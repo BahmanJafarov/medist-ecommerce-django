@@ -1,0 +1,345 @@
+/************************************* newsletter-modal css start *************************************/
+/*====================================
+    newsletter-modal css
+====================================*/
+@media (min-width: 768px) {
+    .newsletter-modal .modal-dialog {
+        max-width: 550px;
+    }
+}
+
+/* newsletter-modal newsletter-info css */
+@media (min-width: 576px) {
+    .newsletter-modal .newsletter-info .newsletter-image {
+        width: 224px;
+    }
+    .newsletter-modal .newsletter-info .newsletter-content {
+        width: calc(100% - 224px);
+    }
+}
+/************************************* newsletter-modal css end *************************************/
+
+/************************************* home-slider css start *************************************/
+/*====================================
+    home-slider swiper css
+====================================*/
+.slider-content .home-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+
+/*====================================
+    slider-content css
+====================================*/
+.slider-content .home-slider .slider-image span {
+    position: relative;
+    padding-left: 21px;
+}
+.slider-content .home-slider .slider-image span::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: var(--dominant-font-color);
+}
+.slider-content .home-slider .slider-image h2 {
+    line-height: 1.1;
+}
+@media (min-width: 576px) {
+    .slider-content .home-slider .slider-image span {
+        padding-left: 34px;
+    }
+    .slider-content .home-slider .slider-image span::before {
+        top: 13px;
+        width: 24px;
+    }
+}
+@media (min-width: 1200px) {
+    .slider-content .home-slider .slider-image span::before {
+        top: 13px;
+    }
+}
+
+/*====================================
+    slider-content animation css
+====================================*/
+.slider-content .home-slider.swiper .swiper-slide .slider-image span,
+.slider-content .home-slider.swiper .swiper-slide .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide .slider-image a {
+    opacity: 0;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image span,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image a {
+    opacity: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image span {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2 {
+    -webkit-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+    -webkit-animation-duration: 1.0s;
+    animation-duration: 1.0s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image a {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+/*====================================
+    slider-navigation css
+====================================*/
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button {
+    color: var(--heading-font-color);
+    background-color: var(--extra-font-color);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+    left: 10px;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+    right: 10px;
+}
+.slider-content:hover .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button {
+    opacity: 1;
+    visibility: visible;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button:hover {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+}
+@media (min-width: 1600px) {
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+        left: 30px;
+    }
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+        right: 30px;
+    }
+}
+
+/*====================================
+    slider-dot css
+====================================*/
+.slider-content .home-slider.swiper .swiper-dots {
+    bottom: 15px;
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination {
+    width: unset;
+    position: unset;
+    margin: -5px 0px 0px -5px;
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    margin: 5px 0px 0px 5px;
+    opacity: 1;
+    border: 1px solid var(--dominant-font-color);
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet:hover,
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+@media (min-width: 576px) {
+    .slider-content .home-slider.swiper .swiper-dots {
+        bottom: 30px;
+    }
+}
+/************************************* home-slider css end *************************************/
+
+/************************************* category-slider css start *************************************/
+/*====================================
+    category-slider swiper css
+====================================*/
+.category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 50%;
+}
+.category-slider .cat-slider.swiper .swiper-slide {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.category-slider .cat-slider.swiper .swiper-slide.swiper-slide-visible {
+    border-left: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.category-slider .cat-slider.swiper .swiper-slide.swiper-slide-visible.swiper-slide-active {
+    border: none;
+}
+@media (min-width: 576px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+@media (min-width: 768px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 25%;
+    }
+}
+@media (min-width: 992px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 20%;
+    }
+}
+@media (min-width: 1200px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 16.66%;
+    }
+}
+
+/*====================================
+    category cat-content css
+====================================*/
+@media (min-width: 1200px) {
+    .category-slider .cat-slider .cat-content {
+        -webkit-transition: transform 0.5s ease-in-out;
+        transition: transform 0.5s ease-in-out;
+    }
+    .category-slider .cat-slider .cat-content:hover {
+        transform: translateY(-32px);
+    }
+    .category-slider .cat-slider .cat-content a.cat-btn {
+        transform: translateY(13px);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+    }
+    .category-slider .cat-slider .cat-content:hover a.cat-btn {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+/************************************* category-slider css end *************************************/
+
+/************************************* banner-area css start *************************************/
+/*====================================
+    banner-area css
+====================================*/
+.banner-area .banner-block a.banner-img .banner-content span.banner-subtitle {
+    position: relative;
+    padding-left: 21px;
+}
+.banner-area .banner-block a.banner-img .banner-content span.banner-subtitle::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+    background-color: var(--secondary-font-color);
+}
+.banner-area .banner-block a.banner-img .banner-content h2 {
+    line-height: 1.1;
+}
+/************************************* banner-area css end *************************************/
+
+/************************************* product-tab css start *************************************/
+/*====================================
+    product-tab css
+====================================*/
+.product-tab-area ul.nav-tabs {
+    margin-top: -15px;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.product-tab-area ul.nav-tabs li {
+    margin-top: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+@media (min-width: 576px) {
+    .product-tab-area ul.nav-tabs {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .product-tab-area ul.nav-tabs li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* product-tab title css */
+.product-tab-area ul.nav-tabs li a {
+    color: var(--body-font-color);
+    border-bottom: 1px solid transparent;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.product-tab-area ul.nav-tabs li a:hover {
+    color: var(--dominant-font-color);
+}
+.product-tab-area ul.nav-tabs li a.active {
+    color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+/************************************* product-tab css end *************************************/
+
+/************************************* service css start *************************************/
+/*====================================
+    service-content css
+====================================*/
+.service-area .service-content {
+    -webkit-transition: border-color 0.5s ease-in-out;
+    transition: border-color 0.5s ease-in-out;
+}
+.service-area .service-content:hover {
+    border-color: var(--dominant-font-color);
+}
+/************************************* service css end *************************************/
+
+/************************************* brand-logo css start *************************************/
+/*====================================
+    brand-logo slider-swiper css
+====================================*/
+.brand-logo .brand-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 50%;
+}
+@media (min-width: 576px) {
+    .brand-logo .brand-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+@media (min-width: 992px) {
+    .brand-logo .brand-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 25%;
+    }
+}
+@media (min-width: 1200px) {
+    .brand-logo .brand-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 20%;
+    }
+}
+@media (min-width: 1400px) {
+    .brand-logo .brand-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 16.66%;
+    }
+}
+
+/*====================================
+    brand-content css
+====================================*/
+.brand-logo .brand-slider .brand-content a span img {
+    -webkit-filter: opacity(0.5);
+    filter: opacity(0.5);
+    -webkit-transition: filter 0.5s ease-in-out;
+    transition: filter 0.5s ease-in-out;
+}
+.brand-logo .brand-slider .brand-content:hover a span img {
+    -webkit-filter: opacity(1);
+    filter: opacity(1);
+}
+/************************************* brand-logo css end *************************************/

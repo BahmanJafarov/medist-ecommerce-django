@@ -1,0 +1,466 @@
+/************************************* newsletter-modal css start *************************************/
+/*====================================
+    newsletter-modal css
+====================================*/
+@media (min-width: 768px) {
+    .newsletter-modal .modal-dialog {
+        max-width: 550px;
+    }
+}
+
+/* newsletter-modal newsletter-info css */
+@media (min-width: 576px) {
+    .newsletter-modal .newsletter-info .newsletter-image {
+        width: 224px;
+    }
+    .newsletter-modal .newsletter-info .newsletter-content {
+        width: calc(100% - 224px);
+    }
+}
+/************************************* newsletter-modal css end *************************************/
+
+/************************************* home-slider css start *************************************/
+/*====================================
+    home-slider swiper css
+====================================*/
+.slider-content .home-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+
+/*====================================
+    slider-content css
+====================================*/
+.slider-content .home-slider .slider-image h2 {
+    line-height: 1.1;
+}
+
+/*====================================
+    slider-content animation css
+====================================*/
+.slider-content .home-slider.swiper .swiper-slide .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide .slider-image a {
+    opacity: 0;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image a {
+    opacity: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image a {
+    -webkit-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+    -webkit-animation-duration: 1.0s;
+    animation-duration: 1.0s;
+}
+
+/*====================================
+    slider-navigation css
+====================================*/
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+    left: 10px;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+    right: 10px;
+}
+.slider-content:hover .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button {
+    opacity: 1;
+    visibility: visible;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button:hover {
+    color: var(--extra-font-color);
+    background-color: var(--secondary-font-color);
+}
+@media (min-width: 1200px) {
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+        left: 30px;
+    }
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+        right: 30px;
+    }
+}
+
+/*====================================
+    slider-dot css
+====================================*/
+.slider-content .home-slider.swiper .swiper-dots {
+    bottom: 15px;
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination {
+    width: unset;
+    position: unset;
+    margin: -5px 0px 0px -5px;
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: var(--secondary-font-color);
+    margin: 5px 0px 0px 5px;
+    opacity: 1;
+    border: 1px solid var(--secondary-font-color);
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet:hover,
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+@media (min-width: 576px) {
+    .slider-content .home-slider.swiper .swiper-dots {
+        bottom: 30px;
+    }
+}
+/************************************* home-slider css end *************************************/
+
+/************************************* service css start *************************************/
+/*====================================
+    service-area css
+====================================*/
+.service-area .service-content>* {
+    border-bottom: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.service-area .service-content>*:nth-last-child(-n+1) {
+    border-bottom: none;
+}
+@media (min-width: 992px) {
+    .service-area .service-content>* {
+        border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+    .service-area .service-content>*:nth-child(3n) {
+        border-right: none;
+    }
+    .service-area .service-content>*:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+}
+/************************************* service css end *************************************/
+
+/************************************* product-tab css start *************************************/
+/*====================================
+    product-tab css
+====================================*/
+.product-tab-area ul.nav-tabs {
+    margin-top: -15px;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.product-tab-area ul.nav-tabs li {
+    margin-top: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+@media (min-width: 576px) {
+    .product-tab-area ul.nav-tabs {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .product-tab-area ul.nav-tabs li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* product-tab title css */
+.product-tab-area ul.nav-tabs li a {
+    color: var(--body-font-color);
+    border-bottom: 1px solid transparent;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.product-tab-area ul.nav-tabs li a:hover {
+    color: var(--dominant-font-color);
+}
+.product-tab-area ul.nav-tabs li a.active {
+    color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+
+/*====================================
+    category-slider swiper css
+====================================*/
+.product-tab-area .collection-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .product-tab-area .collection-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .product-tab-area .collection-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+
+/*====================================
+    single-product-list css
+====================================*/
+.single-product-list {
+    border: 1px solid rgba(var(--border-color),var(--border-opacity));
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+/*====================================
+    product-image css
+====================================*/
+.single-product-list .single-product-wrap .product-image {
+    position: relative;
+}
+.single-product-list .single-product-wrap .product-image a.pro-img {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 15px;
+}
+.single-product-list .single-product-wrap .product-image a.pro-img img.img2 {
+    display: none;
+}
+@media (min-width: 1200px) {
+    .single-product-list .single-product-wrap .product-image a.pro-img::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: var(--extra-font-color);
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+        transition: background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+    }
+    .single-product-list:hover .single-product-wrap .product-image a.pro-img::after {
+        opacity: 0.5;
+        visibility: visible;
+    }
+    .single-product-list .single-product-wrap .product-image a.pro-img img {
+        -webkit-transition: opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+        transition: opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+    }
+    .single-product-list:hover .single-product-wrap .product-image a.pro-img img.img1,
+    .single-product-list .single-product-wrap .product-image a.pro-img img.img2 {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .single-product-list .single-product-wrap .product-image a.pro-img img.img2 {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .single-product-list:hover .single-product-wrap .product-image a.pro-img img.img2 {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+/*====================================
+    product-action css
+====================================*/
+.single-product-list .single-product-wrap .product-action {
+    display: flex;
+    align-items: center;
+}
+.single-product-list .single-product-wrap .product-action a {
+    position: relative;
+    margin-right: 10px;
+}
+.single-product-list .single-product-wrap .product-action a:last-child {
+    margin: 0px;
+}
+.single-product-list .single-product-wrap .product-action a span.product-icon {
+    color: var(--body-font-color);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.single-product-list .single-product-wrap .product-action a:hover span.product-icon {
+    color: var(--dominant-font-color);
+}
+
+/*====================================
+    product-content css
+====================================*/
+.single-product-list .single-product-wrap .product-content {
+    display: flex;
+    align-items: center;
+    border-left: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.single-product-list .single-product-wrap .product-content .pro-content {
+    width: 100%;
+    padding: 15px;
+}
+.single-product-list .single-product-wrap .product-content .price-box {
+    margin-top: 12px;
+}
+.single-product-list .single-product-wrap .product-content .product-action {
+    margin-top: 18px;
+}
+/************************************* product-tab css end *************************************/
+
+/************************************* banner-area css start *************************************/
+/*====================================
+    banner-area css
+====================================*/
+.banner-area .banner-block a.banner-img .banner-content span.banner-subtitle {
+    border-bottom: 1px solid;
+}
+.banner-area .banner-block a.banner-img .banner-content h2 {
+    line-height: 1.2;
+}
+/************************************* banner-area css end *************************************/
+
+/************************************* category-area css start *************************************/
+/*====================================
+    category-area css
+====================================*/
+.category-area .category-content>* {
+    border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    border-bottom: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.category-area .category-content>*:nth-child(2n) {
+    border-right: none;
+}
+.category-area .category-content>*:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+.category-area .category-content span.span-bullets {
+    position: relative;
+    padding-left: 17px;
+}
+.category-area .category-content span.span-bullets::before {
+    content: "\f3c1";
+    font-family: remixicon;
+    color: var(--body-font-color);
+    font-size: 7px;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    font-weight: var(--heading-font-weight);
+}
+@media (min-width: 992px) {
+    .category-area .category-content>*:nth-child(2n) {
+        border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+    .category-area .category-content>*:nth-child(5n) {
+        border-right: none;
+    }
+    .category-area .category-content>*:nth-last-child(-n+5) {
+        border-bottom: none;
+    }
+}
+/************************************* category-area css end *************************************/
+
+/************************************* category-product css start *************************************/
+/*====================================
+    category-product swiper css
+====================================*/
+.category-product .collection-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 50%;
+}
+@media (min-width: 768px) {
+    .category-product .collection-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+@media (min-width: 992px) {
+    .category-product .collection-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 25%;
+    }
+}
+@media (min-width: 1200px) {
+    .category-product .collection-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 20%;
+    }
+}
+/************************************* category-product css end *************************************/
+
+/************************************* banner-collection css start *************************************/
+/*====================================
+    banner-collection css
+====================================*/
+.banner-collection .banner-block a.banner-img .banner-content span.banner-subtitle {
+    border-bottom: 1px solid;
+}
+.banner-collection .banner-block a.banner-img .banner-content h2 {
+    line-height: 1.2;
+}
+@media (min-width: 768px) {
+    .banner-collection .banner-block a.banner-img img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+/************************************* banner-collection css end *************************************/
+
+/************************************* brand-area css start *************************************/
+/*====================================
+    brand-area css
+====================================*/
+.brand-area .brand-detail>* {
+    border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    border-bottom: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.brand-area .brand-detail>*:nth-child(2n) {
+    border-right: none;
+}
+.brand-area .brand-detail>*:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+@media (min-width: 768px) {
+    .brand-area .brand-detail>*:nth-child(2n) {
+        border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+    .brand-area .brand-detail>*:nth-child(3n) {
+        border-right: none;
+    }
+    .brand-area .brand-detail>*:nth-last-child(-n+3) {
+        border-bottom: none;
+    }
+}
+@media (min-width: 1200px) {
+    .brand-area .brand-detail>*:nth-child(3n) {
+        border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+    .brand-area .brand-detail>*:nth-child(6n) {
+        border-right: none;
+    }
+    .brand-area .brand-detail>*:nth-last-child(-n+6) {
+        border-bottom: none;
+    }
+}
+
+/*====================================
+    brand-content css
+====================================*/
+.brand-area .brand-detail .brand-content a span img {
+    -webkit-transition: filter 0.5s ease-in-out;
+    transition: filter 0.5s ease-in-out;
+}
+.brand-area .brand-detail .brand-content:hover a span img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+/************************************* brand-area css end *************************************/

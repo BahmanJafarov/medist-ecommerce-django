@@ -1,0 +1,430 @@
+/************************************* newsletter-modal css start *************************************/
+/*====================================
+    newsletter-modal css
+====================================*/
+@media (min-width: 768px) {
+    .newsletter-modal .modal-dialog {
+        max-width: 550px;
+    }
+}
+
+/* newsletter-modal newsletter-info css */
+@media (min-width: 576px) {
+    .newsletter-modal .newsletter-info .newsletter-image {
+        width: 224px;
+    }
+    .newsletter-modal .newsletter-info .newsletter-content {
+        width: calc(100% - 224px);
+    }
+}
+/************************************* newsletter-modal css end *************************************/
+
+/************************************* home-slider css start *************************************/
+/*====================================
+    home-slider swiper css
+====================================*/
+.slider-content .home-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+
+/*====================================
+    slider-image css
+====================================*/
+.slider-content .home-slider .slider-image::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(0deg, var(--dominant-font-color)0%, transparent);
+    opacity: 0.9;
+}
+
+/*====================================
+    slider-content css
+====================================*/
+.slider-content .home-slider.swiper .swiper-slide .slider-image span,
+.slider-content .home-slider.swiper .swiper-slide .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide .slider-image .slider-btn {
+    opacity: 0;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image span,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image .slider-btn {
+    opacity: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image span {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image h2 {
+    -webkit-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+    -webkit-animation-duration: 1.0s;
+    animation-duration: 1.0s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-image .slider-btn {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+/*====================================
+    slider-navigation css
+====================================*/
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button {
+    color: var(--heading-font-color);
+    background-color: var(--extra-font-color);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,opacity 0.5s ease-in-out,visibility 0.5s ease-in-out;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+    left: 15px;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+    right: 15px;
+}
+.slider-content:hover .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button {
+    opacity: 1;
+    visibility: visible;
+}
+.slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button:hover {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+}
+@media (min-width: 576px) {
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+        left: 30px;
+    }
+    .slider-content .home-slider.swiper .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+        right: 30px;
+    }
+}
+
+/*====================================
+    slider-dot css
+====================================*/
+.slider-content .home-slider.swiper .swiper-dots {
+    bottom: 15px;
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination {
+    width: unset;
+    position: unset;
+    margin: -5px 0px 0px -5px;
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    margin: 5px 0px 0px 5px;
+    opacity: 1;
+    border: 1px solid var(--body-bgcolor);
+}
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet:hover,
+.slider-content .home-slider.swiper .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--body-bgcolor);
+    border-color: var(--body-bgcolor);
+}
+@media (min-width: 576px) {
+    .slider-content .home-slider.swiper .swiper-dots {
+        bottom: 30px;
+    }
+}
+/************************************* home-slider css end *************************************/
+
+/************************************* category-slider css start *************************************/
+/*====================================
+    category-slider swiper css
+====================================*/
+.category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+
+/*====================================
+    category cat-content css
+====================================*/
+.category-slider .cat-slider .cat-block .cat-content a {
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+}
+.category-slider .cat-slider .cat-block .cat-content a:hover {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+
+/*====================================
+    category swiper-scrollbar css
+====================================*/
+.category-slider .swiper-scroll .swiper-scrollbar {
+    position: unset;
+    width: auto;
+    height: 2px;
+    cursor: pointer;
+}
+.category-slider .swiper-scroll .swiper-scrollbar-drag {
+    background-color: var(--dominant-font-color);
+    border-radius: var(--border-radius);
+}
+/************************************* category-slider css end *************************************/
+
+/************************************* banner css start *************************************/
+/*====================================
+    banner-content css
+====================================*/
+.banner-area .banner-block .banner-content span {
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+}
+.banner-area .banner-block .banner-content span:hover {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+/************************************* banner css end *************************************/
+
+/************************************* service css start *************************************/
+/*====================================
+    service-content css
+====================================*/
+.service-area .service-content {
+    position: relative;
+}
+.service-area .service-content::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    height: 2px;
+    background-color: var(--dominant-font-color);
+    transform: scaleX(0);
+    z-index: 1;
+    -webkit-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+.service-area .service-content:hover::after {
+    transform: scaleX(-1);
+}
+
+/*====================================
+    service-content text css
+====================================*/
+.service-area .service-content .service-text span::before {
+    content: "(";
+}
+.service-area .service-content .service-text span::after {
+    content: ")";
+}
+/************************************* service css end *************************************/
+
+/************************************* product-tab css start *************************************/
+/*====================================
+    product-tab css
+====================================*/
+.product-tab-area ul.nav-tabs li a {
+    color: var(--body-font-color);
+    background-color: transparent;
+    border: 1px solid transparent;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.product-tab-area ul.nav-tabs li a:hover {
+    color: var(--dominant-font-color);
+}
+.product-tab-area ul.nav-tabs li a.active {
+    color: var(--dominant-font-color);
+    background-color: var(--extra-font-color);
+    border-color: rgba(var(--border-color),var(--border-opacity));
+}
+/************************************* product-tab css end *************************************/
+
+/************************************* support css start *************************************/
+/*====================================
+    support-icon-content css
+====================================*/
+.support-area .support-icon-title .support-icon .support-icon-content span {
+    margin-right: -24px;
+}
+
+/*====================================
+    support-btn css
+====================================*/
+@media (min-width: 992px) {
+    .support-area .support-btn .support-btn-content {
+        width: calc(50% - 15px);
+        position: relative;
+    }
+    .support-area .support-btn .support-btn-content::before {
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: rgba(var(--border-color),var(--border-opacity));
+        transform: translateX(calc(-100% - 30px));
+    }
+}
+/************************************* support css end *************************************/
+
+/************************************* testimonial css start *************************************/
+/*====================================
+    testimonial-slider css
+====================================*/
+.testimonial .testimonial-slider.slick-slider {
+    border: 1px solid rgba(var(--border-color),var(--border-opacity));
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+.testimonial .testimonial-slider.slick-slider .slick-slide {
+    cursor: pointer;
+    border: none;
+}
+@media (min-width: 768px) {
+    .testimonial .testimonial-slider.slick-slider {
+        border: none;
+        border-radius: 0;
+        overflow: unset;
+    }
+    .testimonial .testimonial-slider.slick-slider .slick-list {
+        margin: -15px;
+    }
+    .testimonial .testimonial-slider.slick-slider .slick-slide {
+        padding: 15px;
+    }
+}
+
+/* testimonial-slider content css */
+.testimonial .testi-slider-v .testimonial-slider.slick-slider .slick-slide.slick-current .testi-content {
+    background-color: var(--body-bgcolor);
+}
+@media (min-width: 768px) {
+    .testimonial .testi-slider-v .testimonial-slider .testi-content {
+        border: 1px solid rgba(var(--border-color),var(--border-opacity));
+        border-radius: var(--border-radius);
+    }
+}
+
+/*====================================
+    testimonial-slider-for css
+====================================*/
+@media (min-width: 768px) {
+    .testimonial .testi-slider-h .testimonial-slider-for.slick-slider .slick-list {
+        max-width: 91.67%;
+    }
+}
+@media (min-width: 1400px) {
+    .testimonial .testi-slider-h .testimonial-slider-for.slick-slider .slick-list {
+        max-width: 83.33%;
+    }
+}
+
+/* testimonial-slider-for info css */
+.testimonial .testi-slider-h .testimonial-slider-for .testi-info p::before {
+    content: '"';
+}
+.testimonial .testi-slider-h .testimonial-slider-for .testi-info p::after {
+    content: '"';
+}
+@media (min-width: 1200px) {
+    .testimonial .testi-slider-h .testimonial-slider-for .testi-info p {
+        line-height: 40px;
+    }
+}
+
+/*=============================================
+    testimonial-slider-for slick-button css
+=============================================*/
+.testimonial .testi-slider-h .testimonial-slider-for button.slick-arrow {
+    color: var(--extra-font-color);
+    font-size: 16px;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    height: 40px;
+    width: 40px;
+    background-color: var(--heading-font-color);
+    z-index: 1;
+    border-radius: 100%;
+    line-height: 0;
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out;
+}
+.testimonial .testi-slider-h .testimonial-slider-for button.slick-arrow.slick-prev {
+    left: -60px;
+}
+.testimonial .testi-slider-h .testimonial-slider-for button.slick-arrow.slick-next {
+    right: -60px;
+}
+.testimonial .testi-slider-h .testimonial-slider-for button.slick-arrow:hover {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+}
+.testimonial .testi-slider-h .testimonial-slider-for button.slick-arrow.slick-disabled {
+    opacity: 0.5;
+}
+
+/*==========================================
+    testimonial-slider-for slick-dot css
+==========================================*/
+.testimonial .testi-slider-h .testimonial-slider-for ul.slick-dots {
+    margin: 30px 0px -5px -5px;
+    text-align: center;
+    line-height: 0;
+}
+.testimonial .testi-slider-h .testimonial-slider-for ul.slick-dots li {
+    display: inline-flex;
+    margin: 0px 0px 5px 5px;
+}
+.testimonial .testi-slider-h .testimonial-slider-for ul.slick-dots li button {
+    text-indent: -9999px;
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    border: 1px solid var(--dominant-font-color);
+    border-radius: 100%;
+}
+.testimonial .testi-slider-h .testimonial-slider-for ul.slick-dots li.slick-active button {
+    background-color: var(--dominant-font-color);
+    border: 1px solid var(--dominant-font-color);
+}
+@media (min-width: 576px) {
+    .testimonial .testi-slider-h .testimonial-slider-for ul.slick-dots {
+        margin: 50px 0px -5px -5px;
+        text-align: center;
+        line-height: 0;
+    }
+}
+@media (min-width: 768px) {
+    .testimonial .testi-slider-h .testimonial-slider-for ul.slick-dots {
+        position: absolute;
+        right: 0;
+        bottom: 50%;
+        transform: translateY(50%);
+        display: flex;
+        flex-direction: column;
+        margin: 0px 0px -5px -5px;
+    }
+}
+/************************************* testimonial css end *************************************/

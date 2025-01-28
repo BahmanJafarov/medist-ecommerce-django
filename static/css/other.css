@@ -1,0 +1,781 @@
+/************************************* other-swiper-wrap css start *************************************/
+/*====================================
+    other-swiper-wrap navigation css
+====================================*/
+.other-swiper-wrap .swiper-buttons button {
+    color: var(--body-font-color);
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    margin: 0px 10px 0px 0px;
+    border: 1px solid rgba(var(--border-color),var(--border-opacity));
+    border-radius: 100%;
+    box-shadow: rgba(var(--box-shadow-outer),var(--box-shadow-outer-opacity));
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+}
+.other-swiper-wrap .swiper-buttons button:last-child:last-child {
+    margin: 0px;
+}
+.other-swiper-wrap .swiper-buttons button:hover {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+@media (min-width: 768px) {
+    .other-swiper-wrap .swiper-buttons button {
+        transform: translateY(-50%);
+        margin: 0px;
+    }
+}
+
+/*====================================
+    other-swiper-wrap dots css
+====================================*/
+.other-swiper-wrap .swiper-dots .swiper-pagination {
+    width: unset;
+    position: unset;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -5px 0px 0px -5px;
+}
+.other-swiper-wrap .swiper-dots .swiper-pagination span {
+    width: 12px;
+    height: 12px;
+    background-color: transparent;
+    margin: 5px 0px 0px 5px;
+    opacity: 1;
+    border: 1px solid var(--dominant-font-color);
+}
+.other-swiper-wrap .swiper-dots .swiper-pagination span.swiper-pagination-bullet-active {
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+/************************************* other-swiper-wrap css end *************************************/
+
+/************************************* text-shadow-title css start *************************************/
+/*====================================
+    text-shadow-title css
+====================================*/
+.text-shadow-title {
+    text-shadow: 1px 0 0 var(--body-font-color), 0 1px 0 var(--body-font-color), -1px 0 0 var(--body-font-color), 0 -1px 0 var(--body-font-color);
+    font-weight: 900;
+}
+/************************************* text-shadow-title css end *************************************/
+
+/************************************* other-tab css start *************************************/
+/*====================================
+    other-tabs css
+====================================*/
+.other-tabs {
+    margin-top: -13px;
+}
+.other-tabs>* {
+    margin-top: 13px;
+    padding-top: 13px;
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.other-tabs>*:first-child {
+    padding-top: 0px;
+    border-top: none;
+}
+@media (min-width: 576px) {
+    .other-tabs {
+        margin-top: -23px;
+    }
+    .other-tabs>* {
+        margin-top: 23px;
+        padding-top: 23px;
+    }
+}
+
+/*====================================
+    other-tab title css
+====================================*/
+.other-tab a[aria-expanded="true"] {
+    color: var(--dominant-font-color);
+}
+.other-tab a[aria-expanded="true"] span.other-tab-icon i::before {
+    content: "\f1af";
+}
+/************************************* other-tab css end *************************************/
+
+/************************************* point-content css start *************************************/
+/*====================================
+    point-content css
+====================================*/
+.point-content .row {
+    margin-top: -7px;
+}
+.point-content .row>* {
+    margin-top: 7px;
+    padding-top: 15px;
+}
+.point-content .row>*:first-child {
+    padding-top: 0px;
+}
+.point-content .point-content-info span {
+    top: -3.5px;
+    height: 32px;
+}
+/************************************* point-content css end *************************************/
+
+/************************************* column-2 css start *************************************/
+/*====================================
+    column-2 css
+====================================*/
+@media (min-width: 992px) {
+    .column-2 {
+        column-count: 2;
+        column-gap: 30px;
+    }
+}
+@media (min-width: 1200px) {
+    .column-2 {
+        column-gap: 50px;
+    }
+}
+/************************************* column-2 css end *************************************/
+
+/************************************* point-overview css start *************************************/
+/*====================================
+    point-overview css
+====================================*/
+.point-overview {
+    margin-bottom: -16px;
+}
+.point-overview>* {
+    margin-bottom: 16px;
+}
+/************************************* point-overview css end *************************************/
+
+/************************************* point-line css start *************************************/
+/*====================================
+    point-line css
+====================================*/
+.point-line>* {
+    margin-top: 12px;
+    padding-top: 13px;
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.point-line>*:first-child {
+    margin-top: 0px;
+    padding-top: 0px;
+    border-top: none;
+}
+@media (min-width: 576px) {
+    .point-line>* {
+        margin-top: 22px;
+        padding-top: 23px;
+    }
+}
+/************************************* point-line css end *************************************/
+
+/************************************* index css start *************************************/
+/*====================================
+    question-index css
+====================================*/
+.question-index {
+    counter-reset: Questions;
+}
+.question-index h6::before {
+    counter-increment: Questions;
+    content: "Q." counter(Questions) " ";
+}
+
+/*====================================
+    number-index css
+====================================*/
+.number-index {
+    counter-reset: number;
+}
+.number-index .number-sub-index {
+    counter-reset: sub-number;
+}
+.number-index .number-sub-index::before {
+    counter-increment: number;
+    content: counter(number) ". ";
+}
+.number-index .p-number::before {
+    counter-increment: sub-number;
+    content: counter(number) "."counter(sub-number)" ";
+}
+/************************************* index css end *************************************/
+
+/************************************* about-us css start *************************************/
+/*====================================
+    about-us css
+====================================*/
+.about-us .row.about-area {
+    margin-top: -30px;
+}
+.about-us .row.about-area>* {
+    margin-top: 30px;
+}
+@media (min-width: 768px) {
+    .about-us .row.about-area,
+    .about-us .row.about-area>* {
+        margin-top: 0px;
+    }
+}
+
+/*====================================
+    about-counter css
+====================================*/
+.about-counter .about-counter-content .about-counter-info {
+    border-bottom: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.about-counter .about-counter-content .about-counter-info:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+.about-counter .about-counter-content .about-counter-info:nth-child(n+1):not(:nth-child(2n)) {
+    border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+@media (min-width: 992px) {
+    .about-counter .about-counter-content .about-counter-info {
+        border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+    .about-counter .about-counter-content .about-counter-info:nth-child(4n) {
+        border-right: none;
+    }
+    .about-counter .about-counter-content .about-counter-info:nth-last-child(-n+4) {
+        border-bottom: none;
+    }
+}
+/************************************* about-us css end *************************************/
+
+/************************************* about-us2 css start *************************************/
+/*====================================
+    about-future css
+====================================*/
+.about-future .about-future-content img {
+    -webkit-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+}
+.about-future .about-future-content:hover img {
+    transform: translateY(-10px);
+}
+
+/*====================================
+    about-testimonial css
+====================================*/
+.about-testimonial .about-testislider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+/************************************* about-us2 css end *************************************/
+
+/************************************* about-us3 css start *************************************/
+/*====================================
+    about-counter css
+====================================*/
+.about-counter-promise .about-counter .about-counter-detail .about-counter-info:nth-child(n+3) {
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.about-counter-promise .about-counter .about-counter-detail .about-counter-info:nth-child(odd) {
+    padding-right: 15px;
+    border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.about-counter-promise .about-counter .about-counter-detail .about-counter-info:nth-child(even) {
+    padding-left: 15px;
+}
+@media (min-width: 576px) {
+    .about-counter-promise .about-counter .about-counter-detail .about-counter-info:nth-child(odd) {
+        padding-right: 30px;
+    }
+    .about-counter-promise .about-counter .about-counter-detail .about-counter-info:nth-child(even) {
+        padding-left: 30px;
+    }
+}
+/************************************* about-us3 css end *************************************/
+
+/************************************* about-us5 css start *************************************/
+/*====================================
+    about-us-info css
+====================================*/
+.about-us-info {
+    position: relative;
+    z-index: 1;
+}
+.about-us-info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50%;
+    background-color: var(--extra-bgcolor);
+    z-index: -1;
+}
+/************************************* about-us5 css end *************************************/
+
+/************************************* about-us6 css start *************************************/
+/*====================================
+    about-location css
+====================================*/
+.about-location .about-location-wrap {
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+/* about-location swiper css */
+.about-location .about-locationslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .about-location .about-locationslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .about-location .about-locationslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+/************************************* about-us6 css end *************************************/
+
+/************************************* contact-us css start *************************************/
+/*====================================
+    contact-map css
+====================================*/
+.contact-map iframe {
+    height: 320px;
+}
+@media (min-width: 576px) {
+    .contact-map iframe {
+        height: 400px;
+    }
+}
+@media (min-width: 1200px) {
+    .contact-map iframe {
+        height: 500px;
+    }
+}
+/************************************* contact-us css end *************************************/
+
+/************************************* contact-us4 css start *************************************/
+/*====================================
+    contact-map css
+====================================*/
+.contact-map.contact-map-info {
+    position: relative;
+    z-index: 1;
+}
+.contact-map.contact-map-info::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 50%;
+    background-color: var(--extra-bgcolor);
+    z-index: -1;
+}
+/************************************* contact-us4 css start *************************************/
+
+/************************************* contact-us5 css start *************************************/
+/*====================================
+    contact-location css
+====================================*/
+.contact-location.section-overlay {
+    margin-top: -30px;
+}
+
+/* contact-location-location swiper css */
+.contact-location .contact-locationslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .contact-location .contact-locationslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .contact-location .contact-locationslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+/************************************* contact-us5 css start *************************************/
+
+/************************************* contact-us6 css start *************************************/
+/*====================================
+    contact-banner css
+====================================*/
+@media (min-width: 768px) {
+    .contact-banner.contact-banner-wrap {
+        visibility: hidden;
+    }
+}
+@media (min-width: 768px) {
+    .contact-banner.contact-banner-wrap .banner-hover span.banner-img {
+        border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+    }
+}
+/************************************* contact-us6 css end *************************************/
+
+/************************************* contact-us7 css start *************************************/
+/*====================================
+    contact-location css
+====================================*/
+@media (min-width: 768px) {
+    .contact-location .section-capture span.contact-location-sub-title {
+        position: relative;
+    }
+    .contact-location .section-capture span.contact-location-sub-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        transform: translateX(calc(-100% - 30px));
+        height: 1px;
+        background-color: var(--dominant-font-color);
+    }
+}
+/************************************* contact-us7 css end *************************************/
+
+/************************************* faqs4 css start *************************************/
+/*====================================
+    faqs-tab-title css
+====================================*/
+.faqs h6.faqs-tab-title span {
+    border-bottom: 2px solid;
+}
+/************************************* faqs4 css end *************************************/
+
+/************************************* faqs7 css start *************************************/
+/*====================================
+    faqs-collapse-group css
+====================================*/
+.faqs-collapse-group>* {
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.faqs-collapse-group>*:first-child {
+    border-top: none;
+}
+/************************************* faqs7 css end *************************************/
+
+/************************************* payment-policy2 css start *************************************/
+/*====================================
+    payment-method css
+====================================*/
+@media (min-width: 576px) {
+    .payment-method {
+        overflow: hidden;
+    }
+    .payment-method .payment-methodslider.swiper {
+        margin: 0px calc(-100% - 30px);
+        overflow: unset;
+    }
+}
+@media (min-width: 768px) {
+    .payment-method .payment-methodslider.swiper {
+        margin: 0px calc(-50% - 15px);
+    }
+}
+@media (min-width: 1200px) {
+    .payment-method .payment-methodslider.swiper {
+        margin: 0px calc(-33.33% - 10px);
+    }
+}
+
+/* payment-methodslider swiper css */
+.payment-method .payment-methodslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 576px) {
+    .payment-method .payment-methodslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+@media (min-width: 768px) {
+    .payment-method .payment-methodslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 1200px) {
+    .payment-method .payment-methodslider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 20%;
+    }
+}
+
+/*=========================================
+    payment-method swiper-scrollbar css
+=========================================*/
+.payment-method .swiper-scroll .swiper-scrollbar {
+    position: unset;
+    width: auto;
+    height: 2px;
+    cursor: pointer;
+}
+.payment-method .swiper-scroll .swiper-scrollbar-drag {
+    background-color: var(--dominant-font-color);
+    border-radius: var(--border-radius);
+}
+/************************************* payment-policy2 css end *************************************/
+
+/************************************* privacy-policy css start *************************************/
+/*====================================
+    privacy-feature css
+====================================*/
+.privacy-feature .privacy-feature-content {
+    background-color: var(--extra-bgcolor);
+}
+.privacy-feature .privacy-feature-content:nth-child(even) {
+    background-color: var(--body-bgcolor);
+}
+/************************************* privacy-policy css end *************************************/
+
+/************************************* privacy-policy2 css start *************************************/
+/*====================================
+    privacy-policy css
+====================================*/
+.privacy-policy.section-overlay {
+    margin-top: -30px;
+}
+/************************************* privacy-policy2 css end *************************************/
+
+/************************************* privacy-policy3 css start *************************************/
+/*====================================
+    privacy-point css
+====================================*/
+.privacy-point .privacy-point-content:nth-child(n+2),
+.privacy-point .privacy-point-content:nth-child(n+3) {
+    padding-top: 30px;
+    margin-top: 30px;
+}
+.privacy-point .privacy-point-content:nth-child(n+2) {
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.privacy-point .privacy-point-content:nth-child(n+3) {
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+@media (min-width: 768px) {
+    .privacy-point .privacy-point-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .privacy-point .privacy-point-content:nth-child(odd) {
+        padding-right: 30px;
+        border-right: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+    .privacy-point .privacy-point-content:nth-child(even) {
+        padding-left: 30px;
+    }
+    .privacy-point .privacy-point-content:nth-child(n+2) {
+        margin-top: 0px;
+        border-top: none;
+    }
+    .privacy-point .privacy-point-content:nth-child(n+3) {
+        border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+}
+@media (min-width: 1200px) {
+    .privacy-point .privacy-point-content:nth-child(odd) {
+        padding-right: 50px;
+    }
+    .privacy-point .privacy-point-content:nth-child(even) {
+        padding-left: 50px;
+    }
+}
+/************************************* privacy-policy3 css end *************************************/
+
+/************************************* return-policy css start *************************************/
+/*====================================
+    return-tab-contact css
+====================================*/
+@media (min-width: 992px) {
+    .return-tab-contact {
+        position: relative;
+        z-index: 1;
+    }
+    .return-tab-contact::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 50%;
+        background-color: var(--secondary-font-color);
+        z-index: -1;
+    }
+}
+/************************************* return-policy css end *************************************/
+
+/************************************* store css start *************************************/
+/*====================================
+    store css
+====================================*/
+.store .store-content .store-info {
+    margin-top: -9px;
+}
+.store .store-content .store-info>* {
+    margin-top: 9px;
+}
+@media (min-width: 576px) {
+    .store .store-content .store-info {
+        margin-top: -19px;
+    }
+    .store .store-content .store-info>* {
+        margin-top: 19px;
+    }
+}
+/************************************* store css end *************************************/
+
+/************************************* store2 css start *************************************/
+/*====================================
+    store-alert-msg css
+====================================*/
+.store .store-search .store-alert-msg {
+    display: none;
+    --bs-bg-opacity: 0.1;
+    --bs-border-opacity: 0.1;
+    border: 1px solid;
+}
+.store .store-search .store-alert-msg.active {
+    display: block;
+}
+
+/*====================================
+    store-data css
+====================================*/
+.store .store-data {
+    display: none;
+}
+.store .store-data.active {
+    display: block;
+}
+/************************************* store2 css end *************************************/
+
+/************************************* terms-condition css start *************************************/
+/*====================================
+    terms-point css
+====================================*/
+.terms-point .row>*:nth-child(n+2) .terms-point-content {
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.terms-point .row>*:nth-child(n+2) .terms-point-content,
+.terms-point .row>*:nth-child(n+3) .terms-point-content {
+    padding-top: 23px;
+    margin-top: 22px;
+}
+@media (min-width: 992px) {
+    .terms-point .row>*:nth-child(2) .terms-point-content {
+        padding-top: 0px;
+        margin-top: 0px;
+    }
+    .terms-point .row>*:nth-child(n+2) .terms-point-content {
+        border-top: none;
+    }
+    .terms-point .row>*:nth-child(n+3) .terms-point-content {
+        border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+}
+@media (min-width: 1200px) {
+    .terms-point .row>*:nth-child(odd) {
+        padding-right: 25px;
+    }
+    .terms-point .row>*:nth-child(even) {
+        padding-left: 25px;
+    }
+}
+/************************************* terms-condition css end *************************************/
+
+/************************************* terms-condition2 css start *************************************/
+/*====================================
+    terms-banner css
+====================================*/
+.terms-banner h2 {
+    font-size: 24px;
+}
+@media (min-width: 576px) {
+    .terms-banner h2 {
+        font-size: 32px;
+    }
+}
+@media (min-width: 768px) {
+    .terms-banner h2 {
+        font-size: 48px;
+    }
+}
+@media (min-width: 992px) {
+    .terms-banner h2 {
+        font-size: 64px;
+    }
+}
+@media (min-width: 1200px) {
+    .terms-banner h2 {
+        font-size: 80px;
+    }
+}
+/************************************* terms-condition2 css end *************************************/
+
+/************************************* terms-condition4 css start *************************************/
+/*====================================
+    terms-condition-content css
+====================================*/
+.terms-condition .terms-condition-content h6 {
+    border-left: 2px solid var(--dominant-font-color);
+}
+/************************************* terms-condition4 css end *************************************/
+
+/************************************* coming-soon css start *************************************/
+/*====================================
+    coming-soon-overlay css
+====================================*/
+.coming-soon-overlay {
+    position: relative;
+    z-index: 1;
+}
+.coming-soon-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--heading-font-color);
+    opacity: 0.5;
+    z-index: -1;
+}
+/************************************* coming-soon css end *************************************/
+
+/************************************* coming-soon2 css start *************************************/
+/*=======================================
+    coming-content css
+=======================================*/
+.coming-content span.coming-content-title {
+    letter-spacing: 5px;
+}
+/************************************* coming-soon2 css end *************************************/
+
+/************************************* coming-soon3 css start *************************************/
+/*=======================================
+    coming-desktop css
+=======================================*/
+@media (min-width: 1600px) {
+    .coming-content .coming-desktop {
+        width: 58.33%;
+    }
+}
+/************************************* coming-soon3 css end *************************************/
+
+/************************************* keyframes css start *************************************/
+/*====================================
+    blinking keyframes css
+====================================*/
+.blinking {
+    -webkit-animation: blinking 2s cubic-bezier(.4, 0, .6, 1) infinite;
+    animation: blinking 2s cubic-bezier(.4, 0, .6, 1) infinite;
+}
+@-webkit-keyframes blinking {
+    50% {
+        opacity: 0.5;
+    }
+}
+@keyframes blinking {
+    50% {
+        opacity: 0.5;
+    }
+}
+/************************************* keyframes css end *************************************/

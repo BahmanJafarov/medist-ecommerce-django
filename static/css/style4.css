@@ -1,0 +1,315 @@
+/************************************* newsletter-modal css start *************************************/
+/*====================================
+    newsletter-modal css
+====================================*/
+@media (min-width: 768px) {
+    .newsletter-modal .modal-dialog {
+        max-width: 550px;
+    }
+}
+
+/* newsletter-modal newsletter-info css */
+@media (min-width: 576px) {
+    .newsletter-modal .newsletter-info .newsletter-image {
+        width: 224px;
+    }
+    .newsletter-modal .newsletter-info .newsletter-content {
+        width: calc(100% - 224px);
+    }
+}
+/************************************* newsletter-modal css end *************************************/
+
+/************************************* home-slider css start *************************************/
+/*====================================
+    home-slider swiper css
+====================================*/
+.slider-content .home-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+
+/* slider-content css */
+.slider-content {
+    position: relative;
+}
+
+/* slider-text-info css */
+.slider-content .home-slider .slider-text-info span {
+    border-bottom: 1px solid;
+}
+.slider-content .home-slider .slider-text-info h2 {
+    line-height: 1.17;
+}
+
+/* slider-text-info animation css */
+.slider-content .home-slider.swiper .swiper-slide .slider-text-info span,
+.slider-content .home-slider.swiper .swiper-slide .slider-text-info h2,
+.slider-content .home-slider.swiper .swiper-slide .slider-text-info .slider-price,
+.slider-content .home-slider.swiper .swiper-slide .slider-text-info a {
+    opacity: 0;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info span,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info h2,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info .slider-price,
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info a {
+    opacity: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: flipInX;
+    animation-name: flipInX;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info span {
+    -webkit-animation-delay: 0.25s;
+    animation-delay: 0.25s;
+    -webkit-animation-duration: 0.25s;
+    animation-duration: 0.25s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info h2 {
+    -webkit-animation-delay: 0.50s;
+    animation-delay: 0.50s;
+    -webkit-animation-duration: 0.50s;
+    animation-duration: 0.50s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info .slider-price {
+    -webkit-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+}
+.slider-content .home-slider.swiper .swiper-slide.swiper-slide-active .slider-text-info a {
+    -webkit-animation-delay: 1.0s;
+    animation-delay: 1.0s;
+    -webkit-animation-duration: 1.0s;
+    animation-duration: 1.0s;
+}
+
+/* slider-navigation css */
+.slider-content .swiper-buttons .swiper-buttons-wrap button.swiper-prev {
+    left: 30px;
+}
+.slider-content .swiper-buttons .swiper-buttons-wrap button.swiper-next {
+    right: 30px;
+}
+
+/*====================================
+    slider-dot css
+====================================*/
+.slider-content .swiper-dots .swiper-pagination {
+    width: unset;
+    position: unset;
+    margin: -5px 0px 0px;
+}
+.slider-content .swiper-dots .swiper-pagination {
+    counter-reset: slider-counter;
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet {
+    position: relative;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-bgcolor);
+    margin: 5px 0px 0px;
+    opacity: 1;
+    border-radius: 100%;
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet::before {
+    counter-increment: slider-counter;
+    content: counter(slider-counter);
+    color: var(--dominant-font-color);
+    position: absolute;
+    z-index: 2;
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.inner {
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    background-color: var(--body-bgcolor);
+    z-index: 1;
+    border-radius: 100%;
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.bar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--body-bgcolor);
+    border-radius: 100%;
+    -webkit-clip: rect(0px, 32px, 32px, 16px);
+    clip: rect(0px, 32px, 32px, 16px);
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.bar span.progress-wrap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dominant-font-color);
+    border-radius: 100%;
+    -webkit-clip: rect(0px, 16px, 32px, 0px);
+    clip: rect(0px, 16px, 32px, 0px);
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.bar.left-bar span.progress-wrap {
+    animation: left 2.5s linear both;
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.bar.right-bar {
+    transform: rotate(180deg);
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.bar.right-bar span.progress-wrap {
+    animation: right 2.5s linear both;
+    animation-delay: 2.5s;
+}
+.slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet span.outer {
+    width: 28px;
+    height: 28px;
+    margin: 0px;
+    background-color: var(--body-bgcolor);
+    border-radius: 100%;
+}
+@media (min-width: 576px) {
+    .slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet {
+        height: 40px;
+        width: 40px;
+    }
+    .slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.inner,
+    .slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet span.outer {
+        width: 36px;
+        height: 36px;
+    }
+    .slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.bar {
+        -webkit-clip: rect(0px, 40px, 40px, 20px);
+        clip: rect(0px, 40px, 40px, 20px);
+    }
+    .slider-content .swiper-dots .swiper-pagination span.swiper-pagination-bullet.swiper-pagination-bullet-active span.bar span.progress-wrap {
+        -webkit-clip: rect(0px, 20px, 40px, 0px);
+        clip: rect(0px, 20px, 40px, 0px);
+    }
+}
+
+/* slider-dot keyframe css */
+@keyframes left {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+@keyframes right {
+    100% {
+        transform: rotate(180deg);
+    }
+}
+/************************************* home-slider css end *************************************/
+
+/************************************* service css start *************************************/
+/*====================================
+    service-area css
+====================================*/
+.service-area .row>* .service-content {
+    position: relative;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+.service-area .row>*:first-child .service-content {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+.service-area .row>* .service-content::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: rgba(var(--border-color),var(--border-opacity));
+}
+.service-area .row>*:first-child .service-content::after {
+    display: none;
+}
+@media (min-width: 992px) {
+    .service-area .row>* {
+        border-left: 1px solid rgba(var(--border-color),var(--border-opacity));
+    }
+    .service-area .row>*:nth-child(3n + 1) {
+        border-left: none;
+    }
+    .service-area .row>* .service-content {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+    .service-area .row>* .service-content::after {
+        display: none;
+    }
+    .service-area .row>*:first-child .service-content::after {
+        display: none;
+    }
+}
+/************************************* service css end *************************************/
+
+/************************************* product-tab css start *************************************/
+/*====================================
+    product-tab css
+====================================*/
+.product-tab-area ul.nav-tabs {
+    margin-top: -15px;
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+}
+.product-tab-area ul.nav-tabs li {
+    margin-top: 15px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+}
+@media (min-width: 576px) {
+    .product-tab-area ul.nav-tabs {
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    .product-tab-area ul.nav-tabs li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+/* product-tab title css */
+.product-tab-area ul.nav-tabs li a {
+    color: var(--body-font-color);
+    border-bottom: 1px solid transparent;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out;
+}
+.product-tab-area ul.nav-tabs li a:hover {
+    color: var(--dominant-font-color);
+}
+.product-tab-area ul.nav-tabs li a.active {
+    color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+/************************************* product-tab css end *************************************/
+
+/************************************* category-slider css start *************************************/
+/*====================================
+    category-slider swiper css
+====================================*/
+.category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+    width: 100%;
+}
+@media (min-width: 576px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 50%;
+    }
+}
+@media (min-width: 768px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 33.33%;
+    }
+}
+@media (min-width: 992px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 25%;
+    }
+}
+@media (min-width: 1200px) {
+    .category-slider .cat-slider.swiper:not(.swiper-initialized) .swiper-slide:not([style]) {
+        width: 20%;
+    }
+}
+/************************************* category-slider css end *************************************/

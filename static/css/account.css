@@ -1,0 +1,572 @@
+/*=====================================
+    root
+=====================================*/
+:root {
+    --bs-card-ratio: 58%;
+    --bs-card-sm-ratio: 49.02%;
+    --bs-card-md-ratio: 60.61%;
+    --bs-card-lg-ratio: 72%;
+    --bs-card-xl-ratio: 59.51%;
+}
+.jp-card .ratio::before {
+    padding-top: var(--bs-card-ratio);
+}
+@media (min-width: 576px) {
+    .jp-card .ratio::before {
+        padding-top: var(--bs-card-sm-ratio);
+    }
+}
+@media (min-width: 768px) {
+    .jp-card .ratio::before {
+        padding-top: var(--bs-card-md-ratio);
+    }
+}
+@media (min-width: 992px) {
+    .jp-card .ratio::before {
+        padding-top: var(--bs-card-lg-ratio);
+    }
+}
+@media (min-width: 1200px) {
+    .jp-card .ratio::before {
+        padding-top: var(--bs-card-xl-ratio);
+    }
+}
+
+/************************************* login css start *************************************/
+/*====================================
+    customer-account css
+====================================*/
+.customer-account .customer-account-content a {
+    opacity: 0.5;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+.customer-account .customer-account-content a:hover {
+    opacity: 0.8;
+}
+/************************************* login css end *************************************/
+
+/************************************* cart-page css start *************************************/
+/*====================================
+    cart-advance css
+====================================*/
+.cart-advance .cart-summary {
+    position: relative;
+    z-index: 1;
+}
+.cart-advance .cart-summary::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+    background-color: var(--extra-bgcolor);
+    z-index: -1;
+}
+@media (min-width: 576px) {
+    .cart-advance .cart-summary::after {
+        right: 0px;
+        left: 0px;
+    }
+}
+@media (min-width: 992px) {
+    .cart-advance {
+        position: relative;
+        z-index: 1;
+    }
+    .cart-advance::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 50%;
+        background-color: var(--extra-bgcolor);
+        z-index: -1;
+    }
+    .cart-advance .cart-summary::after {
+        display: none;
+    }
+}
+/************************************* cart-page css end *************************************/
+
+/************************************* wishlist-page css start *************************************/
+/*====================================
+    wish-note-cart css
+====================================*/
+.wish-table .wish-table-data .wish-table-info .wish-note-content .wish-textarea textarea[name].focus {
+    border-color: var(--dominant-font-color);
+}
+/************************************* wishlist-page css end *************************************/
+
+/************************************* invoice css start *************************************/
+/*====================================
+    invoice css
+====================================*/
+.invoice .invoice-table {
+    overflow-x: hidden;
+}
+.invoice .invoice-table>* {
+    overflow-x: auto;
+    scrollbar-width: thin;
+    -webkit-scrollbar-width: thin;
+}
+.invoice .invoice-table>*::-webkit-scrollbar-track {
+    background-color: #eeeeee;
+}
+.invoice .invoice-table>*::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+}
+.invoice .invoice-table>*::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dominant-font-color);
+}
+@media (min-width: 1200px) {
+    .invoice .invoice-table>* {
+        -webkit-scrollbar-width: unset;
+        scrollbar-width: unset;
+        max-width: unset;
+        overflow-x: unset;
+    }
+}
+
+/*====================================
+    invoice-table-block-row css
+====================================*/
+.invoice .invoice-table .invoice-table-block .invoice-table-block-row {
+    width: calc(100% + 33.33%);
+}
+@media (min-width: 425px) {
+    .invoice .invoice-table .invoice-table-block .invoice-table-block-row {
+        width: calc(100% + 0%);
+    }
+}
+
+/*====================================
+    invoice-print css
+====================================*/
+@media print {
+    body {
+        height: 100%;
+        padding-top: 0px!important;
+    }
+    header, .breadcrumb, footer, a#top, .bottom-menu {
+        display: none!important;
+    }
+    .container, .plr-15, .plr-sm-30, .plr-xl-50 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .section-ptb {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .box-shadow {
+        box-shadow: none;
+    }
+    .invoice .invoice-button {
+        display: none;
+    }
+}
+/************************************* invoice css end *************************************/
+
+/************************************* checkout css start *************************************/
+/*====================================
+    checkout orderview css
+====================================*/
+.checkout-summary .checkout-orderview h6 span::before {
+    content: "(";
+}
+.checkout-summary .checkout-orderview h6 span::after {
+    content: ")";
+}
+
+/* checkout item-img css */
+.checkout-summary .checkout-orderview .checkitem-content .checkitem-img span.checkitem-qty {
+    top: -10px;
+    right: -10px;
+    height: 20px;
+    width: 20px;
+}
+
+/*====================================
+    checkout method css
+====================================*/
+.check-method .check-method-option .check-method-content .check-method-radio span a.pickup-availability {
+    border-bottom: 1px solid;
+}
+
+/* checkout-method btn css */
+.apple-btn, .google-btn, .bank-btn {
+    color: var(--extra-font-color);
+    background-color: #000000;    
+    border: 2px solid #000000;
+}
+.paypal-btn {
+    color: #003087;
+    background-color: #ffc439;
+    border: 2px solid #ffc439;
+}
+.apple-btn, .google-btn, .bank-btn, .paypal-btn {
+    gap: 5px;
+    -webkit-transition: background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+    transition: background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+}
+.apple-btn:hover, .google-btn:hover, .bank-btn:hover {
+    background-color: #3c4043;
+    border-color: #3c4043;
+}
+.paypal-btn:hover {
+    background-color: #f1a900;
+    border-color: #f1a900;
+}
+
+/*====================================
+    checkout-tab css
+====================================*/
+.checktab-overview .checkout-tab {
+    position: relative;
+    z-index: 1;
+}
+.checktab-overview .checkout-tab::before {
+    content: "";
+    position: absolute;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background-color: rgba(var(--border-color),var(--border-opacity));
+    z-index: -1;
+}
+
+/* checkout-tab ul,li css */
+.checktab-overview .checkout-tab ul.checktab-ul {
+    counter-reset: num;
+}
+.checktab-overview .checkout-tab ul.checktab-ul li.checktab-li .checktab-num::before {
+    counter-increment: num;
+    content: counter(num);
+    color: var(--body-font-color);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--extra-bgcolor);
+    font-weight: var(--heading-font-weight);
+    border: 1px solid rgba(var(--border-color),var(--border-opacity));
+    border-radius: 50%;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+.checktab-overview .checkout-tab ul.checktab-ul li.checktab-li.active .checktab-num::before {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+.checktab-overview .checkout-tab ul.checktab-ul li.checktab-li.done .checktab-num::before {
+    content: "\eb7a";
+    font-family: 'remixicon'!important;
+    color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+.checktab-overview .checkout-tab ul.checktab-ul li.checktab-li .checktab-num span {
+    bottom: -30px;
+}
+.checktab-overview .checkout-tab ul.checktab-ul li.checktab-li.active .checktab-num span,
+.checktab-overview .checkout-tab ul.checktab-ul li.checktab-li.done .checktab-num span {
+    color: var(--dominant-font-color);
+}
+
+/* checkout-tab progress css */
+.checktab-overview .checktab-progress {
+    width: 0;
+    height: 2px;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+/*====================================
+    pickup-availability-modal css
+====================================*/
+@media (min-width: 768px) {
+    .pickup-availability-modal .modal-dialog {
+        max-width: 750px;
+    }
+}
+
+/* pickup-availability-warehouse css */
+.pickup-availability-modal .pickup-availability-modal-content .pickup-availability-warehouse .pickup-warehouse-detail .pickup-warehouse-location a span {
+    border-bottom: 1px solid;
+}
+.pickup-availability-modal .pickup-availability-modal-content .pickup-availability-warehouse .pickup-warehouse-detail .pickup-warehouse-available {
+    position: relative;
+    z-index: 1;
+}
+.pickup-availability-modal .pickup-availability-modal-content .pickup-availability-warehouse .pickup-warehouse-detail .pickup-warehouse-available::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--dominant-font-color);
+    opacity: 0.1;
+    z-index: -1;
+}
+/************************************* checkout css end *************************************/
+
+/************************************* account-page css start *************************************/
+/*====================================
+    account-page author css
+====================================*/
+.account-page .ap-info .ap-profile a:nth-child(even) {
+    background-color: var(--extra-bgcolor);
+}
+.account-page .ap-info .ap-profile a span.ap-count {
+    width: 20px;
+    height: 20px;
+}
+/************************************* account-page css end *************************************/
+
+/************************************* empty css start *************************************/
+/*====================================
+    empty-info css
+====================================*/
+.empty-info img {
+    -webkit-filter: grayscale(1) opacity(0.3);
+    filter: grayscale(1) opacity(0.3);
+}
+/************************************* empty css end *************************************/
+
+/************************************* track-page css start *************************************/
+/*====================================
+    track-record css
+====================================*/
+ul.track-ul li.track-li {
+    padding: 0px 0px 30px;
+    position: relative;
+    z-index: 1;
+}
+ul.track-ul li.track-li:last-child {
+    padding: 0px;
+}
+ul.track-ul li.track-li::after {
+    content: "";
+    position: absolute;
+    top: 64px;
+    left: 30px;
+    width: 1px;
+    height: calc(100% - 64px);
+    background-color: rgba(var(--border-color),var(--border-opacity));
+    z-index: -1;
+}
+ul.track-ul li.track-li:last-child::after {
+    display: none;
+}
+ul.track-ul li.track-li.active::after {
+    background-color: var(--dominant-font-color);
+}
+ul.track-ul li.track-li .track-icon-text span.track-icon {
+    background-color: var(--extra-bgcolor);
+    border: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+ul.track-ul li.track-li.active .track-icon-text span.track-icon {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+ul.track-ul li.track-li.active-next .track-icon-text span.track-icon {
+    color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+/************************************* track-page css end *************************************/
+
+/************************************* ticket-create-edit css start *************************************/
+/*====================================
+    ckeditor css
+====================================*/
+.editor-creator .ck.ck-toolbar,
+.editor-creator .ck.ck-dropdown__panel {
+    background-color: var(--extra-bgcolor);
+}
+.editor-creator .ck.ck-toolbar,
+.editor-creator .ck.ck-dropdown__panel,
+.editor-creator .ck.ck-editor__main>.ck-editor__editable:not(.ck-focused) {
+    border-color: rgba(var(--border-color),var(--border-opacity));
+}
+.editor-creator .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+.editor-creator .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-dropdown__panel,
+.editor-creator .ck.ck-dropdown__panel.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list,
+.editor-creator .ck.ck-dropdown .ck-dropdown__panel .ck-list.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:first-child .ck-button,
+.editor-creator .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:first-child .ck-button.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:last-child .ck-button,
+.editor-creator .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:last-child .ck-button.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-button,
+.editor-creator .ck-rounded-corners a.ck.ck-button,
+.editor-creator .ck.ck-button.ck-rounded-corners,
+.editor-creator a.ck.ck-button.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-editor__main>.ck-editor__editable,
+.editor-creator .ck.ck-editor__main>.ck-editor__editable.ck-rounded-corners {
+    border-radius: var(--border-radius);
+}
+.editor-creator .ck-rounded-corners .ck.ck-editor__top .ck-sticky-panel .ck-toolbar,
+.editor-creator .ck.ck-editor__top .ck-sticky-panel .ck-toolbar.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:first-child .ck-button,
+.editor-creator .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:first-child .ck-button.ck-rounded-corners {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.editor-creator .ck.ck-dropdown__panel.ck-dropdown__panel_se,
+.editor-creator .ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list,
+.editor-creator .ck.ck-dropdown .ck-dropdown__panel .ck-list.ck-rounded-corners,
+.editor-creator .ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:first-child .ck-button,
+.editor-creator .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:first-child .ck-button.ck-rounded-corners {
+    border-top-left-radius: 0;
+}
+.editor-creator .ck-rounded-corners .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:last-child .ck-button,
+.editor-creator .ck.ck-dropdown .ck-dropdown__panel .ck-list .ck-list__item:last-child .ck-button.ck-rounded-corners {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.editor-creator .ck.ck-toolbar .ck.ck-toolbar__separator {
+    background: rgba(var(--border-color),var(--border-opacity));
+}
+.editor-creator .ck.ck-dropdown__panel,
+.editor-creator .ck.ck-editor__editable:not(.ck-editor__nested-editable).ck-focused {
+    box-shadow: none;
+}
+.editor-creator .ck.ck-editor__editable_inline {
+    height: 300px;
+    padding: 0px 15px;
+}
+.editor-creator .ck.ck-editor__main p {
+    margin-top: 10px;
+}
+.editor-creator .ck.ck-editor__main ul {
+    list-style: unset;
+    margin-top: 10px;
+    padding-left: 16px;
+}
+/************************************* ticket-create-edit css end *************************************/
+
+/************************************* ticket-page css start *************************************/
+/*====================================
+    ticket-header css
+====================================*/
+.ticket-content .ticket-header {
+    position: relative;
+}
+.ticket-content .ticket-header::before,
+.ticket-content .ticket-header::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--body-bgcolor);
+    z-index: 1;
+    border-radius: 100%;
+}
+.ticket-content .ticket-header::before {
+    left: -15px;
+}
+.ticket-content .ticket-header::after {
+    right: -15px;
+}
+
+/*====================================
+    ticket-body css
+====================================*/
+.ticket-content .ticket-body {
+    position: relative;
+}
+.ticket-content .ticket-body::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-image: linear-gradient(90deg, rgba(var(--border-color),var(--border-opacity)), rgba(var(--border-color),var(--border-opacity)) 75%, transparent 75%, transparent 100%);
+    background-size: 16px 1px;
+}
+/************************************* ticket-page css end *************************************/
+
+/************************************* ticket-info page css start *************************************/
+/*====================================
+    ticket-view css
+====================================*/
+.ti-view .ti-view-info .ti-image ul.ti-img-ul li.ti-img-li .ti-ss button {
+    top: -4px;
+    right: -4px;
+}
+.ti-view .ti-view-info .ti-point ul {
+    list-style-type: disc;
+    padding-left: 17px;
+}
+.ti-view .ti-view-info .ti-point ul li {
+    margin-top: 5px;
+}
+.ti-view .ti-view-info .ti-point ul li:first-child {
+    margin-top: 0px;
+}
+.ti-view .ti-view-info .ti-point ul li::marker {
+    color: var(--heading-font-color);
+}
+
+/*====================================
+    ticket-chat css
+====================================*/
+.ti-reply-info .ti-chat .ti-chat-col .ti-chat-reply .ti-content-info .ti-content ul {
+    list-style-type: disc;
+    padding-left: 17px;
+}
+.ti-reply-info .ti-chat .ti-chat-col .ti-chat-reply .ti-content-info .ti-content ul li {
+    margin-top: 5px;
+}
+.ti-reply-info .ti-chat .ti-chat-col .ti-chat-reply .ti-content-info .ti-content ul li:first-child {
+    margin-top: 0px;
+}
+.ti-reply-info .ti-chat .ti-chat-col .ti-chat-reply .ti-content-info .ti-content ul li::marker {
+    color: var(--heading-font-color);
+}
+/************************************* ticket-info page css end *************************************/
+
+/************************************* extra css start *************************************/
+/*====================================
+    st-field-btn css
+====================================*/
+button.st-field-btn span.st-field-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/*====================================
+    st-label css
+====================================*/
+.st-small-label {
+    color: var(--extra-font-color);
+    font-size: 10px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+    border-radius: var(--border-radius);
+    line-height: 1;
+}
+.st-big-label {
+    color: var(--extra-font-color);
+    min-width: 75px;
+    padding: 3px 5px;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: var(--border-radius);
+    line-height: 1.3;
+}
+/************************************* extra css end *************************************/

@@ -1,0 +1,85 @@
+/************************************* blog-sidebar css start *************************************/
+/*====================================
+    blog-post-sidebar css
+====================================*/
+.blog-sidebar-wrap .blog-post-sidebar {
+    padding-top: 30px;
+    margin-top: 30px;
+    border-top: 1px solid rgba(var(--border-color),var(--border-opacity));
+}
+.blog-sidebar-wrap .blog-post-sidebar:first-child {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+/*====================================
+    blog-tag css
+====================================*/
+ul.tag-ul li.tag-li a {
+    -webkit-transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out,background-color 0.5s ease-in-out,border-color 0.5s ease-in-out;
+}
+ul.tag-ul li.tag-li a:hover {
+    color: var(--extra-font-color);
+    background-color: var(--dominant-font-color);
+    border-color: var(--dominant-font-color);
+}
+ul.tag-ul li.tag-li a::before {
+    content: "#";
+}
+/************************************* blog-sidebar css end *************************************/
+
+/************************************* blog css start *************************************/
+/*====================================
+    blog-post-content css
+====================================*/
+.blog-post .blog-post-content span.blog-tag-date span {
+    border-right: 1px solid var(--heading-font-color);
+}
+/************************************* blog css end *************************************/
+
+/************************************* article css start *************************************/
+/*====================================
+    article-comments css
+====================================*/
+.article-comments form .article-cmt .article-cmt-wrap .article-cmt-wrapper .article-cmt-content .article-cmt-red ul li .article-edit-reply button {
+    position: relative;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.article-comments form .article-cmt .article-cmt-wrap .article-cmt-wrapper .article-cmt-content .article-cmt-red ul li .article-edit-reply button:first-child {
+    margin: 0px;
+    padding: 0px;
+}
+.article-comments form .article-cmt .article-cmt-wrap .article-cmt-wrapper .article-cmt-content .article-cmt-red ul li .article-edit-reply button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 1px;
+    background-color: rgba(var(--border-color,var(--border-opacity)));
+}
+.article-comments form .article-cmt .article-cmt-wrap .article-cmt-wrapper .article-cmt-content .article-cmt-red ul li .article-edit-reply button:first-child::before {
+    display: none;
+}
+/************************************* article css end *************************************/
+
+/************************************* search-blog css start *************************************/
+/*====================================
+    search-blog css
+====================================*/
+.search-page .search-bar-page form.search-form .section-title h2 span::before {
+    content: '"';
+}
+.search-page .search-bar-page form.search-form .section-title h2 span::after {
+    content: '"';
+}
+
+/* search-blog result css */
+.blog-post-sidebar .search-bar .search-results ul.search-ul,
+.search-page .search-bar .search-results ul.search-ul {
+    max-height: 153px;
+}
+/************************************* search-blog css end *************************************/
