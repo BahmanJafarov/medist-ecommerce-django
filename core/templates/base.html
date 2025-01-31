@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        {% block title %}
+            <title>Medist - The medical equipment eCommerce html template</title>
+        {% endblock %}
+        <meta name="description" content="A best clean, modern, stylish, creative, responsive theme for different eCommerce business or industries.">
+        <meta name="keywords" content="medical theme, vegetables, medicine store, eCommerce html template, responsive, multipurpose, mask, sanitizer, eCommerce store, health, tables, dental, healthcare, pharmacy, herbal, medicine shop">
+        <meta name="author" content="spacingtech_webify">
+        <!-- favicon -->
+        <link rel="shortcut icon" type="image/favicon" href="/static/image/index/favicon.png">
+        <!-- plugin css -->
+        <link rel="stylesheet" type="text/css" href="/static/css/plugin.css">
+        <!-- theme css -->
+        <link rel="stylesheet" type="text/css" href="/static/css/theme.css">
+        <!-- collection css -->
+        <link rel="stylesheet" type="text/css" href="/static/css/collection.css">
+        <!-- blog css -->
+        <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+        <!-- style css -->
+        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    </head>
+<body>
+    
+    <!-- header start -->
+    {% block header %}
+    {% include 'includes/header.html' %}
+    {% endblock %}
+    <!-- header end-->
+
+    {% block newsletter %} {% endblock %}
+
+    {% block content %} {% endblock %}
+
+    <!-- footer start-->
+    {% block footer %}
+    {% include 'includes/footer.html' %}
+    {% endblock %}
+    <!-- footer end -->
+
+    <!-- plugin js -->
+    <script src="/static/js/plugin.js"></script>
+
+    <!-- theme js -->
+    <script src="/static/js/theme.js"></script>
+    
+</body>
+</html>

@@ -1,110 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <title>Medist - The medical equipment eCommerce html template</title>
-        <meta name="description" content="A best clean, modern, stylish, creative, responsive theme for different eCommerce business or industries.">
-        <meta name="keywords" content="medical theme, vegetables, medicine store, eCommerce html template, responsive, multipurpose, mask, sanitizer, eCommerce store, health, tables, dental, healthcare, pharmacy, herbal, medicine shop">
-        <meta name="author" content="spacingtech_webify">
-        <!-- favicon -->
-        <link rel="shortcut icon" type="image/favicon" href="assets/image/index/favicon.png">
-        <!-- plugin css -->
-        <link rel="stylesheet" type="text/css" href="assets/css/plugin.css">
-        <!-- theme css -->
-        <link rel="stylesheet" type="text/css" href="assets/css/theme.css">
-        <!-- other css -->
-        <link rel="stylesheet" type="text/css" href="assets/css/other.css">
-    </head>
-    <body>
-        <!-- preloader start -->
-        <div class="preloader position-fixed top-0 start-0 w-100 h-100 body-bg z-index-5">
-            <div class="loader-img position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-                <img src="assets/image/index/logo.png" class="width-88 width-xl-144 img-fluid" alt="logo">
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Coming soon</title>
+{% endblock %}
+
+{% block header %} {% endblock %}
+
+{% block content %}
+
+    <!-- main start -->
+    <main id="main">
+        <section class="coming-soon-overlay position-relative section-ptb d-flex align-items-center fullscreen">
+            <!-- coming-bgimg start -->
+            <div class="coming-bgimg position-absolute top-0 end-0 bottom-0 start-0 z-n1">
+                <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="/static/image/other/coming-soon1.jpg"></div>
+                <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="/static/image/other/coming-soon2.jpg"></div>
+                <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="/static/image/other/coming-soon3.jpg"></div>
+                <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="/static/image/other/coming-soon4.jpg"></div>
+                <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="/static/image/other/coming-soon5.jpg"></div>
             </div>
-        </div>
-        <!-- preloader end -->
-        <main id="main">
-            <section class="coming-soon-overlay position-relative section-ptb d-flex align-items-center fullscreen">
-                <!-- coming-bgimg start -->
-                <div class="coming-bgimg position-absolute top-0 end-0 bottom-0 start-0 z-n1">
-                    <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="assets/image/other/coming-soon1.jpg"></div>
-                    <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="assets/image/other/coming-soon2.jpg"></div>
-                    <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="assets/image/other/coming-soon3.jpg"></div>
-                    <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="assets/image/other/coming-soon4.jpg"></div>
-                    <div class="position-absolute top-0 end-0 bottom-0 start-0 bg-img" data-bgimg="assets/image/other/coming-soon5.jpg"></div>
-                </div>
-                <!-- coming-bgimg end -->
-                <div class="container">
-                    <div class="col-12 col-md-10 col-lg-7 col-xl-6 col-xxl-5 mx-md-auto text-center">
-                        <!-- comming-soon start -->
-                        <div class="coming-soon">
-                            <div class="section-capture" data-animate="animate__fadeIn">
-                                <h2 class="extra-color font-32 font-sm-56 font-xl-72 lh-1">Coming soon</h2>
-                            </div>
-                            <div class="coming-timer countdown" data-time="2027/12/31 00:00:00">
-                                <ul class="ul-mt10 justify-content-between">
-                                    <li class="col-3 extra-color" data-animate="animate__fadeIn">
-                                        <span class="d-block day font-24 font-sm-40 heading-weight lh-1"></span>
-                                        <span class="d-block mst-6 mst-sm-9 text-uppercase">Days</span>
-                                    </li>
-                                    <li class="col-3 extra-color" data-animate="animate__fadeIn">
-                                        <span class="d-block hrs font-24 font-sm-40 heading-weight lh-1"></span>
-                                        <span class="d-block mst-6 mst-sm-9 text-uppercase">Hrs</span>
-                                    </li>
-                                    <li class="col-3 extra-color" data-animate="animate__fadeIn">
-                                        <span class="d-block min font-24 font-sm-40 heading-weight lh-1"></span>
-                                        <span class="d-block mst-6 mst-sm-9 text-uppercase">Min</span>
-                                    </li>
-                                    <li class="col-3 extra-color" data-animate="animate__fadeIn">
-                                        <span class="d-block sec font-24 font-sm-40 heading-weight lh-1"></span>
-                                        <span class="d-block mst-6 mst-sm-9 text-uppercase">Sec</span>
-                                    </li>
-                                </ul>
-                            </div>
+            <!-- coming-bgimg end -->
+            <div class="container">
+                <div class="col-12 col-md-10 col-lg-7 col-xl-6 col-xxl-5 mx-md-auto text-center">
+                    <!-- comming-soon start -->
+                    <div class="coming-soon">
+                        <div class="section-capture" data-animate="animate__fadeIn">
+                            <h2 class="extra-color font-32 font-sm-56 font-xl-72 lh-1">Coming soon</h2>
                         </div>
-                        <!-- comming-soon end -->
-                        <!-- comming-content end -->
-                        <div class="coming-content mst-30 mst-xl-50">
-                            <div class="coming-news">
-                                <p class="extra-color font-16 meb-13" data-animate="animate__fadeIn">Be the first, To know when we launch. Promotions, new products and sales. Directly to your inbox.</p>
-                                <form method="post" class="coming-form" data-animate="animate__fadeIn">
-                                    <div class="coming-wrap">
-                                        <input type="email" id="coming-email" name="coming-email" class="w-100 text-center" placeholder="Enter your email" required>
-                                        <button type="submit" class="w-100 btn-style secondary-btn mst-15">Notify me</button>
-                                    </div>
-                                </form>
-                            </div>
-                            <div class="coming-social mst-30">
-                                <ul class="social-ul justify-content-center ul-mt30">
-                                    <li class="social-li" data-animate="animate__fadeIn">
-                                        <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-facebook-fill d-block lh-1"></i></a>
-                                    </li>
-                                    <li class="social-li" data-animate="animate__fadeIn">
-                                        <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-instagram-fill d-block lh-1"></i></a>
-                                    </li>
-                                    <li class="social-li" data-animate="animate__fadeIn">
-                                        <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-pinterest-fill d-block lh-1"></i></a>
-                                    </li>
-                                    <li class="social-li" data-animate="animate__fadeIn">
-                                        <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-twitter-fill d-block lh-1"></i></a>
-                                    </li>
-                                    <li class="social-li" data-animate="animate__fadeIn">
-                                        <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-youtube-fill d-block lh-1"></i></a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div class="coming-timer countdown" data-time="2027/12/31 00:00:00">
+                            <ul class="ul-mt10 justify-content-between">
+                                <li class="col-3 extra-color" data-animate="animate__fadeIn">
+                                    <span class="d-block day font-24 font-sm-40 heading-weight lh-1"></span>
+                                    <span class="d-block mst-6 mst-sm-9 text-uppercase">Days</span>
+                                </li>
+                                <li class="col-3 extra-color" data-animate="animate__fadeIn">
+                                    <span class="d-block hrs font-24 font-sm-40 heading-weight lh-1"></span>
+                                    <span class="d-block mst-6 mst-sm-9 text-uppercase">Hrs</span>
+                                </li>
+                                <li class="col-3 extra-color" data-animate="animate__fadeIn">
+                                    <span class="d-block min font-24 font-sm-40 heading-weight lh-1"></span>
+                                    <span class="d-block mst-6 mst-sm-9 text-uppercase">Min</span>
+                                </li>
+                                <li class="col-3 extra-color" data-animate="animate__fadeIn">
+                                    <span class="d-block sec font-24 font-sm-40 heading-weight lh-1"></span>
+                                    <span class="d-block mst-6 mst-sm-9 text-uppercase">Sec</span>
+                                </li>
+                            </ul>
                         </div>
-                        <!-- comming-conten end -->
                     </div>
+                    <!-- comming-soon end -->
+                    <!-- comming-content end -->
+                    <div class="coming-content mst-30 mst-xl-50">
+                        <div class="coming-news">
+                            <p class="extra-color font-16 meb-13" data-animate="animate__fadeIn">Be the first, To know when we launch. Promotions, new products and sales. Directly to your inbox.</p>
+                            <form method="post" class="coming-form" data-animate="animate__fadeIn">
+                                <div class="coming-wrap">
+                                    <input type="email" id="coming-email" name="coming-email" class="w-100 text-center" placeholder="Enter your email" required>
+                                    <button type="submit" class="w-100 btn-style secondary-btn mst-15">Notify me</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="coming-social mst-30">
+                            <ul class="social-ul justify-content-center ul-mt30">
+                                <li class="social-li" data-animate="animate__fadeIn">
+                                    <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-facebook-fill d-block lh-1"></i></a>
+                                </li>
+                                <li class="social-li" data-animate="animate__fadeIn">
+                                    <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-instagram-fill d-block lh-1"></i></a>
+                                </li>
+                                <li class="social-li" data-animate="animate__fadeIn">
+                                    <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-pinterest-fill d-block lh-1"></i></a>
+                                </li>
+                                <li class="social-li" data-animate="animate__fadeIn">
+                                    <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-twitter-fill d-block lh-1"></i></a>
+                                </li>
+                                <li class="social-li" data-animate="animate__fadeIn">
+                                    <a href="javascript:void(0)" class="d-block extra-color icon-16" aria-label="Social link"><i class="ri-youtube-fill d-block lh-1"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- comming-conten end -->
                 </div>
-            </section>
-        </main>
-        <!-- main end -->
-        <!-- plugin js -->
-        <script src="assets/js/plugin.js"></script>
-        <!-- theme js -->
-        <script src="assets/js/theme.js"></script>
-    </body>
-</html>
+            </div>
+        </section>
+    </main>
+    <!-- main end -->    
+         
+{% endblock %}
+
+{% block footer %} {% endblock %}

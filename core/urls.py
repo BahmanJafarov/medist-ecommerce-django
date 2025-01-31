@@ -19,5 +19,21 @@ from core.views import *
 
 
 urlpatterns = [
-    path('404/', error_404)
+    path('', home, name = 'home'),
+    path('404/', error_404, name = 'error_404'),
+    path('about-us/', about_us, name = 'about-us'),
+    path('cancellation/', cancellation, name = 'cancellation'),
+    path('coming-soon/', coming_soon, name = 'coming-soon'),
+    path('contact-us/', contact_us, name = 'contact-us'),
+    path('cookie/', cookie, name = 'cookie'),
+    path('faqs/', faqs, name = 'faqs'),
+    path('legal/', legal, name = 'legal'),
+    path('payment-policy/', payment_policy, name = 'payment-policy'),
+    path('privacy-policy/', privacy_policy, name = 'privacy-policy'),
+    path('return-policy/', return_policy, name = 'return-policy'),
+    path('search-empty/', search_empty, name = 'search-empty'),
+    path('shipping-policy/', shipping_policy, name = 'shipping-policy'),
+    path('sitemap/', sitemap, name = 'sitemap'),
+    path('store/', store, name = 'store'),
+    path('terms-conditions/', terms_conditions, name = 'terms-conditions')
 ]
