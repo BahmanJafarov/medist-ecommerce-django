@@ -1,0 +1,31 @@
+{% block delete-modal %}
+
+<!-- delete-modal start -->
+<div class="delete-modal modal fade" id="deletemodal" data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content body-bg border-0 br-hidden">
+            <div class="modal-body ptb-30 plr-15 plr-sm-30">
+                <form method="post" action="javascript:void(0)">
+                    <div class="delete-modal-header d-flex align-items-center justify-content-between meb-30">
+                        <h6 class="font-18">Are you sure you want to delete account?</h6>
+                        <button type="button" class="body-secondary-color icon-16" data-bs-dismiss="modal" aria-label="Close"><i class="ri-close-large-line d-block lh-1"></i></button>
+                    </div>
+                    <div class="delete-modal-text">Orders history and all data associated with your account will be removed.</div>
+                    <div class="delete-modal-button mst-30">
+                        <div class="row btn-row">
+                            <div class="col-12 col-sm-6">
+                                <a href="/" class="w-100 btn-style2 quaternary-btn">Delete</a>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <button type="submit" class="w-100 btn-style2 secondary-btn" data-bs-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- delete-modal end -->
+
+{% endblock %}
