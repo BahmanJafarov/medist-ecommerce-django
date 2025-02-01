@@ -1,83 +1,96 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Faqs</title>
+<title>Faqs</title>
 {% endblock %}
 
 {% block content %}
 
-    <!-- main start -->
-    <main id="main">
-        <!-- faqs start -->
-        <section class="faqs section-pt">
-            <div class="container">
-                <div class="section-capture text-center" data-animate="animate__fadeIn">
-                    <div class="section-title">
-                        <h2 class="section-heading">Frequently asked questions</h2>
-                    </div>
+<!-- main start -->
+<main id="main">
+    <!-- faqs start -->
+    <section class="faqs section-pt">
+        <div class="container">
+            <div class="section-capture text-center" data-animate="animate__fadeIn">
+                <div class="section-title">
+                    <h2 class="section-heading">Frequently asked questions</h2>
                 </div>
-                <div class="row row-mtm align-items-lg-center">
-                    <div class="col-12 col-lg-6" data-animate="animate__fadeIn">
-                        <div class="faqs-banner">
-                            <div class="banner-hover">
-                                <span class="d-block banner-img br-hidden">
-                                    <img src="/static/image/other/faqs.jpg" class="w-100 img-fluid" alt="faqs">
-                                </span>
-                            </div>
+            </div>
+            <div class="row row-mtm align-items-lg-center">
+                <div class="col-12 col-lg-6" data-animate="animate__fadeIn">
+                    <div class="faqs-banner">
+                        <div class="banner-hover">
+                            <span class="d-block banner-img br-hidden">
+                                <img src="{% static 'image/other/faqs.jpg' %}" class="w-100 img-fluid" alt="faqs">
+                            </span>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-6">
-                        <div class="other-tabs psl-xl-20" id="faqs-collapse">
-                            <div class="other-tab" data-animate="animate__fadeIn">
-                                <a href="#faqs-collapse1" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="true">
-                                    <span class="width-calc-16 font-18 heading-weight">How do i track my order?</span>
-                                    <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                                </a>
-                                <div class="collapse show" id="faqs-collapse1" data-bs-parent="#faqs-collapse">
-                                    <div class="pst-6 pst-sm-16">
-                                        <div class="p-mtm20">
-                                            <p class="p-bullets">You can track your order by logging into your account and visiting the "orders" section.</p>
-                                        </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="other-tabs psl-xl-20" id="faqs-collapse">
+                        <div class="other-tab" data-animate="animate__fadeIn">
+                            <a href="#faqs-collapse1" class="dominant-link d-flex flex-wrap align-items-baseline"
+                                data-bs-toggle="collapse" aria-expanded="true">
+                                <span class="width-calc-16 font-18 heading-weight">How do i track my order?</span>
+                                <span class="other-tab-icon width-16 icon-16"><i
+                                        class="ri-add-line d-block lh-1"></i></span>
+                            </a>
+                            <div class="collapse show" id="faqs-collapse1" data-bs-parent="#faqs-collapse">
+                                <div class="pst-6 pst-sm-16">
+                                    <div class="p-mtm20">
+                                        <p class="p-bullets">You can track your order by logging into your account and
+                                            visiting the "orders" section.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="other-tab" data-animate="animate__fadeIn">
-                                <a href="#faqs-collapse2" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="width-calc-16 font-18 heading-weight">What is your return policy?</span>
-                                    <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                                </a>
-                                <div class="collapse" id="faqs-collapse2" data-bs-parent="#faqs-collapse">
-                                    <div class="pst-6 pst-sm-16">
-                                        <div class="p-mtm20">
-                                            <p class="p-bullets">We accept returns within 30 days of purchase.</p>
-                                            <p class="p-bullets">Items must be unused and in original packaging.</p>
-                                        </div>
+                        </div>
+                        <div class="other-tab" data-animate="animate__fadeIn">
+                            <a href="#faqs-collapse2" class="dominant-link d-flex flex-wrap align-items-baseline"
+                                data-bs-toggle="collapse" aria-expanded="false">
+                                <span class="width-calc-16 font-18 heading-weight">What is your return policy?</span>
+                                <span class="other-tab-icon width-16 icon-16"><i
+                                        class="ri-add-line d-block lh-1"></i></span>
+                            </a>
+                            <div class="collapse" id="faqs-collapse2" data-bs-parent="#faqs-collapse">
+                                <div class="pst-6 pst-sm-16">
+                                    <div class="p-mtm20">
+                                        <p class="p-bullets">We accept returns within 30 days of purchase.</p>
+                                        <p class="p-bullets">Items must be unused and in original packaging.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="other-tab" data-animate="animate__fadeIn">
-                                <a href="#faqs-collapse3" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="width-calc-16 font-18 heading-weight">Do you offer international shipping?</span>
-                                    <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                                </a>
-                                <div class="collapse" id="faqs-collapse3" data-bs-parent="#faqs-collapse">
-                                    <div class="pst-6 pst-sm-16">
-                                        <div class="p-mtm20">
-                                            <p class="p-bullets">Yes, we ship to over 100 countries worldwide. Shipping costs vary by location.</p>
-                                        </div>
+                        </div>
+                        <div class="other-tab" data-animate="animate__fadeIn">
+                            <a href="#faqs-collapse3" class="dominant-link d-flex flex-wrap align-items-baseline"
+                                data-bs-toggle="collapse" aria-expanded="false">
+                                <span class="width-calc-16 font-18 heading-weight">Do you offer international
+                                    shipping?</span>
+                                <span class="other-tab-icon width-16 icon-16"><i
+                                        class="ri-add-line d-block lh-1"></i></span>
+                            </a>
+                            <div class="collapse" id="faqs-collapse3" data-bs-parent="#faqs-collapse">
+                                <div class="pst-6 pst-sm-16">
+                                    <div class="p-mtm20">
+                                        <p class="p-bullets">Yes, we ship to over 100 countries worldwide. Shipping
+                                            costs vary by location.</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="other-tab" data-animate="animate__fadeIn">
-                                <a href="#faqs-collapse4" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                    <span class="width-calc-16 font-18 heading-weight">Can i change my order after placing it?</span>
-                                    <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                                </a>
-                                <div class="collapse" id="faqs-collapse4" data-bs-parent="#faqs-collapse">
-                                    <div class="pst-6 pst-sm-16">
-                                        <div class="p-mtm20">
-                                            <p class="p-bullets">Orders can be modified within 1 hour of placement. Please contact our support team.</p>
-                                        </div>
+                        </div>
+                        <div class="other-tab" data-animate="animate__fadeIn">
+                            <a href="#faqs-collapse4" class="dominant-link d-flex flex-wrap align-items-baseline"
+                                data-bs-toggle="collapse" aria-expanded="false">
+                                <span class="width-calc-16 font-18 heading-weight">Can i change my order after placing
+                                    it?</span>
+                                <span class="other-tab-icon width-16 icon-16"><i
+                                        class="ri-add-line d-block lh-1"></i></span>
+                            </a>
+                            <div class="collapse" id="faqs-collapse4" data-bs-parent="#faqs-collapse">
+                                <div class="pst-6 pst-sm-16">
+                                    <div class="p-mtm20">
+                                        <p class="p-bullets">Orders can be modified within 1 hour of placement. Please
+                                            contact our support team.</p>
                                     </div>
                                 </div>
                             </div>
@@ -85,127 +98,167 @@
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- faqs end -->
-        <!-- faqs-service start -->
-        <section class="faqs-service section-pt text-center">
-            <div class="container">
-                <div class="row row-mtm">
-                    <div class="col-12 col-md-6" data-animate="animate__fadeIn">
-                        <div class="col-lg-10 col-xl-9 col-xxl-7 d-flex flex-column align-items-center mx-lg-auto faqs-service-content">
-                            <span class="dominant-color icon-24 width-88 height-88 d-flex align-items-center justify-content-center extra-bg meb-23 rounded-circle"><i class="ri-phone-line d-block lh-1"></i></span>
-                            <h6 class="font-18">Call the team</h6>
-                            <p class="mst-6">Get in touch with our support crew anytime for assistance. We're here to help you out.</p>
+        </div>
+    </section>
+    <!-- faqs end -->
+    <!-- faqs-service start -->
+    <section class="faqs-service section-pt text-center">
+        <div class="container">
+            <div class="row row-mtm">
+                <div class="col-12 col-md-6" data-animate="animate__fadeIn">
+                    <div
+                        class="col-lg-10 col-xl-9 col-xxl-7 d-flex flex-column align-items-center mx-lg-auto faqs-service-content">
+                        <span
+                            class="dominant-color icon-24 width-88 height-88 d-flex align-items-center justify-content-center extra-bg meb-23 rounded-circle"><i
+                                class="ri-phone-line d-block lh-1"></i></span>
+                        <h6 class="font-18">Call the team</h6>
+                        <p class="mst-6">Get in touch with our support crew anytime for assistance. We're here to help
+                            you out.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6" data-animate="animate__fadeIn">
+                    <div
+                        class="col-lg-10 col-xl-9 col-xxl-7 d-flex flex-column align-items-center mx-lg-auto faqs-service-content">
+                        <span
+                            class="dominant-color icon-24 width-88 height-88 d-flex align-items-center justify-content-center extra-bg meb-23 rounded-circle"><i
+                                class="ri-user-line d-block lh-1"></i></span>
+                        <h6 class="font-18">Help team crew</h6>
+                        <p class="mst-6">Support squad dedicated to assisting you with any questions or issues you have.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- faqs-service end -->
+    <!-- faqs start -->
+    <section class="faqs section-ptb">
+        <div class="container">
+            <div class="section-capture text-center" data-animate="animate__fadeIn">
+                <div class="section-title">
+                    <h2 class="section-heading">Common queries</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="other-tabs" id="faqs-collapse-group">
+                    <div class="other-tab" data-animate="animate__fadeIn">
+                        <a href="#faqs-collapse-group1" class="dominant-link d-flex flex-wrap align-items-baseline"
+                            data-bs-toggle="collapse" aria-expanded="true">
+                            <span class="width-calc-16 font-18 heading-weight">How do i place an order?</span>
+                            <span class="other-tab-icon width-16 icon-16"><i
+                                    class="ri-add-line d-block lh-1"></i></span>
+                        </a>
+                        <div class="collapse show" id="faqs-collapse-group1" data-bs-parent="#faqs-collapse-group">
+                            <div class="pst-6 pst-sm-16">
+                                <div class="p-mtm20">
+                                    <p class="p-bullets">To place an order, browse our products, select the desired
+                                        item, choose your size and color if applicable, and click "add to cart." Once
+                                        you're ready to purchase, click on the cart icon and proceed to checkout. You'll
+                                        need to enter your shipping and payment details to complete the order.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6" data-animate="animate__fadeIn">
-                        <div class="col-lg-10 col-xl-9 col-xxl-7 d-flex flex-column align-items-center mx-lg-auto faqs-service-content">
-                            <span class="dominant-color icon-24 width-88 height-88 d-flex align-items-center justify-content-center extra-bg meb-23 rounded-circle"><i class="ri-user-line d-block lh-1"></i></span>
-                            <h6 class="font-18">Help team crew</h6>
-                            <p class="mst-6">Support squad dedicated to assisting you with any questions or issues you have.</p>
+                    <div class="other-tab" data-animate="animate__fadeIn">
+                        <a href="#faqs-collapse-group2" class="dominant-link d-flex flex-wrap align-items-baseline"
+                            data-bs-toggle="collapse" aria-expanded="false">
+                            <span class="width-calc-16 font-18 heading-weight">How can i track my order status?</span>
+                            <span class="other-tab-icon width-16 icon-16"><i
+                                    class="ri-add-line d-block lh-1"></i></span>
+                        </a>
+                        <div class="collapse" id="faqs-collapse-group2" data-bs-parent="#faqs-collapse-group">
+                            <div class="pst-6 pst-sm-16">
+                                <div class="p-mtm20">
+                                    <p class="p-bullets">After placing your order, you’ll receive a confirmation email
+                                        with a tracking number once your order has shipped.</p>
+                                    <p class="p-bullets">You can use this number on our "order tracking" page to see the
+                                        status of your delivery.</p>
+                                    <p class="p-bullets">You can also track your order in the "My Account" section if
+                                        you have an account with us.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-tab" data-animate="animate__fadeIn">
+                        <a href="#faqs-collapse-group3" class="dominant-link d-flex flex-wrap align-items-baseline"
+                            data-bs-toggle="collapse" aria-expanded="false">
+                            <span class="width-calc-16 font-18 heading-weight">What are the shipping options
+                                available?</span>
+                            <span class="other-tab-icon width-16 icon-16"><i
+                                    class="ri-add-line d-block lh-1"></i></span>
+                        </a>
+                        <div class="collapse" id="faqs-collapse-group3" data-bs-parent="#faqs-collapse-group">
+                            <div class="pst-6 pst-sm-16">
+                                <div class="p-mtm20">
+                                    <p class="p-bullets">We offer several shipping options, including Standard Shipping
+                                        (5-7 business days), Express Shipping (2-3 business days), and Next Day Delivery
+                                        (1 business day). Shipping costs are calculated at checkout based on your
+                                        location and the selected shipping method.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-tab" data-animate="animate__fadeIn">
+                        <a href="#faqs-collapse-group4" class="dominant-link d-flex flex-wrap align-items-baseline"
+                            data-bs-toggle="collapse" aria-expanded="false">
+                            <span class="width-calc-16 font-18 heading-weight">Can i change or cancel my order?</span>
+                            <span class="other-tab-icon width-16 icon-16"><i
+                                    class="ri-add-line d-block lh-1"></i></span>
+                        </a>
+                        <div class="collapse" id="faqs-collapse-group4" data-bs-parent="#faqs-collapse-group">
+                            <div class="pst-6 pst-sm-16">
+                                <div class="p-mtm20">
+                                    <p class="p-bullets">If you need to change or cancel your order, please contact us
+                                        within 1 hour of placing the order. Once your order has been processed, we may
+                                        not be able to make changes, but we’ll do our best to assist you.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-tab" data-animate="animate__fadeIn">
+                        <a href="#faqs-collapse-group5" class="dominant-link d-flex flex-wrap align-items-baseline"
+                            data-bs-toggle="collapse" aria-expanded="false">
+                            <span class="width-calc-16 font-18 heading-weight">What is your return and exchange
+                                policy?</span>
+                            <span class="other-tab-icon width-16 icon-16"><i
+                                    class="ri-add-line d-block lh-1"></i></span>
+                        </a>
+                        <div class="collapse" id="faqs-collapse-group5" data-bs-parent="#faqs-collapse-group">
+                            <div class="pst-6 pst-sm-16">
+                                <div class="p-mtm20">
+                                    <p class="p-bullets">We accept returns and exchanges within 30 days of the delivery
+                                        date. Items must be unworn, unwashed, and in their original packaging with tags
+                                        attached.</p>
+                                    <p class="p-bullets">To initiate a return, please visit our "returns & exchanges"
+                                        page and follow the instructions.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="other-tab" data-animate="animate__fadeIn">
+                        <a href="#faqs-collapse-group6" class="dominant-link d-flex flex-wrap align-items-baseline"
+                            data-bs-toggle="collapse" aria-expanded="false">
+                            <span class="width-calc-16 font-18 heading-weight">How long does it take to process a
+                                return?</span>
+                            <span class="other-tab-icon width-16 icon-16"><i
+                                    class="ri-add-line d-block lh-1"></i></span>
+                        </a>
+                        <div class="collapse" id="faqs-collapse-group6" data-bs-parent="#faqs-collapse-group">
+                            <div class="pst-6 pst-sm-16">
+                                <div class="p-mtm20">
+                                    <p class="p-bullets">Once we receive your returned item, it typically takes 5-7
+                                        business days to process your return. You will receive a refund to your original
+                                        payment method within 10 business days of processing.</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- faqs-service end -->
-        <!-- faqs start -->
-        <section class="faqs section-ptb">
-            <div class="container">
-                <div class="section-capture text-center" data-animate="animate__fadeIn">
-                    <div class="section-title">
-                        <h2 class="section-heading">Common queries</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="other-tabs" id="faqs-collapse-group">
-                        <div class="other-tab" data-animate="animate__fadeIn">
-                            <a href="#faqs-collapse-group1" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="true">
-                                <span class="width-calc-16 font-18 heading-weight">How do i place an order?</span>
-                                <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                            </a>
-                            <div class="collapse show" id="faqs-collapse-group1" data-bs-parent="#faqs-collapse-group">
-                                <div class="pst-6 pst-sm-16">
-                                    <div class="p-mtm20">
-                                        <p class="p-bullets">To place an order, browse our products, select the desired item, choose your size and color if applicable, and click "add to cart." Once you're ready to purchase, click on the cart icon and proceed to checkout. You'll need to enter your shipping and payment details to complete the order.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="other-tab" data-animate="animate__fadeIn">
-                            <a href="#faqs-collapse-group2" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                <span class="width-calc-16 font-18 heading-weight">How can i track my order status?</span>
-                                <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                            </a>
-                            <div class="collapse" id="faqs-collapse-group2" data-bs-parent="#faqs-collapse-group">
-                                <div class="pst-6 pst-sm-16">
-                                    <div class="p-mtm20">
-                                        <p class="p-bullets">After placing your order, you’ll receive a confirmation email with a tracking number once your order has shipped.</p>
-                                        <p class="p-bullets">You can use this number on our "order tracking" page to see the status of your delivery.</p>
-                                        <p class="p-bullets">You can also track your order in the "My Account" section if you have an account with us.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="other-tab" data-animate="animate__fadeIn">
-                            <a href="#faqs-collapse-group3" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                <span class="width-calc-16 font-18 heading-weight">What are the shipping options available?</span>
-                                <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                            </a>
-                            <div class="collapse" id="faqs-collapse-group3" data-bs-parent="#faqs-collapse-group">
-                                <div class="pst-6 pst-sm-16">
-                                    <div class="p-mtm20">
-                                        <p class="p-bullets">We offer several shipping options, including Standard Shipping (5-7 business days), Express Shipping (2-3 business days), and Next Day Delivery (1 business day). Shipping costs are calculated at checkout based on your location and the selected shipping method.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="other-tab" data-animate="animate__fadeIn">
-                            <a href="#faqs-collapse-group4" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                <span class="width-calc-16 font-18 heading-weight">Can i change or cancel my order?</span>
-                                <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                            </a>
-                            <div class="collapse" id="faqs-collapse-group4" data-bs-parent="#faqs-collapse-group">
-                                <div class="pst-6 pst-sm-16">
-                                    <div class="p-mtm20">
-                                        <p class="p-bullets">If you need to change or cancel your order, please contact us within 1 hour of placing the order. Once your order has been processed, we may not be able to make changes, but we’ll do our best to assist you.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="other-tab" data-animate="animate__fadeIn">
-                            <a href="#faqs-collapse-group5" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                <span class="width-calc-16 font-18 heading-weight">What is your return and exchange policy?</span>
-                                <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                            </a>
-                            <div class="collapse" id="faqs-collapse-group5" data-bs-parent="#faqs-collapse-group">
-                                <div class="pst-6 pst-sm-16">
-                                    <div class="p-mtm20">
-                                        <p class="p-bullets">We accept returns and exchanges within 30 days of the delivery date. Items must be unworn, unwashed, and in their original packaging with tags attached.</p>
-                                        <p class="p-bullets">To initiate a return, please visit our "returns & exchanges" page and follow the instructions.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="other-tab" data-animate="animate__fadeIn">
-                            <a href="#faqs-collapse-group6" class="dominant-link d-flex flex-wrap align-items-baseline" data-bs-toggle="collapse" aria-expanded="false">
-                                <span class="width-calc-16 font-18 heading-weight">How long does it take to process a return?</span>
-                                <span class="other-tab-icon width-16 icon-16"><i class="ri-add-line d-block lh-1"></i></span>
-                            </a>
-                            <div class="collapse" id="faqs-collapse-group6" data-bs-parent="#faqs-collapse-group">
-                                <div class="pst-6 pst-sm-16">
-                                    <div class="p-mtm20">
-                                        <p class="p-bullets">Once we receive your returned item, it typically takes 5-7 business days to process your return. You will receive a refund to your original payment method within 10 business days of processing.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- faqs end -->
-    </main>
-    <!-- main end -->
-         
+        </div>
+    </section>
+    <!-- faqs end -->
+</main>
+<!-- main end -->
+
 {% endblock %}

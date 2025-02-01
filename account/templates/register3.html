@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Register</title>
+<title>Register</title>
 {% endblock %}
 
 {% block content %}
@@ -23,15 +24,21 @@
                             <div class="col-12 col-md-6 field-col" data-animate="animate__fadeIn">
                                 <label for="fname" class="field-label">First name</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="text" id="fname" name="fname" class="w-100 h-auto p-0 bg-transparent border-0" placeholder="First name" autocomplete="given-name">
-                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i class="ri-user-line d-block lh-1"></i></button>
+                                    <input type="text" id="fname" name="fname"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="First name"
+                                        autocomplete="given-name">
+                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
+                                            class="ri-user-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 field-col" data-animate="animate__fadeIn">
                                 <label for="lname" class="field-label">Last name</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="text" id="lname" name="lname" class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Last name" autocomplete="family-name">
-                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i class="ri-user-line d-block lh-1"></i></button>
+                                    <input type="text" id="lname" name="lname"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Last name"
+                                        autocomplete="family-name">
+                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
+                                            class="ri-user-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 field-col" data-animate="animate__fadeIn">
@@ -50,22 +57,31 @@
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="email" class="field-label">Email</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="email" id="email" name="email" class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Email" autocomplete="email">
-                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i class="ri-mail-line d-block lh-1"></i></button>
+                                    <input type="email" id="email" name="email"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Email"
+                                        autocomplete="email">
+                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
+                                            class="ri-mail-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="password" class="field-label">Password</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="password" id="password" name="password" class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Password" autocomplete="new-password">
-                                    <button type="button" class="field-pwd-btn body-color icon-16" aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
+                                    <input type="password" id="password" name="password"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Password"
+                                        autocomplete="new-password">
+                                    <button type="button" class="field-pwd-btn body-color icon-16"
+                                        aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="rep-new-pwd" class="field-label">Confirm password</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="password" id="rep-new-pwd" name="password-rep" class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Confirm password" autocomplete="new-password">
-                                    <button type="button" class="field-pwd-btn body-color icon-16" aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
+                                    <input type="password" id="rep-new-pwd" name="password-rep"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Confirm password"
+                                        autocomplete="new-password">
+                                    <button type="button" class="field-pwd-btn body-color icon-16"
+                                        aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -75,18 +91,23 @@
                                     <label class="cust-checkbox-label checkbox-agree">
                                         <input type="checkbox" class="cust-checkbox checkboxbtn">
                                         <span class="d-block cust-check"></span>
-                                        <span class="login-read">By proceeding, I acknowledge and consent to the stated <a href="/terms-conditions/" class="body-secondary-color text-decoration-underline">terms & guidelines</a>.</span>
+                                        <span class="login-read">By proceeding, I acknowledge and consent to the stated
+                                            <a href="/terms-conditions/"
+                                                class="body-secondary-color text-decoration-underline">terms &
+                                                guidelines</a>.</span>
                                     </label>
                                 </div>
                                 <div class="col-12 mst-9" data-animate="animate__fadeIn">
-                                    <button type="submit" class="w-100 btn-style2 secondary-btn hide-btn opacity-50 disabled pe-none">Create</button>
+                                    <button type="submit"
+                                        class="w-100 btn-style2 secondary-btn hide-btn opacity-50 disabled pe-none">Create</button>
                                 </div>
                             </div>
                         </div>
                     </form>
                     <div class="mst-30 text-center">
                         <h6 class="font-18" data-animate="animate__fadeIn">Already have an account?</h6>
-                        <a href="/register/" class="d-inline-block body-secondary-color mst-8 text-decoration-underline" data-animate="animate__fadeIn">Log in</a>
+                        <a href="/register/" class="d-inline-block body-secondary-color mst-8 text-decoration-underline"
+                            data-animate="animate__fadeIn">Log in</a>
                     </div>
                 </div>
             </div>

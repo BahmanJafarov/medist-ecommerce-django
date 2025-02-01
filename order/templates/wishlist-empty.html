@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Wishlist empty</title>
+<title>Wishlist empty</title>
 {% endblock %}
 
 {% block content %}
@@ -19,9 +20,12 @@
                                 <h2 class="section-heading">No favorite item yet</h2>
                             </div>
                         </div>
-                        <img src="/static/image/account/empty-wish.png" class="width-160 img-fluid meb-23" alt="empty-wish" data-animate="animate__fadeIn">
-                        <h6 class="font-18" data-animate="animate__fadeIn">Sorry your wishlist has currently no more products, click on 'explore products' button given below for continue browsing.</h6>
-                        <a href="/collection/" class="btn-style2 secondary-btn mst-23" data-animate="animate__fadeIn">Explore products</a>
+                        <img src="{% static 'image/account/empty-wish.png' %}" class="width-160 img-fluid meb-23"
+                            alt="empty-wish" data-animate="animate__fadeIn">
+                        <h6 class="font-18" data-animate="animate__fadeIn">Sorry your wishlist has currently no more
+                            products, click on 'explore products' button given below for continue browsing.</h6>
+                        <a href="/collection/" class="btn-style2 secondary-btn mst-23"
+                            data-animate="animate__fadeIn">Explore products</a>
                     </div>
                 </div>
             </div>

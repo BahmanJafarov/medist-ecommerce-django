@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Login</title>
+<title>Login</title>
 {% endblock %}
 
 {% block content %}
@@ -23,15 +24,21 @@
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="email" class="field-label">Email</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="email" id="email" name="email" class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Email" autocomplete="email">
-                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i class="ri-mail-line d-block lh-1"></i></button>
+                                    <input type="email" id="email" name="email"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Email"
+                                        autocomplete="email">
+                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
+                                            class="ri-mail-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="password" class="field-label">Password</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="password" id="password" name="password" class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Password" autocomplete="current-password">
-                                    <button type="button" class="field-pwd-btn body-color icon-16" aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
+                                    <input type="password" id="password" name="password"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Password"
+                                        autocomplete="current-password">
+                                    <button type="button" class="field-pwd-btn body-color icon-16"
+                                        aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -41,14 +48,16 @@
                                     <button type="submit" class="w-100 btn-style2 quaternary-btn">Sign in</button>
                                 </div>
                                 <div class="col-12 col-sm-7" data-animate="animate__fadeIn">
-                                    <a href="/forgot-password/" class="w-100 btn-style2 secondary-btn">Forgot your password?</a>
+                                    <a href="/forgot-password/" class="w-100 btn-style2 secondary-btn">Forgot your
+                                        password?</a>
                                 </div>
                             </div>
                         </div>
                     </form>
                     <div class="mst-30 text-center">
                         <h6 class="font-18" data-animate="animate__fadeIn">Don't have an account?</h6>
-                        <a href="/register/" class="d-inline-block body-secondary-color mst-8 text-decoration-underline" data-animate="animate__fadeIn">Create an account</a>
+                        <a href="/register/" class="d-inline-block body-secondary-color mst-8 text-decoration-underline"
+                            data-animate="animate__fadeIn">Create an account</a>
                     </div>
                 </div>
             </div>

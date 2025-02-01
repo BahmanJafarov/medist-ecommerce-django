@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Legal</title>
+<title>Legal</title>
 {% endblock %}
 
 {% block content %}
@@ -16,91 +17,136 @@
                 <form method="get" action="javascript:void(0)" class="search-form">
                     <div class="section-capture text-center">
                         <div class="section-title">
-                            <h2 class="section-heading">Your search for <span class="search-text">a</span> revealed the following:</h2>
+                            <h2 class="section-heading">Your search for <span class="search-text">a</span> revealed the
+                                following:</h2>
                         </div>
                     </div>
                     <div class="search-bar position-relative">
                         <div class="form-search d-flex flex-wrap border-full br-hidden">
-                            <input type="search" name="search-input" class="search-input width-calc-64 border-0 rounded-0" value="a" placeholder="Search here" required>
-                            <button type="submit" onclick="window.location.href='search-product.html'" class="d-block search-page-btn width-64 secondary-btn icon-16" aria-label="Go to search" disabled><i class="ri-search-line d-block lh-1"></i></button>
+                            <input type="search" name="search-input"
+                                class="search-input width-calc-64 border-0 rounded-0" value="a"
+                                placeholder="Search here" required>
+                            <button type="submit" onclick="window.location.href='search-product.html'"
+                                class="d-block search-page-btn width-64 secondary-btn icon-16" aria-label="Go to search"
+                                disabled><i class="ri-search-line d-block lh-1"></i></button>
                         </div>
-                        <div class="d-none search-results position-absolute top-100 start-0 end-0 body-bg z-1 border-full border-radius box-shadow">
-                            <div class="search-for ptb-10 plr-15 beb">Search for <span class="search-text">a</span></div>
+                        <div
+                            class="d-none search-results position-absolute top-100 start-0 end-0 body-bg z-1 border-full border-radius box-shadow">
+                            <div class="search-for ptb-10 plr-15 beb">Search for <span class="search-text">a</span>
+                            </div>
                             <ul class="search-ul">
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product1.jpg" class="w-100 img-fluid border-radius" alt="search-product1"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product1.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product1"></span>
                                         <span class="width-calc-48 psl-15">Refractometers</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product2.jpg" class="w-100 img-fluid border-radius" alt="search-product2"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product2.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product2"></span>
                                         <span class="width-calc-48 psl-15">Digital thermometer</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product3.jpg" class="w-100 img-fluid border-radius" alt="search-product3"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product3.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product3"></span>
                                         <span class="width-calc-48 psl-15">Optical microscope</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product4.jpg" class="w-100 img-fluid border-radius" alt="search-product4"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product4.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product4"></span>
                                         <span class="width-calc-48 psl-15">Dental tools</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product5.jpg" class="w-100 img-fluid border-radius" alt="search-product5"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product5.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product5"></span>
                                         <span class="width-calc-48 psl-15">Drug vaccine</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product6.jpg" class="w-100 img-fluid border-radius" alt="search-product6"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product6.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product6"></span>
                                         <span class="width-calc-48 psl-15">Nebulizer machine</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product7.jpg" class="w-100 img-fluid border-radius" alt="search-product7"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product7.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product7"></span>
                                         <span class="width-calc-48 psl-15">Blood machine</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product8.jpg" class="w-100 img-fluid border-radius" alt="search-product8"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product8.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product8"></span>
                                         <span class="width-calc-48 psl-15">Pulse oximeter</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product9.jpg" class="w-100 img-fluid border-radius" alt="search-product9"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product9.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product9"></span>
                                         <span class="width-calc-48 psl-15">Dressing scissors</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product10.jpg" class="w-100 img-fluid border-radius" alt="search-product10"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product10.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product10"></span>
                                         <span class="width-calc-48 psl-15">Sanitizer gel</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product11.jpg" class="w-100 img-fluid border-radius" alt="search-product11"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product11.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product11"></span>
                                         <span class="width-calc-48 psl-15">Face mask</span>
                                     </a>
                                 </li>
                                 <li class="search-li ptb-5 plr-15 bst">
-                                    <a href="product.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                        <span class="width-48"><img src="/static/image/search/search-product12.jpg" class="w-100 img-fluid border-radius" alt="search-product12"></span>
+                                    <a href="product.html"
+                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                        <span class="width-48"><img
+                                                src="{% static 'image/search/search-product12.jpg' %}"
+                                                class="w-100 img-fluid border-radius" alt="search-product12"></span>
                                         <span class="width-calc-48 psl-15">Tonic lotion</span>
                                     </a>
                                 </li>
                             </ul>
-                            <div class="search-more ptb-10 plr-15 bst"><a href="search-product.html" class="body-secondary-color text-decoration-underline">See all results (12)</a></div>
+                            <div class="search-more ptb-10 plr-15 bst"><a href="search-product.html"
+                                    class="body-secondary-color text-decoration-underline">See all results (12)</a>
+                            </div>
                             <div class="search-fail ptb-10 plr-15">Search not found</div>
                         </div>
                     </div>
@@ -110,8 +156,10 @@
             <!-- search-bar end -->
             <div class="search-not-found mst-30 text-center">
                 <div class="col-md-9 col-lg-6 col-xl-5 col-xxl-4 mx-md-auto">
-                    <h6 class="font-18" data-animate="animate__fadeIn">Sorry we can't find anything, No search results</h6>
-                    <span class="d-block mst-8" data-animate="animate__fadeIn">Please try another search keyword or check back again soon</span>
+                    <h6 class="font-18" data-animate="animate__fadeIn">Sorry we can't find anything, No search results
+                    </h6>
+                    <span class="d-block mst-8" data-animate="animate__fadeIn">Please try another search keyword or
+                        check back again soon</span>
                     <a href="/collection/" class="btn-style2 secondary-btn mst-24">Continue shopping</a>
                 </div>
             </div>

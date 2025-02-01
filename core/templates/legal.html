@@ -1,43 +1,75 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Legal</title>
+<title>Legal</title>
 {% endblock %}
 
 {% block content %}
 
-    <!-- main start -->
-    <main id="main">
-        <!-- legal start -->
-        <section class="legal section-ptb">
-            <div class="section-capture text-center" data-animate="animate__fadeIn">
-                <div class="section-title">
-                    <h2 class="section-heading">Legal page</h2>
-                </div>
+<!-- main start -->
+<main id="main">
+    <!-- legal start -->
+    <section class="legal section-ptb">
+        <div class="section-capture text-center" data-animate="animate__fadeIn">
+            <div class="section-title">
+                <h2 class="section-heading">Legal page</h2>
             </div>
-            <div class="container">
-                <div class="row row-mtm align-items-md-start">
-                    {% include 'includes/pages-list.html' %}
-                    <div class="col-12 col-md-8 col-lg-9 p-md-sticky top-0">
-                        <div class="number-index">
-                            <p data-animate="animate__fadeIn">Our legal terms outline your rights and responsibilities concerning the use of our services and products. They include information on the resolution of disputes, the applicability of laws, and any limitations of liability. By using our services, you agree to adhere to these terms, which may be updated periodically. It is your responsibility to stay informed about any changes and ensure compliance with the latest terms.</p>
-                            <p class="mst-15" data-animate="animate__fadeIn">The legal section of our policy defines the terms under which you engage with our services. This includes your acceptance of our terms, conditions, and applicable laws. Any legal disputes will be governed by the terms outlined here. Please review these terms carefully to understand your rights and obligations.</p>
-                            <div class="pst-30 mst-30 bst" data-animate="animate__fadeIn"></div>
-                            <h6 class="font-18" data-animate="animate__fadeIn">Rules & guidelines</h6>
-                            <p class="number-sub-index mst-16" data-animate="animate__fadeIn">By using our services, you agree to comply with all applicable rules and regulations. Our terms outline the responsibilities and rights of both parties involved, ensuring clarity and fairness in our interactions. Review the terms carefully to understand your obligations and the scope of services provided.</p>
-                            <p class="number-sub-index mst-15" data-animate="animate__fadeIn">Users must adhere to all stipulated conditions when using our platform. This includes respecting intellectual property rights and refraining from prohibited activities. You are responsible for any content you upload and must ensure it complies with our guidelines and legal requirements.</p>
-                            <p class="number-sub-index mst-15" data-animate="animate__fadeIn">We aim to provide reliable services but cannot guarantee uninterrupted or error-free operation. We are not liable for any disruptions, losses, or damages that may occur. Our liability is limited to the extent permitted by law, and we do not assume responsibility for third-party issues.</p>
-                            <p class="number-sub-index mst-15" data-animate="animate__fadeIn">In the event of a dispute, parties should first seek resolution through informal means. If unresolved, formal procedures will be followed, including mediation or arbitration as specified. Both parties agree to resolve disputes in accordance with the outlined methods and jurisdictions.</p>
-                            <p class="number-sub-index mst-15" data-animate="animate__fadeIn">Our terms may be updated periodically to reflect changes in laws or our business practices. We will notify users of significant changes, and continued use of the services implies acceptance of the revised terms. Users should review the terms regularly to stay informed of any updates.</p>
-                            <p class="number-sub-index mst-15" data-animate="animate__fadeIn">We reserve the right to terminate or suspend access to our services if users violate the terms. Such actions may be taken without prior notice if deemed necessary to maintain the integrity and security of our platform. Users may appeal termination decisions following the specified process.</p>
-                            <p class="number-sub-index mst-15" data-animate="animate__fadeIn">The terms are governed by the laws of the specified jurisdiction. Any legal proceedings arising from these terms must be conducted in the designated courts. Users consent to the exclusive jurisdiction of these courts for resolving any disputes related to the terms.</p>
-                        </div>
+        </div>
+        <div class="container">
+            <div class="row row-mtm align-items-md-start">
+                {% include 'includes/pages-list.html' %}
+                <div class="col-12 col-md-8 col-lg-9 p-md-sticky top-0">
+                    <div class="number-index">
+                        <p data-animate="animate__fadeIn">Our legal terms outline your rights and responsibilities
+                            concerning the use of our services and products. They include information on the resolution
+                            of disputes, the applicability of laws, and any limitations of liability. By using our
+                            services, you agree to adhere to these terms, which may be updated periodically. It is your
+                            responsibility to stay informed about any changes and ensure compliance with the latest
+                            terms.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">The legal section of our policy defines the
+                            terms under which you engage with our services. This includes your acceptance of our terms,
+                            conditions, and applicable laws. Any legal disputes will be governed by the terms outlined
+                            here. Please review these terms carefully to understand your rights and obligations.</p>
+                        <div class="pst-30 mst-30 bst" data-animate="animate__fadeIn"></div>
+                        <h6 class="font-18" data-animate="animate__fadeIn">Rules & guidelines</h6>
+                        <p class="number-sub-index mst-16" data-animate="animate__fadeIn">By using our services, you
+                            agree to comply with all applicable rules and regulations. Our terms outline the
+                            responsibilities and rights of both parties involved, ensuring clarity and fairness in our
+                            interactions. Review the terms carefully to understand your obligations and the scope of
+                            services provided.</p>
+                        <p class="number-sub-index mst-15" data-animate="animate__fadeIn">Users must adhere to all
+                            stipulated conditions when using our platform. This includes respecting intellectual
+                            property rights and refraining from prohibited activities. You are responsible for any
+                            content you upload and must ensure it complies with our guidelines and legal requirements.
+                        </p>
+                        <p class="number-sub-index mst-15" data-animate="animate__fadeIn">We aim to provide reliable
+                            services but cannot guarantee uninterrupted or error-free operation. We are not liable for
+                            any disruptions, losses, or damages that may occur. Our liability is limited to the extent
+                            permitted by law, and we do not assume responsibility for third-party issues.</p>
+                        <p class="number-sub-index mst-15" data-animate="animate__fadeIn">In the event of a dispute,
+                            parties should first seek resolution through informal means. If unresolved, formal
+                            procedures will be followed, including mediation or arbitration as specified. Both parties
+                            agree to resolve disputes in accordance with the outlined methods and jurisdictions.</p>
+                        <p class="number-sub-index mst-15" data-animate="animate__fadeIn">Our terms may be updated
+                            periodically to reflect changes in laws or our business practices. We will notify users of
+                            significant changes, and continued use of the services implies acceptance of the revised
+                            terms. Users should review the terms regularly to stay informed of any updates.</p>
+                        <p class="number-sub-index mst-15" data-animate="animate__fadeIn">We reserve the right to
+                            terminate or suspend access to our services if users violate the terms. Such actions may be
+                            taken without prior notice if deemed necessary to maintain the integrity and security of our
+                            platform. Users may appeal termination decisions following the specified process.</p>
+                        <p class="number-sub-index mst-15" data-animate="animate__fadeIn">The terms are governed by the
+                            laws of the specified jurisdiction. Any legal proceedings arising from these terms must be
+                            conducted in the designated courts. Users consent to the exclusive jurisdiction of these
+                            courts for resolving any disputes related to the terms.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- legal end -->
-    </main>
-    <!-- main end -->
-         
+        </div>
+    </section>
+    <!-- legal end -->
+</main>
+<!-- main end -->
+
 {% endblock %}

@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Order info delivered</title>
+<title>Order info delivered</title>
 {% endblock %}
 
 {% block content %}
@@ -15,7 +16,8 @@
                 <div class="col-12 col-lg-7 p-lg-sticky top-0">
                     <!-- order-info return start -->
                     <div class="oi-return peb-30 meb-30 beb" data-animate="animate__fadeIn">
-                        <a href="/order/" class="body-dominant-color text-decoration-underline">Return to order details</a>
+                        <a href="/order/" class="body-dominant-color text-decoration-underline">Return to order
+                            details</a>
                     </div>
                     <!-- order-info return end -->
                     <div class="row row-mtm">
@@ -45,7 +47,9 @@
                                 <div class="oi-link">
                                     <div class="row">
                                         <div class="col-6">
-                                            <a href="/invoice/" class="d-inline-block body-dominant-color text-decoration-underline">View invoce</a>
+                                            <a href="/invoice/"
+                                                class="d-inline-block body-dominant-color text-decoration-underline">View
+                                                invoce</a>
                                         </div>
                                     </div>
                                 </div>
@@ -68,10 +72,13 @@
                                 </div>
                                 <div class="col-6">
                                     <!-- order-info payment start -->
-                                    <span class="d-inline-block heading-color heading-weight meb-24">Payment method</span>
+                                    <span class="d-inline-block heading-color heading-weight meb-24">Payment
+                                        method</span>
                                     <div class="wt-payment">
                                         <div class="wt-img-num d-flex flex-wrap align-items-center">
-                                            <span class="width-48 border-full br-hidden"><img src="/static/image/other/paying-maestro.png" class="img-fluid" alt="paying-maestro"></span>
+                                            <span class="width-48 border-full br-hidden"><img
+                                                    src="{% static 'image/other/paying-maestro.png' %}"
+                                                    class="img-fluid" alt="paying-maestro"></span>
                                             <span class="width-calc-48 psl-15">xxxx 0446</span>
                                         </div>
                                         <div class="wt-date mst-15">Expire date 07/23</div>
@@ -80,7 +87,8 @@
                                 </div>
                                 <div class="col-6">
                                     <!-- order-info shipping start -->
-                                    <span class="d-inline-block heading-color heading-weight meb-19">Shipping address</span>
+                                    <span class="d-inline-block heading-color heading-weight meb-19">Shipping
+                                        address</span>
                                     <div class="st-label d-flex mst-5 meb-15">
                                         <span class="d-inline-block st-small-label bg-dark">Home</span>
                                     </div>
@@ -96,7 +104,8 @@
                                 </div>
                                 <div class="col-6">
                                     <!-- order-info billing start -->
-                                    <span class="d-inline-block heading-color heading-weight meb-19">Billing address</span>
+                                    <span class="d-inline-block heading-color heading-weight meb-19">Billing
+                                        address</span>
                                     <div class="st-label d-flex mst-5 meb-15">
                                         <span class="d-inline-block st-small-label bg-dark">Home</span>
                                     </div>
@@ -141,7 +150,8 @@
                                         <div class="row">
                                             <div class="col-6">Contact no</div>
                                             <div class="col-6">
-                                                <a href="tel:+00-0123456789" class="d-inline-block body-dominant-color">(+00)-0123456789</a>
+                                                <a href="tel:+00-0123456789"
+                                                    class="d-inline-block body-dominant-color">(+00)-0123456789</a>
                                             </div>
                                         </div>
                                     </li>
@@ -160,7 +170,8 @@
                                                 <div class="row">
                                                     <div class="col-6">Product</div>
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color">Refractometers</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color">Refractometers</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -191,7 +202,9 @@
                                             <li class="oi-detail-li">
                                                 <div class="row">
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color text-decoration-underline">Buy again</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color text-decoration-underline">Buy
+                                                            again</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -199,7 +212,8 @@
                                         <div class="oi-btn mst-14">
                                             <div class="row">
                                                 <div class="col-12 col-md-6">
-                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn" data-bs-toggle="modal">Write a review</a>
+                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn"
+                                                        data-bs-toggle="modal">Write a review</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -210,7 +224,9 @@
                                                 <div class="row">
                                                     <div class="col-6">Product</div>
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color">Digital thermometer</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color">Digital
+                                                            thermometer</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -241,7 +257,9 @@
                                             <li class="oi-detail-li">
                                                 <div class="row">
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color text-decoration-underline">Buy again</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color text-decoration-underline">Buy
+                                                            again</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -249,7 +267,8 @@
                                         <div class="oi-btn mst-14">
                                             <div class="row">
                                                 <div class="col-12 col-md-6">
-                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn" data-bs-toggle="modal">Write a review</a>
+                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn"
+                                                        data-bs-toggle="modal">Write a review</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -260,7 +279,9 @@
                                                 <div class="row">
                                                     <div class="col-6">Product</div>
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color">Optical microscope</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color">Optical
+                                                            microscope</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -291,7 +312,9 @@
                                             <li class="oi-detail-li">
                                                 <div class="row">
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color text-decoration-underline">Buy again</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color text-decoration-underline">Buy
+                                                            again</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -299,7 +322,8 @@
                                         <div class="oi-btn mst-14">
                                             <div class="row">
                                                 <div class="col-12 col-md-6">
-                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn" data-bs-toggle="modal">Write a review</a>
+                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn"
+                                                        data-bs-toggle="modal">Write a review</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -310,7 +334,8 @@
                                                 <div class="row">
                                                     <div class="col-6">Product</div>
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color">Dental tools</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color">Dental tools</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -341,7 +366,9 @@
                                             <li class="oi-detail-li">
                                                 <div class="row">
                                                     <div class="col-6">
-                                                        <a href="/product/" class="d-inline-block body-dominant-color text-decoration-underline">Buy again</a>
+                                                        <a href="/product/"
+                                                            class="d-inline-block body-dominant-color text-decoration-underline">Buy
+                                                            again</a>
                                                     </div>
                                                 </div>
                                             </li>
@@ -349,7 +376,8 @@
                                         <div class="oi-btn mst-14">
                                             <div class="row">
                                                 <div class="col-12 col-md-6">
-                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn" data-bs-toggle="modal">Write a review</a>
+                                                    <a href="#reviewmodal" class="w-100 btn-style2 secondary-btn"
+                                                        data-bs-toggle="modal">Write a review</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -406,7 +434,9 @@
                         <ul class="track-ul">
                             <li class="track-li active">
                                 <div class="track-icon-text d-flex flex-wrap align-items-center">
-                                    <span class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i class="ri-shopping-bag-line d-block icon-24 lh-1"></i></span>
+                                    <span
+                                        class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i
+                                            class="ri-shopping-bag-line d-block icon-24 lh-1"></i></span>
                                     <div class="track-text width-calc-64 ul-mtm20 psl-15">
                                         <span class="heading-color heading-weight">Order placed</span>
                                         <span>18<sup>th</sup> Jan 2023</span>
@@ -421,7 +451,9 @@
                             </li>
                             <li class="track-li active">
                                 <div class="track-icon-text d-flex flex-wrap align-items-center">
-                                    <span class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i class="ri-gift-line d-block icon-24 lh-1"></i></span>
+                                    <span
+                                        class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i
+                                            class="ri-gift-line d-block icon-24 lh-1"></i></span>
                                     <div class="track-text width-calc-64 ul-mtm20 psl-15">
                                         <span class="heading-color heading-weight">Packed</span>
                                         <span>20<sup>th</sup> Jan 2023</span>
@@ -430,15 +462,19 @@
                                 <div class="track-info ul-mtm20 pst-30 psl-79">
                                     <span class="heading-color heading-weight">Your order is ready to ship</span>
                                     <span>20<sup>th</sup> Jan 2023, 10:47 p.m</span>
-                                    <span class="heading-color heading-weight">Your order has been picked up by courier</span>
+                                    <span class="heading-color heading-weight">Your order has been picked up by
+                                        courier</span>
                                     <span>20<sup>th</sup> Jan 2023, 11:16 p.m</span>
-                                    <span class="heading-color heading-weight">Picked up from Bhiwandi, Maharashtra</span>
+                                    <span class="heading-color heading-weight">Picked up from Bhiwandi,
+                                        Maharashtra</span>
                                     <span>20<sup>th</sup> Jan 2023, 11:16 p.m</span>
                                 </div>
                             </li>
                             <li class="track-li active">
                                 <div class="track-icon-text d-flex flex-wrap align-items-center">
-                                    <span class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i class="ri-truck-line d-block icon-24 lh-1"></i></span>
+                                    <span
+                                        class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i
+                                            class="ri-truck-line d-block icon-24 lh-1"></i></span>
                                     <div class="track-text width-calc-64 ul-mtm20 psl-15">
                                         <span class="heading-color heading-weight">Shipping</span>
                                         <span>20<sup>th</sup> Jan 2023</span>
@@ -448,28 +484,35 @@
                                     <span class="heading-color heading-weight">Order has been shipped</span>
                                     <span>20<sup>th</sup> Jan 2023, 04:21 p.m</span>
                                     <span class="heading-color heading-weight">WIT Logistics - WTIT1400457854</span>
-                                    <span class="heading-color heading-weight">Intransit at Bhiwandi to Mumbai, Maharashtra</span>
+                                    <span class="heading-color heading-weight">Intransit at Bhiwandi to Mumbai,
+                                        Maharashtra</span>
                                     <span>21<sup>th</sup> Jan 2023, 03:54 p.m</span>
-                                    <span class="heading-color heading-weight">Intransit at Mumbai to Surat, Gujarat</span>
+                                    <span class="heading-color heading-weight">Intransit at Mumbai to Surat,
+                                        Gujarat</span>
                                     <span>22<sup>nd</sup> Jan 2023, 06:32 p.m</span>
                                 </div>
                             </li>
                             <li class="track-li active">
                                 <div class="track-icon-text d-flex flex-wrap align-items-center">
-                                    <span class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i class="ri-truck-line d-block icon-24 lh-1"></i></span>
+                                    <span
+                                        class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i
+                                            class="ri-truck-line d-block icon-24 lh-1"></i></span>
                                     <div class="track-text width-calc-64 ul-mtm20 psl-15">
                                         <span class="heading-color heading-weight">Out for delivery</span>
                                         <span>23<sup>rd</sup> Jan 2023</span>
                                     </div>
                                 </div>
                                 <div class="track-info ul-mtm20 pst-30 psl-79">
-                                    <span class="heading-color heading-weight">Out for delivery at location Surat, Gujarat</span>
+                                    <span class="heading-color heading-weight">Out for delivery at location Surat,
+                                        Gujarat</span>
                                     <span>23<sup>rd</sup> Jan 2023, 10:39 p.m</span>
                                 </div>
                             </li>
                             <li class="track-li active">
                                 <div class="track-icon-text d-flex flex-wrap align-items-center">
-                                    <span class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i class="ri-draft-line d-block icon-24 lh-1"></i></span>
+                                    <span
+                                        class="track-icon width-64 height-64 d-flex align-items-center justify-content-center rounded-circle"><i
+                                            class="ri-draft-line d-block icon-24 lh-1"></i></span>
                                     <div class="track-text width-calc-64 ul-mtm20 psl-15">
                                         <span class="heading-color heading-weight">Delivered</span>
                                         <span>24<sup>th</sup> Jan 2023</span>
@@ -490,7 +533,8 @@
                         <form method="post">
                             <div class="review-modal-header d-flex align-items-center justify-content-between meb-30">
                                 <h6 class="font-18">Back to order</h6>
-                                <button type="button" class="body-secondary-color icon-16" data-bs-dismiss="modal" aria-label="Close"><i class="ri-close-large-line d-block lh-1"></i></button>
+                                <button type="button" class="body-secondary-color icon-16" data-bs-dismiss="modal"
+                                    aria-label="Close"><i class="ri-close-large-line d-block lh-1"></i></button>
                             </div>
                             <div class="review-modal-form">
                                 <div class="row field-row">
@@ -510,28 +554,34 @@
                                     </div>
                                     <div class="col-12 field-col">
                                         <label for="name" class="field-label">Name</label>
-                                        <input type="text" id="name" name="name" class="w-100" placeholder="Demo name" autocomplete="name">
+                                        <input type="text" id="name" name="name" class="w-100" placeholder="Demo name"
+                                            autocomplete="name">
                                     </div>
                                     <div class="col-12 field-col">
                                         <label for="name" class="field-label">Email</label>
-                                        <input type="email" id="email" name="email" class="w-100" placeholder="demo@demo.com" autocomplete="email">
+                                        <input type="email" id="email" name="email" class="w-100"
+                                            placeholder="demo@demo.com" autocomplete="email">
                                     </div>
                                     <div class="col-12 field-col">
                                         <label for="name" class="field-label">Review title</label>
-                                        <input type="text" id="title" name="title" class="w-100" placeholder="Review title" autocomplete="name">
+                                        <input type="text" id="title" name="title" class="w-100"
+                                            placeholder="Review title" autocomplete="name">
                                     </div>
                                     <div class="col-12 field-col">
                                         <label for="message" class="field-label">Message</label>
-                                        <textarea rows="5" id="message" name="message" class="w-100" placeholder="Review message" autocomplete="off"></textarea>
+                                        <textarea rows="5" id="message" name="message" class="w-100"
+                                            placeholder="Review message" autocomplete="off"></textarea>
                                     </div>
                                 </div>
                                 <div class="review-modal-button mst-30">
                                     <div class="row btn-row">
                                         <div class="col-12 col-sm-6">
-                                            <button type="submit" class="w-100 btn-style2 quaternary-btn">Submit review</button>
+                                            <button type="submit" class="w-100 btn-style2 quaternary-btn">Submit
+                                                review</button>
                                         </div>
                                         <div class="col-12 col-sm-6">
-                                            <button type="button" class="w-100 btn-style2 secondary-btn" data-bs-dismiss="modal">Cancel</button>
+                                            <button type="button" class="w-100 btn-style2 secondary-btn"
+                                                data-bs-dismiss="modal">Cancel</button>
                                         </div>
                                     </div>
                                 </div>

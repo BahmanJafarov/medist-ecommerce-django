@@ -1,32 +1,35 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Error - Not found</title>
+<title>Error - Not found</title>
 {% endblock %}
 
 {% block content %}
 
-        <!-- main start -->
-        <main id="main">
-            <!-- page-404 start -->
-            <section class="page-404 section-ptb">
-                <div class="container">
-                    <div class="row row-mtm align-items-md-center">
-                        <div class="col-12 col-md-6 text-center" data-animate="animate__fadeIn">
-                            <div class="col-10 col-xl-8 mx-auto">
-                                <img src="/static/image/other/404.png" class="w-100 img-fluid" alt="404">
-                            </div>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <h2 class="dominant-color font-88 lh-1" data-animate="animate__fadeIn">Oops!</h2>
-                            <h6 class="font-18 mst-30" data-animate="animate__fadeIn">Sorry but the page you are looking for does not exist, have been removed, name changed or is temporarity unavailable.</h6>
-                            <a href="index.html" class="btn-style2 secondary-btn mst-23" data-animate="animate__fadeIn">Back to home</a>
-                        </div>
+<!-- main start -->
+<main id="main">
+    <!-- page-404 start -->
+    <section class="page-404 section-ptb">
+        <div class="container">
+            <div class="row row-mtm align-items-md-center">
+                <div class="col-12 col-md-6 text-center" data-animate="animate__fadeIn">
+                    <div class="col-10 col-xl-8 mx-auto">
+                        <img src="{% static 'image/other/404.png' %}" class="w-100 img-fluid" alt="404">
                     </div>
                 </div>
-            </section>
-            <!-- page-404 end -->
-        </main>
-        <!-- main end -->
-         
+                <div class="col-12 col-md-6">
+                    <h2 class="dominant-color font-88 lh-1" data-animate="animate__fadeIn">Oops!</h2>
+                    <h6 class="font-18 mst-30" data-animate="animate__fadeIn">Sorry but the page you are looking for
+                        does not exist, have been removed, name changed or is temporarity unavailable.</h6>
+                    <a href="/" class=" btn-style2 secondary-btn mst-23" data-animate="animate__fadeIn">Back to
+                        home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- page-404 end -->
+</main>
+<!-- main end -->
+
 {% endblock %}

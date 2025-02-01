@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Blog</title>
+<title>Blog</title>
 {% endblock %}
 
 {% block content %}
@@ -22,50 +23,87 @@
                                 <form method="get" action="javascript:void(0)" class="search-form">
                                     <div class="search-bar position-relative">
                                         <div class="form-search d-flex flex-wrap border-full br-hidden">
-                                            <input type="search" name="search-input" class="search-input width-calc-64 border-0 rounded-0" value="a" placeholder="Search here" required>
-                                            <button type="submit" onclick="window.location.href='search-blog.html'" class="d-block search-page-btn width-64 secondary-btn icon-16" aria-label="Go to search" disabled><i class="ri-search-line d-block lh-1"></i></button>
+                                            <input type="search" name="search-input"
+                                                class="search-input width-calc-64 border-0 rounded-0" value="a"
+                                                placeholder="Search here" required>
+                                            <button type="submit" onclick="window.location.href='search-blog.html'"
+                                                class="d-block search-page-btn width-64 secondary-btn icon-16"
+                                                aria-label="Go to search" disabled><i
+                                                    class="ri-search-line d-block lh-1"></i></button>
                                         </div>
-                                        <div class="d-none search-results position-absolute top-100 start-0 end-0 body-bg z-1 border-full border-radius box-shadow">
-                                            <div class="search-for ptb-10 plr-15 beb">Search for <span class="search-text">a</span></div>
+                                        <div
+                                            class="d-none search-results position-absolute top-100 start-0 end-0 body-bg z-1 border-full border-radius box-shadow">
+                                            <div class="search-for ptb-10 plr-15 beb">Search for <span
+                                                    class="search-text">a</span></div>
                                             <ul class="search-ul">
                                                 <li class="search-li ptb-5 plr-15 bst">
-                                                    <a href="article.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                                        <span class="width-48"><img src="/static/image/search/search-blog1.jpg" class="w-100 img-fluid border-radius" alt="search-blog1"></span>
-                                                        <span class="width-calc-48 psl-15">Wel illum qui dolorem eum?</span>
+                                                    <a href="article.html"
+                                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                                        <span class="width-48"><img
+                                                                src="{% static 'image/search/search-blog1.jpg' %}"
+                                                                class="w-100 img-fluid border-radius"
+                                                                alt="search-blog1"></span>
+                                                        <span class="width-calc-48 psl-15">Wel illum qui dolorem
+                                                            eum?</span>
                                                     </a>
                                                 </li>
                                                 <li class="search-li ptb-5 plr-15 bst">
-                                                    <a href="article.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                                        <span class="width-48"><img src="/static/image/search/search-blog2.jpg" class="w-100 img-fluid border-radius" alt="search-blog2"></span>
-                                                        <span class="width-calc-48 psl-15">Nisi ut aliquid ex commodi?</span>
+                                                    <a href="article.html"
+                                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                                        <span class="width-48"><img
+                                                                src="{% static 'image/search/search-blog2.jpg' %}"
+                                                                class="w-100 img-fluid border-radius"
+                                                                alt="search-blog2"></span>
+                                                        <span class="width-calc-48 psl-15">Nisi ut aliquid ex
+                                                            commodi?</span>
                                                     </a>
                                                 </li>
                                                 <li class="search-li ptb-5 plr-15 bst">
-                                                    <a href="article.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                                        <span class="width-48"><img src="/static/image/search/search-blog3.jpg" class="w-100 img-fluid border-radius" alt="search-blog3"></span>
-                                                        <span class="width-calc-48 psl-15">Which of ever undertakes?</span>
+                                                    <a href="article.html"
+                                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                                        <span class="width-48"><img
+                                                                src="{% static 'image/search/search-blog3.jpg' %}"
+                                                                class="w-100 img-fluid border-radius"
+                                                                alt="search-blog3"></span>
+                                                        <span class="width-calc-48 psl-15">Which of ever
+                                                            undertakes?</span>
                                                     </a>
                                                 </li>
                                                 <li class="search-li ptb-5 plr-15 bst">
-                                                    <a href="article.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                                        <span class="width-48"><img src="/static/image/search/search-blog4.jpg" class="w-100 img-fluid border-radius" alt="search-blog4"></span>
+                                                    <a href="article.html"
+                                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                                        <span class="width-48"><img
+                                                                src="{% static 'image/search/search-blog4.jpg' %}"
+                                                                class="w-100 img-fluid border-radius"
+                                                                alt="search-blog4"></span>
                                                         <span class="width-calc-48 psl-15">Where can I get some?</span>
                                                     </a>
                                                 </li>
                                                 <li class="search-li ptb-5 plr-15 bst">
-                                                    <a href="article.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                                        <span class="width-48"><img src="/static/image/search/search-blog5.jpg" class="w-100 img-fluid border-radius" alt="search-blog5"></span>
+                                                    <a href="article.html"
+                                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                                        <span class="width-48"><img
+                                                                src="{% static 'image/search/search-blog5.jpg' %}"
+                                                                class="w-100 img-fluid border-radius"
+                                                                alt="search-blog5"></span>
                                                         <span class="width-calc-48 psl-15">Who avoids a produces?</span>
                                                     </a>
                                                 </li>
                                                 <li class="search-li ptb-5 plr-15 bst">
-                                                    <a href="article.html" class="body-dominant-color d-flex flex-wrap align-items-center">
-                                                        <span class="width-48"><img src="/static/image/search/search-blog6.jpg" class="w-100 img-fluid border-radius" alt="search-blog6"></span>
-                                                        <span class="width-calc-48 psl-15">Where does it come from?</span>
+                                                    <a href="article.html"
+                                                        class="body-dominant-color d-flex flex-wrap align-items-center">
+                                                        <span class="width-48"><img
+                                                                src="{% static 'image/search/search-blog6.jpg' %}"
+                                                                class="w-100 img-fluid border-radius"
+                                                                alt="search-blog6"></span>
+                                                        <span class="width-calc-48 psl-15">Where does it come
+                                                            from?</span>
                                                     </a>
                                                 </li>
                                             </ul>
-                                            <div class="search-more ptb-10 plr-15 bst"><a href="search-blog.html" class="body-secondary-color text-decoration-underline">See all results (12)</a></div>
+                                            <div class="search-more ptb-10 plr-15 bst"><a href="search-blog.html"
+                                                    class="body-secondary-color text-decoration-underline">See all
+                                                    results (12)</a></div>
                                             <div class="search-fail ptb-10 plr-15">Search not found</div>
                                         </div>
                                     </div>
@@ -79,27 +117,33 @@
                             <h6 class="font-18">Categories</h6>
                             <div class="blog-cat-post mst-18">
                                 <div class="blog-cat ul-mtm20">
-                                    <a href="javascript:void(0)" class="body-dominant-color d-flex align-items-center justify-content-between">
+                                    <a href="javascript:void(0)"
+                                        class="body-dominant-color d-flex align-items-center justify-content-between">
                                         <span>Cardiogram</span>
                                         <span>14</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="body-dominant-color d-flex align-items-center justify-content-between">
+                                    <a href="javascript:void(0)"
+                                        class="body-dominant-color d-flex align-items-center justify-content-between">
                                         <span>Scalpel instrument</span>
                                         <span>18</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="body-dominant-color d-flex align-items-center justify-content-between">
+                                    <a href="javascript:void(0)"
+                                        class="body-dominant-color d-flex align-items-center justify-content-between">
                                         <span>Microscope</span>
                                         <span>4</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="body-dominant-color d-flex align-items-center justify-content-between">
+                                    <a href="javascript:void(0)"
+                                        class="body-dominant-color d-flex align-items-center justify-content-between">
                                         <span>First aid kit</span>
                                         <span>9</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="body-dominant-color d-flex align-items-center justify-content-between">
+                                    <a href="javascript:void(0)"
+                                        class="body-dominant-color d-flex align-items-center justify-content-between">
                                         <span>Stethoscope</span>
                                         <span>23</span>
                                     </a>
-                                    <a href="javascript:void(0)" class="body-dominant-color d-flex align-items-center justify-content-between">
+                                    <a href="javascript:void(0)"
+                                        class="body-dominant-color d-flex align-items-center justify-content-between">
                                         <span>Thermometer</span>
                                         <span>15</span>
                                     </a>
@@ -114,37 +158,49 @@
                                 <div class="row row-mtm15">
                                     <div class="blog-img-content d-flex flex-wrap">
                                         <a href="article.html" class="d-block width-88">
-                                            <img src="/static/image/article/article-recent1.jpg" class="img-fluid border-radius" alt="article-recent1">
+                                            <img src="{% static 'image/article/article-recent1.jpg' %}"
+                                                class="img-fluid border-radius" alt="article-recent1">
                                         </a>
                                         <div class="blog-recent-content width-calc-88 psl-15">
-                                            <span class="heading-color heading-weight"><a href="article.html" class="d-inline-block dominant-link">Wel illum qui dolorem eum?</a></span>
+                                            <span class="heading-color heading-weight"><a href="article.html"
+                                                    class="d-inline-block dominant-link">Wel illum qui dolorem
+                                                    eum?</a></span>
                                             <span class="d-block mst-4">Feb 01, 2023</span>
                                         </div>
                                     </div>
                                     <div class="blog-img-content d-flex flex-wrap">
                                         <a href="article.html" class="d-block width-88">
-                                            <img src="/static/image/article/article-recent2.jpg" class="img-fluid border-radius" alt="article-recent2">
+                                            <img src="{% static 'image/article/article-recent2.jpg' %}"
+                                                class="img-fluid border-radius" alt="article-recent2">
                                         </a>
                                         <div class="blog-recent-content width-calc-88 psl-15">
-                                            <span class="heading-color heading-weight"><a href="article.html" class="d-inline-block dominant-link">Nisi ut aliquid ex commodi?</a></span>
+                                            <span class="heading-color heading-weight"><a href="article.html"
+                                                    class="d-inline-block dominant-link">Nisi ut aliquid ex
+                                                    commodi?</a></span>
                                             <span class="d-block mst-4">Feb 01, 2023</span>
                                         </div>
                                     </div>
                                     <div class="blog-img-content banner-hover d-flex flex-wrap">
                                         <a href="article.html" class="d-block width-88">
-                                            <img src="/static/image/article/article-recent3.jpg" class="img-fluid border-radius" alt="article-recent3">
+                                            <img src="{% static 'image/article/article-recent3.jpg' %}"
+                                                class="img-fluid border-radius" alt="article-recent3">
                                         </a>
                                         <div class="blog-recent-content width-calc-88 psl-15">
-                                            <span class="heading-color heading-weight"><a href="article.html" class="d-inline-block dominant-link">Which of ever undertakes?</a></span>
+                                            <span class="heading-color heading-weight"><a href="article.html"
+                                                    class="d-inline-block dominant-link">Which of ever
+                                                    undertakes?</a></span>
                                             <span class="d-block mst-4">Feb 01, 2023</span>
                                         </div>
                                     </div>
                                     <div class="blog-img-content banner-hover d-flex flex-wrap">
                                         <a href="article.html" class="d-block width-88">
-                                            <img src="/static/image/article/article-recent4.jpg" class="img-fluid border-radius" alt="article-recent4">
+                                            <img src="{% static 'image/article/article-recent4.jpg' %}"
+                                                class="img-fluid border-radius" alt="article-recent4">
                                         </a>
                                         <div class="blog-recent-content width-calc-88 psl-15">
-                                            <span class="heading-color heading-weight"><a href="article.html" class="d-inline-block dominant-link">Where can I get some?</a></span>
+                                            <span class="heading-color heading-weight"><a href="article.html"
+                                                    class="d-inline-block dominant-link">Where can I get
+                                                    some?</a></span>
                                             <span class="d-block mst-4">Feb 01, 2023</span>
                                         </div>
                                     </div>
@@ -157,17 +213,39 @@
                             <h6 class="font-18">Tags</h6>
                             <div class="blog-tag-post mst-23">
                                 <ul class="tag-ul ul-mt5">
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Android</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Blog</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Device</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Engineer</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Gadget</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Mobile</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">News</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Raspberrypi</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Robot</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Smartphone</a></li>
-                                    <li class="tag-li"><a href="javascript:void(0)" class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Techie</a></li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Android</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Blog</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Device</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Engineer</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Gadget</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Mobile</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">News</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Raspberrypi</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Robot</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Smartphone</a>
+                                    </li>
+                                    <li class="tag-li"><a href="javascript:void(0)"
+                                            class="d-inline-block body-color font-13 ptb-4 plr-15 extra-bg border-full border-radius">Techie</a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -182,13 +260,18 @@
                             <div class="blog-post banner-hover">
                                 <div class="blog-main-img">
                                     <a href="article.html" class="d-block banner-img position-relative br-hidden">
-                                        <img src="/static/image/index/article/a-1.jpg" class="w-100 img-fluid" alt="a-1">
-                                        <span class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01 Feb, 2023</span>
+                                        <img src="{% static 'image/index/article/a-1.jpg' %}" class="w-100 img-fluid"
+                                            alt="a-1">
+                                        <span
+                                            class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01
+                                            Feb, 2023</span>
                                     </a>
                                 </div>
                                 <div class="blog-post-content pst-23">
-                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Wel illum qui dolorem eum?</a></h6>
-                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eg</p>
+                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Wel
+                                            illum qui dolorem eum?</a></h6>
+                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        doli. Aenean commodo ligula eg</p>
                                     <a href="article.html" class="link-btn mst-16">Read more</a>
                                 </div>
                             </div>
@@ -197,13 +280,18 @@
                             <div class="blog-post banner-hover">
                                 <div class="blog-main-img">
                                     <a href="article.html" class="d-block banner-img position-relative br-hidden">
-                                        <img src="/static/image/index/article/a-2.jpg" class="w-100 img-fluid" alt="a-2">
-                                        <span class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01 Feb, 2023</span>
+                                        <img src="{% static 'image/index/article/a-2.jpg' %}" class="w-100 img-fluid"
+                                            alt="a-2">
+                                        <span
+                                            class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01
+                                            Feb, 2023</span>
                                     </a>
                                 </div>
                                 <div class="blog-post-content pst-23">
-                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Nisi ut aliquid ex commodi?</a></h6>
-                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eg</p>
+                                    <h6 class="font-18 text-uppercase"><a href="article.html"
+                                            class="d-inline-block">Nisi ut aliquid ex commodi?</a></h6>
+                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        doli. Aenean commodo ligula eg</p>
                                     <a href="article.html" class="link-btn mst-16">Read more</a>
                                 </div>
                             </div>
@@ -212,13 +300,18 @@
                             <div class="blog-post banner-hover">
                                 <div class="blog-main-img">
                                     <a href="article.html" class="d-block banner-img position-relative br-hidden">
-                                        <img src="/static/image/index/article/a-3.jpg" class="w-100 img-fluid" alt="a-3">
-                                        <span class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01 Feb, 2023</span>
+                                        <img src="{% static 'image/index/article/a-3.jpg' %}" class="w-100 img-fluid"
+                                            alt="a-3">
+                                        <span
+                                            class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01
+                                            Feb, 2023</span>
                                     </a>
                                 </div>
                                 <div class="blog-post-content pst-23">
-                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Which of ever undertakes?</a></h6>
-                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eg</p>
+                                    <h6 class="font-18 text-uppercase"><a href="article.html"
+                                            class="d-inline-block">Which of ever undertakes?</a></h6>
+                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        doli. Aenean commodo ligula eg</p>
                                     <a href="article.html" class="link-btn mst-16">Read more</a>
                                 </div>
                             </div>
@@ -227,13 +320,18 @@
                             <div class="blog-post banner-hover">
                                 <div class="blog-main-img">
                                     <a href="article.html" class="d-block banner-img position-relative br-hidden">
-                                        <img src="/static/image/index/article/a-4.jpg" class="w-100 img-fluid" alt="a-4">
-                                        <span class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01 Feb, 2023</span>
+                                        <img src="{% static 'image/index/article/a-4.jpg' %}" class="w-100 img-fluid"
+                                            alt="a-4">
+                                        <span
+                                            class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01
+                                            Feb, 2023</span>
                                     </a>
                                 </div>
                                 <div class="blog-post-content pst-23">
-                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Where can I get some?</a></h6>
-                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eg</p>
+                                    <h6 class="font-18 text-uppercase"><a href="article.html"
+                                            class="d-inline-block">Where can I get some?</a></h6>
+                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        doli. Aenean commodo ligula eg</p>
                                     <a href="article.html" class="link-btn mst-16">Read more</a>
                                 </div>
                             </div>
@@ -242,13 +340,18 @@
                             <div class="blog-post banner-hover">
                                 <div class="blog-main-img">
                                     <a href="article.html" class="d-block banner-img position-relative br-hidden">
-                                        <img src="/static/image/index/article/a-5.jpg" class="w-100 img-fluid" alt="a-5">
-                                        <span class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01 Feb, 2023</span>
+                                        <img src="{% static 'image/index/article/a-5.jpg' %}" class="w-100 img-fluid"
+                                            alt="a-5">
+                                        <span
+                                            class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01
+                                            Feb, 2023</span>
                                     </a>
                                 </div>
                                 <div class="blog-post-content pst-23">
-                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Who avoids a produces?</a></h6>
-                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eg</p>
+                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Who
+                                            avoids a produces?</a></h6>
+                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        doli. Aenean commodo ligula eg</p>
                                     <a href="article.html" class="link-btn mst-16">Read more</a>
                                 </div>
                             </div>
@@ -257,13 +360,18 @@
                             <div class="blog-post banner-hover">
                                 <div class="blog-main-img">
                                     <a href="article.html" class="d-block banner-img position-relative br-hidden">
-                                        <img src="/static/image/index/article/a-6.jpg" class="w-100 img-fluid" alt="a-6">
-                                        <span class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01 Feb, 2023</span>
+                                        <img src="{% static 'image/index/article/a-6.jpg' %}" class="w-100 img-fluid"
+                                            alt="a-6">
+                                        <span
+                                            class="d-inline-block dominant-color position-absolute start-0 bottom-0 ptb-10 plr-30 extra-bg heading-weight text-uppercase">01
+                                            Feb, 2023</span>
                                     </a>
                                 </div>
                                 <div class="blog-post-content pst-23">
-                                    <h6 class="font-18 text-uppercase"><a href="article.html" class="d-inline-block">Where does it come from?</a></h6>
-                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit doli. Aenean commodo ligula eg</p>
+                                    <h6 class="font-18 text-uppercase"><a href="article.html"
+                                            class="d-inline-block">Where does it come from?</a></h6>
+                                    <p class="font-16 mst-16">Lorem ipsum dolor sit amet, consectetuer adipiscing elit
+                                        doli. Aenean commodo ligula eg</p>
                                     <a href="article.html" class="link-btn mst-16">Read more</a>
                                 </div>
                             </div>
@@ -275,25 +383,39 @@
                         <nav aria-label="Page navigation example">
                             <ul class="pagination ul-mt5 align-items-center justify-content-center pagination-box">
                                 <li class="page-item first">
-                                    <a href="javascript:void(0)" class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1" aria-label="First page">First</a>
+                                    <a href="javascript:void(0)"
+                                        class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
+                                        aria-label="First page">First</a>
                                 </li>
                                 <li class="page-item prev">
-                                    <a href="javascript:void(0)" class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius" aria-label="Previous"><i class="ri-arrow-left-line d-block lh-1"></i></a>
+                                    <a href="javascript:void(0)"
+                                        class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
+                                        aria-label="Previous"><i class="ri-arrow-left-line d-block lh-1"></i></a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="javascript:void(0)" class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1" aria-label="Page number">1</a>
+                                    <a href="javascript:void(0)"
+                                        class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
+                                        aria-label="Page number">1</a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="javascript:void(0)" class="page-link active d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1" aria-label="Page number">2</a>
+                                    <a href="javascript:void(0)"
+                                        class="page-link active d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
+                                        aria-label="Page number">2</a>
                                 </li>
                                 <li class="page-item">
-                                    <a href="javascript:void(0)" class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1" aria-label="Page number">3</a>
+                                    <a href="javascript:void(0)"
+                                        class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
+                                        aria-label="Page number">3</a>
                                 </li>
                                 <li class="page-item next">
-                                    <a href="javascript:void(0)" class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius" aria-label="Next"><i class="ri-arrow-right-line d-block lh-1"></i></a>
+                                    <a href="javascript:void(0)"
+                                        class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
+                                        aria-label="Next"><i class="ri-arrow-right-line d-block lh-1"></i></a>
                                 </li>
                                 <li class="page-item last">
-                                    <a href="javascript:void(0)" class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1" aria-label="Last page">Last</a>
+                                    <a href="javascript:void(0)"
+                                        class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
+                                        aria-label="Last page">Last</a>
                                 </li>
                             </ul>
                         </nav>

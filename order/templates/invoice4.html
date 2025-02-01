@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Invoice</title>
+<title>Invoice</title>
 {% endblock %}
 
 {% block content %}
@@ -16,12 +17,13 @@
                     <div class="row">
                         <div class="col-6 invoice-theme-logo">
                             <a href="/" class="d-block theme-logo">
-                                <img src="/static/image/index/logo.png" class="width-112 img-fluid" alt="logo">
+                                <img src="{% static 'image/index/logo.png' %}" class="width-112 img-fluid" alt="logo">
                             </a>
                         </div>
                         <div class="col-6 text-end">
                             <h2 class="font-24">Invoice</h2>
-                            <span class="d-block mst-6"><span class="heading-color heading-weight mer-5">No:</span>#1718</span>
+                            <span class="d-block mst-6"><span
+                                    class="heading-color heading-weight mer-5">No:</span>#1718</span>
                         </div>
                     </div>
                     <div class="mst-30 pst-30 bst">
@@ -152,8 +154,11 @@
                     </div>
                     <div class="pst-30 bst">
                         <div class="ul-mtm15">
-                            <span class="d-block"><span class="heading-color heading-weight mer-5">Tel:</span><a href="tel:+919876543210" class="body-dominant-color">+91 98765-43210</a></span>
-                            <span class="d-block"><span class="heading-color heading-weight mer-5">Email:</span><a href="mailto:contact@demowebsite.com" class="body-dominant-color">contact@demowebsite.com</a></span>
+                            <span class="d-block"><span class="heading-color heading-weight mer-5">Tel:</span><a
+                                    href="tel:+919876543210" class="body-dominant-color">+91 98765-43210</a></span>
+                            <span class="d-block"><span class="heading-color heading-weight mer-5">Email:</span><a
+                                    href="mailto:contact@demowebsite.com"
+                                    class="body-dominant-color">contact@demowebsite.com</a></span>
                         </div>
                         <div class="font-11 mst-10 text-end">By paying, you agree to our terms.</div>
                     </div>
@@ -161,10 +166,14 @@
                 <div class="invoice-button mst-30">
                     <div class="ul-mt15 justify-content-center">
                         <div class="invoice-print-button" data-animate="animate__fadeIn">
-                            <a href="javascript:window.print()" class="body-secondary-color d-flex align-items-center ptb-10 plr-15 extra-bg border-full"><i class="ri-printer-line icon-16 mer-5"></i>Print</a>
+                            <a href="javascript:window.print()"
+                                class="body-secondary-color d-flex align-items-center ptb-10 plr-15 extra-bg border-full"><i
+                                    class="ri-printer-line icon-16 mer-5"></i>Print</a>
                         </div>
                         <div class="invoice-download-button" data-animate="animate__fadeIn">
-                            <button type="button" class="invoice-download body-secondary-color d-flex align-items-center ptb-10 plr-15 extra-bg border-full"><i class="ri-download-line icon-16 mer-5"></i>Download</button>
+                            <button type="button"
+                                class="invoice-download body-secondary-color d-flex align-items-center ptb-10 plr-15 extra-bg border-full"><i
+                                    class="ri-download-line icon-16 mer-5"></i>Download</button>
                         </div>
                     </div>
                 </div>

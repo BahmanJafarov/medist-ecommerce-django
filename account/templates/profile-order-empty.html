@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Profile order empty</title>
+<title>Profile order empty</title>
 {% endblock %}
 
 {% block content %}
@@ -17,9 +18,13 @@
                     <div class="ap-detail">
                         <div class="empty-info col-12 col-md-10 col-xl-8 col-xxl-7 mx-md-auto text-center">
                             <h2 class="section-heading meb-30" data-animate="animate__fadeIn">No order placed yet</h2>
-                            <img src="/static/image/account/empty-order.png" class="width-160 img-fluid meb-23" alt="empty-order" data-animate="animate__fadeIn">
-                            <h6 class="font-18" data-animate="animate__fadeIn">There are no order history yet. Start purchase some products, click on 'explore products' button given below for continue browsing.</h6>
-                            <a href="collection.html" class="btn-style2 secondary-btn mst-23" data-animate="animate__fadeIn">Explore products</a>
+                            <img src="{% static 'image/account/empty-order.png' %}" class="width-160 img-fluid meb-23"
+                                alt="empty-order" data-animate="animate__fadeIn">
+                            <h6 class="font-18" data-animate="animate__fadeIn">There are no order history yet. Start
+                                purchase some products, click on 'explore products' button given below for continue
+                                browsing.</h6>
+                            <a href="collection.html" class="btn-style2 secondary-btn mst-23"
+                                data-animate="animate__fadeIn">Explore products</a>
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Legal</title>
+<title>Legal</title>
 {% endblock %}
 
 {% block content %}
@@ -21,38 +22,113 @@
                 <div class="col-12 col-md-8 col-lg-9 p-md-sticky top-0">
                     <div class="number-index">
                         <h6 class="font-18" data-animate="animate__fadeIn">Delivery covers regions:</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">Our shipping services extend to various regions, ensuring your orders reach you promptly and securely, regardless of your location.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">We have partnered with reliable couriers to deliver orders across multiple regions, including international destinations. Our network is designed to provide timely delivery, tracking, and support throughout the process. Specific shipping times may vary depending on the destination, customs procedures, and other factors.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">To ensure a seamless experience, we cover remote and urban areas alike, offering standard and expedited shipping options. Depending on your location, delivery times and costs may differ. We strive to keep you informed throughout the process, providing updates and estimated arrival times for your convenience.</p>
+                        <p class="mst-16" data-animate="animate__fadeIn">Our shipping services extend to various
+                            regions, ensuring your orders reach you promptly and securely, regardless of your location.
+                        </p>
+                        <p class="mst-15" data-animate="animate__fadeIn">We have partnered with reliable couriers to
+                            deliver orders across multiple regions, including international destinations. Our network is
+                            designed to provide timely delivery, tracking, and support throughout the process. Specific
+                            shipping times may vary depending on the destination, customs procedures, and other factors.
+                        </p>
+                        <p class="mst-15" data-animate="animate__fadeIn">To ensure a seamless experience, we cover
+                            remote and urban areas alike, offering standard and expedited shipping options. Depending on
+                            your location, delivery times and costs may differ. We strive to keep you informed
+                            throughout the process, providing updates and estimated arrival times for your convenience.
+                        </p>
                         <div class="pst-30 mst-30 bst" data-animate="animate__fadeIn"></div>
-                        <h6 class="number-sub-index font-18" data-animate="animate__fadeIn">Minor shipment dispatches</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">For smaller orders, we provide streamlined shipping solutions to ensure timely and efficient delivery to your address. These orders are handled with care to maintain the same quality service.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">Small-scale shipments are processed using dedicated services designed to handle compact packages efficiently. We use reliable carriers to ensure these orders are dispatched quickly and reach you in optimal condition. Shipping times and costs for small orders may vary based on destination and carrier availability, but we aim to provide a smooth and satisfactory delivery experience.</p>
-                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">When can i expect my small order shipment?</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">For small orders, delivery times can vary based on location and shipping method. Generally, you can expect your shipment to arrive within the estimated timeframe provided at checkout. If there are any delays or issues with your order, we'll notify you with updated tracking information and expected delivery dates.</p>
-                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">How do i monitor my shipment?</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">To track your shipment, use the tracking number provided in your confirmation email. Enter this number on our website or the carrier's site to get real-time updates on your package's location and status.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">You can also check the status by logging into your account and viewing your order history. This will show the latest tracking details and delivery progress.</p>
-                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">What should i do when receiving my small order shipment?</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">When your small order arrives, inspect the package carefully to ensure it is intact and the contents match your order. If there are any discrepancies or damage, document the issue with photos and contact our customer service immediately. Provide your order number and details of the problem for prompt resolution.</p>
+                        <h6 class="number-sub-index font-18" data-animate="animate__fadeIn">Minor shipment dispatches
+                        </h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">For smaller orders, we provide streamlined
+                            shipping solutions to ensure timely and efficient delivery to your address. These orders are
+                            handled with care to maintain the same quality service.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">Small-scale shipments are processed using
+                            dedicated services designed to handle compact packages efficiently. We use reliable carriers
+                            to ensure these orders are dispatched quickly and reach you in optimal condition. Shipping
+                            times and costs for small orders may vary based on destination and carrier availability, but
+                            we aim to provide a smooth and satisfactory delivery experience.</p>
+                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">When can i expect my small
+                            order shipment?</h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">For small orders, delivery times can vary based
+                            on location and shipping method. Generally, you can expect your shipment to arrive within
+                            the estimated timeframe provided at checkout. If there are any delays or issues with your
+                            order, we'll notify you with updated tracking information and expected delivery dates.</p>
+                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">How do i monitor my shipment?
+                        </h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">To track your shipment, use the tracking number
+                            provided in your confirmation email. Enter this number on our website or the carrier's site
+                            to get real-time updates on your package's location and status.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">You can also check the status by logging into
+                            your account and viewing your order history. This will show the latest tracking details and
+                            delivery progress.</p>
+                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">What should i do when
+                            receiving my small order shipment?</h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">When your small order arrives, inspect the
+                            package carefully to ensure it is intact and the contents match your order. If there are any
+                            discrepancies or damage, document the issue with photos and contact our customer service
+                            immediately. Provide your order number and details of the problem for prompt resolution.</p>
                         <div class="pst-30 mst-30 bst" data-animate="animate__fadeIn"></div>
                         <h6 class="number-sub-index font-18" data-animate="animate__fadeIn">Big order shipments</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">Large orders are handled with special care to ensure safe and timely delivery. Depending on the size and weight, your order may be shipped in multiple packages. We will provide tracking information for each shipment to help you monitor progress and expected delivery times.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">Delivery times for large orders may vary based on the shipping method and destination. Our team will work closely with shipping carriers to ensure that your order arrives promptly. If there are any delays or issues, we'll keep you informed with updates and provide support to resolve any concerns.</p>
-                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">Big order shipping choices</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">For substantial shipments, we provide several delivery options to meet your needs. These methods are tailored to handle large volumes efficiently and securely. You can choose between standard delivery, expedited options, or specialized services depending on your requirements and urgency. Each option is designed to ensure timely and safe arrival of your order.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">We offer various shipping choices for large orders, including regular shipping, express services, and tailored solutions to suit your delivery needs.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">For oversized or heavy shipments, we provide customized solutions to handle unique delivery requirements. This includes coordination with specialized carriers and ensuring all logistical aspects are covered for safe delivery.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">Choosing the best shipping option depends on your order's size, weight, and delivery timeline. We provide guidance to help you select the most suitable method to ensure prompt and secure delivery of your large order.</p>
-                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">What do i need to do when receiving my big order?</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">Upon receiving your substantial shipment, first, inspect the packaging for any visible damage or signs of mishandling. Ensure all items listed on the delivery receipt are present and accounted for. If you notice any discrepancies or issues with the package, report them immediately to the delivery carrier or our customer service for prompt resolution. Proper documentation and timely reporting are crucial for managing large shipments effectively.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">When your large order arrives, check the condition of the boxes and confirm that the contents match your order. If you encounter any problems, such as missing or damaged items, contact our support team or the delivery service right away for assistance.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">After receiving a significant order, carefully unpack and review each item to ensure everything is in good condition and matches your purchase. In case of any issues, such as damaged goods or missing items, provide detailed information and photographs if possible. This helps expedite the process of resolving any problems with the shipment and ensures that any necessary replacements or refunds are handled swiftly.</p>
-                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">What extra costs might be added to my large order shipment?</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">When shipping large orders, you may incur extra fees based on various factors. These can include costs for special handling, oversized package surcharges, or delivery to remote locations. Additional fees may also apply if expedited shipping is required or if your order needs to be split into multiple shipments. Always review the shipping terms and conditions to understand any potential extra costs before finalizing your order.</p>
-                        <p class="mst-15" data-animate="animate__fadeIn">For large shipments, there might be extra charges for handling, oversized items, or delivery to hard-to-reach areas. If you opt for faster delivery or need multiple shipments, additional costs could also apply. Check the shipping policy for a breakdown of potential extra fees.</p>
-                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">Is it possible to ship to a tradeshow, convention center, or freight forwarder?</h6>
-                        <p class="mst-16" data-animate="animate__fadeIn">Yes, shipping to trade shows, convention centers, or freight forwarders is possible. Ensure you provide accurate details and contact information for these locations. Verify any specific delivery requirements or restrictions with the venue or forwarder before arranging your shipment to ensure successful delivery.</p>
+                        <p class="mst-16" data-animate="animate__fadeIn">Large orders are handled with special care to
+                            ensure safe and timely delivery. Depending on the size and weight, your order may be shipped
+                            in multiple packages. We will provide tracking information for each shipment to help you
+                            monitor progress and expected delivery times.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">Delivery times for large orders may vary based
+                            on the shipping method and destination. Our team will work closely with shipping carriers to
+                            ensure that your order arrives promptly. If there are any delays or issues, we'll keep you
+                            informed with updates and provide support to resolve any concerns.</p>
+                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">Big order shipping choices
+                        </h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">For substantial shipments, we provide several
+                            delivery options to meet your needs. These methods are tailored to handle large volumes
+                            efficiently and securely. You can choose between standard delivery, expedited options, or
+                            specialized services depending on your requirements and urgency. Each option is designed to
+                            ensure timely and safe arrival of your order.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">We offer various shipping choices for large
+                            orders, including regular shipping, express services, and tailored solutions to suit your
+                            delivery needs.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">For oversized or heavy shipments, we provide
+                            customized solutions to handle unique delivery requirements. This includes coordination with
+                            specialized carriers and ensuring all logistical aspects are covered for safe delivery.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">Choosing the best shipping option depends on
+                            your order's size, weight, and delivery timeline. We provide guidance to help you select the
+                            most suitable method to ensure prompt and secure delivery of your large order.</p>
+                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">What do i need to do when
+                            receiving my big order?</h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">Upon receiving your substantial shipment,
+                            first, inspect the packaging for any visible damage or signs of mishandling. Ensure all
+                            items listed on the delivery receipt are present and accounted for. If you notice any
+                            discrepancies or issues with the package, report them immediately to the delivery carrier or
+                            our customer service for prompt resolution. Proper documentation and timely reporting are
+                            crucial for managing large shipments effectively.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">When your large order arrives, check the
+                            condition of the boxes and confirm that the contents match your order. If you encounter any
+                            problems, such as missing or damaged items, contact our support team or the delivery service
+                            right away for assistance.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">After receiving a significant order, carefully
+                            unpack and review each item to ensure everything is in good condition and matches your
+                            purchase. In case of any issues, such as damaged goods or missing items, provide detailed
+                            information and photographs if possible. This helps expedite the process of resolving any
+                            problems with the shipment and ensures that any necessary replacements or refunds are
+                            handled swiftly.</p>
+                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">What extra costs might be
+                            added to my large order shipment?</h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">When shipping large orders, you may incur extra
+                            fees based on various factors. These can include costs for special handling, oversized
+                            package surcharges, or delivery to remote locations. Additional fees may also apply if
+                            expedited shipping is required or if your order needs to be split into multiple shipments.
+                            Always review the shipping terms and conditions to understand any potential extra costs
+                            before finalizing your order.</p>
+                        <p class="mst-15" data-animate="animate__fadeIn">For large shipments, there might be extra
+                            charges for handling, oversized items, or delivery to hard-to-reach areas. If you opt for
+                            faster delivery or need multiple shipments, additional costs could also apply. Check the
+                            shipping policy for a breakdown of potential extra fees.</p>
+                        <h6 class="p-number font-18 mst-15" data-animate="animate__fadeIn">Is it possible to ship to a
+                            tradeshow, convention center, or freight forwarder?</h6>
+                        <p class="mst-16" data-animate="animate__fadeIn">Yes, shipping to trade shows, convention
+                            centers, or freight forwarders is possible. Ensure you provide accurate details and contact
+                            information for these locations. Verify any specific delivery requirements or restrictions
+                            with the venue or forwarder before arranging your shipment to ensure successful delivery.
+                        </p>
                     </div>
                 </div>
             </div>

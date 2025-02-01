@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Product comparison</title>
+<title>Product comparison</title>
 {% endblock %}
 
 {% block content %}
@@ -20,7 +21,8 @@
                 <div class="product-compare-area">
                     <div class="product-compare-block">
                         <label class="cust-checkbox-label meb-30" data-animate="animate__fadeIn">
-                            <input type="checkbox" id="product-compare-difference" name="product-compare-difference" class="cust-checkbox">
+                            <input type="checkbox" id="product-compare-difference" name="product-compare-difference"
+                                class="cust-checkbox">
                             <span class="d-block cust-check"></span>
                             <span>Show only differences</span>
                         </label>
@@ -28,41 +30,55 @@
                             <div class="row flex-nowrap">
                                 <div class="col-6 col-lg-4 col-xl-3 d-flex">
                                     <div class="w-100 border-full border-radius">
-                                        <div class="product-compare-detail ptb-15 plr-15" data-animate="animate__fadeIn">
+                                        <div class="product-compare-detail ptb-15 plr-15"
+                                            data-animate="animate__fadeIn">
                                             <span class="product-compare-img position-relative">
-                                                <a href="/product/" class="d-block br-hidden"><img src="/static/image/product/compare-product1.jpg" class="w-100 img-fluid" alt="compare-product1"></a>
-                                                <button type="submit" class="product-compare-remove-btn extra-color icon-8 position-absolute top-0 end-0 width-16 height-16 secondary-bg rounded-circle" aria-label="Remove compare product"><i class="ri-close-large-line d-block lh-1"></i></button>
+                                                <a href="/product/" class="d-block br-hidden"><img
+                                                        src="{% static 'image/product/compare-product1.jpg' %}"
+                                                        class="w-100 img-fluid" alt="compare-product1"></a>
+                                                <button type="submit"
+                                                    class="product-compare-remove-btn extra-color icon-8 position-absolute top-0 end-0 width-16 height-16 secondary-bg rounded-circle"
+                                                    aria-label="Remove compare product"><i
+                                                        class="ri-close-large-line d-block lh-1"></i></button>
                                             </span>
                                             <div class="product-compare-content mst-20">
-                                                <span class="d-inline-block font-16 heading-weight"><a href="/product/" class="d-block dominant-link">Refractometers</a></span>
+                                                <span class="d-inline-block font-16 heading-weight"><a href="/product/"
+                                                        class="d-block dominant-link">Refractometers</a></span>
                                                 <div class="ul-mt5 pst-8">
                                                     <span class="dominant-color heading-weight">$79.00</span>
-                                                    <span class="heading-weight text-decoration-line-through">$89.00</span>
+                                                    <span
+                                                        class="heading-weight text-decoration-line-through">$89.00</span>
                                                 </div>
                                             </div>
                                             <div class="product-compare-info mst-24">
                                                 <div class="ul-mt10 color">
                                                     <label class="cust-checkbox-label">
-                                                        <input type="radio" name="refractometers-color" class="cust-checkbox" value="aliceblue" checked>
+                                                        <input type="radio" name="refractometers-color"
+                                                            class="cust-checkbox" value="aliceblue" checked>
                                                         <span class="d-block cust-check aliceblue"></span>
                                                     </label>
                                                     <label class="cust-checkbox-label">
-                                                        <input type="radio" name="refractometers-color" class="cust-checkbox" value="antiquewhite">
+                                                        <input type="radio" name="refractometers-color"
+                                                            class="cust-checkbox" value="antiquewhite">
                                                         <span class="d-block cust-check antiquewhite"></span>
                                                     </label>
                                                     <label class="cust-checkbox-label">
-                                                        <input type="radio" name="refractometers-color" class="cust-checkbox" value="azure">
+                                                        <input type="radio" name="refractometers-color"
+                                                            class="cust-checkbox" value="azure">
                                                         <span class="d-block cust-check azure"></span>
                                                     </label>
                                                 </div>
                                                 <div class="product-compare-button mst-30">
-                                                    <a href="/checkout/" class="w-100 btn-style2 secondary-btn">Buy now</a>
+                                                    <a href="/checkout/" class="w-100 btn-style2 secondary-btn">Buy
+                                                        now</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-compare-ratting ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-ratting ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Ratings</h6>
-                                            <span class="d-inline-block review-total">4.0(<span class="review-caption">2 reviews</span>)</span>
+                                            <span class="d-inline-block review-total">4.0(<span class="review-caption">2
+                                                    reviews</span>)</span>
                                             <span class="review-ratting mst-9">
                                                 <span class="review-star icon-16">
                                                     <i class="ri-star-fill"></i>
@@ -73,23 +89,28 @@
                                                 </span>
                                             </span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Availibility</h6>
                                             <span class="d-inline-block text-success">In stock</span>
                                         </div>
-                                        <div class="product-compare-color ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-color ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Color</h6>
                                             <span class="d-inline-block">Aliceblue, Antiquewhite, Azure</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Size</h6>
                                             <span class="d-inline-block">5ml, 20ml, 250ml</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Weight</h6>
                                             <span class="d-inline-block">---</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Warranty</h6>
                                             <span class="d-inline-block">Yes</span>
                                         </div>
@@ -97,41 +118,55 @@
                                 </div>
                                 <div class="col-6 col-lg-4 col-xl-3 d-flex">
                                     <div class="w-100 border-full border-radius">
-                                        <div class="product-compare-detail ptb-15 plr-15" data-animate="animate__fadeIn">
+                                        <div class="product-compare-detail ptb-15 plr-15"
+                                            data-animate="animate__fadeIn">
                                             <span class="product-compare-img position-relative">
-                                                <a href="/product/" class="d-block br-hidden"><img src="/static/image/product/compare-product2.jpg" class="w-100 img-fluid" alt="compare-product2"></a>
-                                                <button type="submit" class="product-compare-remove-btn extra-color icon-8 position-absolute top-0 end-0 width-16 height-16 secondary-bg rounded-circle" aria-label="Remove compare product"><i class="ri-close-large-line d-block lh-1"></i></button>
+                                                <a href="/product/" class="d-block br-hidden"><img
+                                                        src="{% static 'image/product/compare-product2.jpg' %}"
+                                                        class="w-100 img-fluid" alt="compare-product2"></a>
+                                                <button type="submit"
+                                                    class="product-compare-remove-btn extra-color icon-8 position-absolute top-0 end-0 width-16 height-16 secondary-bg rounded-circle"
+                                                    aria-label="Remove compare product"><i
+                                                        class="ri-close-large-line d-block lh-1"></i></button>
                                             </span>
                                             <div class="product-compare-content mst-20">
-                                                <span class="d-inline-block font-16 heading-weight"><a href="/product/" class="d-block dominant-link">Digital thermometer</a></span>
+                                                <span class="d-inline-block font-16 heading-weight"><a href="/product/"
+                                                        class="d-block dominant-link">Digital thermometer</a></span>
                                                 <div class="ul-mt5 pst-8">
                                                     <span class="dominant-color heading-weight">$49.00</span>
-                                                    <span class="heading-weight text-decoration-line-through">$59.00</span>
+                                                    <span
+                                                        class="heading-weight text-decoration-line-through">$59.00</span>
                                                 </div>
                                             </div>
                                             <div class="product-compare-info mst-24">
                                                 <div class="ul-mt10 color">
                                                     <label class="cust-checkbox-label disabled">
-                                                        <input type="radio" name="digital-thermometer-color" class="cust-checkbox" value="beige" checked>
+                                                        <input type="radio" name="digital-thermometer-color"
+                                                            class="cust-checkbox" value="beige" checked>
                                                         <span class="d-block cust-check beige"></span>
                                                     </label>
                                                     <label class="cust-checkbox-label disabled">
-                                                        <input type="radio" name="digital-thermometer-color" class="cust-checkbox" value="bisque">
+                                                        <input type="radio" name="digital-thermometer-color"
+                                                            class="cust-checkbox" value="bisque">
                                                         <span class="d-block cust-check bisque"></span>
                                                     </label>
                                                     <label class="cust-checkbox-label disabled">
-                                                        <input type="radio" name="digital-thermometer-color" class="cust-checkbox" value="black">
+                                                        <input type="radio" name="digital-thermometer-color"
+                                                            class="cust-checkbox" value="black">
                                                         <span class="d-block cust-check black"></span>
                                                     </label>
                                                 </div>
                                                 <div class="product-compare-button mst-30">
-                                                    <a href="/product/" class="w-100 btn-style2 secondary-btn">Learn more</a>
+                                                    <a href="/product/" class="w-100 btn-style2 secondary-btn">Learn
+                                                        more</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-compare-ratting ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-ratting ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Ratings</h6>
-                                            <span class="d-inline-block review-total">5.0(<span class="review-caption">12 reviews</span>)</span>
+                                            <span class="d-inline-block review-total">5.0(<span
+                                                    class="review-caption">12 reviews</span>)</span>
                                             <span class="review-ratting mst-9">
                                                 <span class="review-star icon-16">
                                                     <i class="ri-star-fill"></i>
@@ -142,23 +177,28 @@
                                                 </span>
                                             </span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Availibility</h6>
                                             <span class="d-inline-block text-danger">Out of stock</span>
                                         </div>
-                                        <div class="product-compare-color ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-color ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Color</h6>
                                             <span class="d-inline-block">Beige, Bisque, Black</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Size</h6>
                                             <span class="d-inline-block">---</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Weight</h6>
                                             <span class="d-inline-block">187g(6.60oz)</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Warranty</h6>
                                             <span class="d-inline-block">No</span>
                                         </div>
@@ -166,41 +206,55 @@
                                 </div>
                                 <div class="col-6 col-lg-4 col-xl-3 d-flex">
                                     <div class="w-100 border-full border-radius">
-                                        <div class="product-compare-detail ptb-15 plr-15" data-animate="animate__fadeIn">
+                                        <div class="product-compare-detail ptb-15 plr-15"
+                                            data-animate="animate__fadeIn">
                                             <span class="product-compare-img position-relative">
-                                                <a href="/product/" class="d-block br-hidden"><img src="/static/image/product/compare-product3.jpg" class="w-100 img-fluid" alt="compare-product3"></a>
-                                                <button type="submit" class="product-compare-remove-btn extra-color icon-8 position-absolute top-0 end-0 width-16 height-16 secondary-bg rounded-circle" aria-label="Remove compare product"><i class="ri-close-large-line d-block lh-1"></i></button>
+                                                <a href="/product/" class="d-block br-hidden"><img
+                                                        src="{% static 'image/product/compare-product3.jpg' %}"
+                                                        class="w-100 img-fluid" alt="compare-product3"></a>
+                                                <button type="submit"
+                                                    class="product-compare-remove-btn extra-color icon-8 position-absolute top-0 end-0 width-16 height-16 secondary-bg rounded-circle"
+                                                    aria-label="Remove compare product"><i
+                                                        class="ri-close-large-line d-block lh-1"></i></button>
                                             </span>
                                             <div class="product-compare-content mst-20">
-                                                <span class="d-inline-block font-16 heading-weight"><a href="/product/" class="d-block dominant-link">Optical microscope</a></span>
+                                                <span class="d-inline-block font-16 heading-weight"><a href="/product/"
+                                                        class="d-block dominant-link">Optical microscope</a></span>
                                                 <div class="ul-mt5 pst-8">
                                                     <span class="dominant-color heading-weight">$69.00</span>
-                                                    <span class="heading-weight text-decoration-line-through">$79.00</span>
+                                                    <span
+                                                        class="heading-weight text-decoration-line-through">$79.00</span>
                                                 </div>
                                             </div>
                                             <div class="product-compare-info mst-24">
                                                 <div class="ul-mt10 color">
                                                     <label class="cust-checkbox-label">
-                                                        <input type="radio" name="optical-microscope-color" class="cust-checkbox" value="cadetblue" checked>
+                                                        <input type="radio" name="optical-microscope-color"
+                                                            class="cust-checkbox" value="cadetblue" checked>
                                                         <span class="d-block cust-check cadetblue"></span>
                                                     </label>
                                                     <label class="cust-checkbox-label">
-                                                        <input type="radio" name="optical-microscope-color" class="cust-checkbox" value="chocolate">
+                                                        <input type="radio" name="optical-microscope-color"
+                                                            class="cust-checkbox" value="chocolate">
                                                         <span class="d-block cust-check chocolate"></span>
                                                     </label>
                                                     <label class="cust-checkbox-label">
-                                                        <input type="radio" name="optical-microscope-color" class="cust-checkbox" value="coral">
+                                                        <input type="radio" name="optical-microscope-color"
+                                                            class="cust-checkbox" value="coral">
                                                         <span class="d-block cust-check coral"></span>
                                                     </label>
                                                 </div>
                                                 <div class="product-compare-button mst-30">
-                                                    <a href="/checkout/" class="w-100 btn-style2 secondary-btn">Buy now</a>
+                                                    <a href="/checkout/" class="w-100 btn-style2 secondary-btn">Buy
+                                                        now</a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-compare-ratting ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-ratting ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Ratings</h6>
-                                            <span class="d-inline-block review-total">5.0(<span class="review-caption">12 reviews</span>)</span>
+                                            <span class="d-inline-block review-total">5.0(<span
+                                                    class="review-caption">12 reviews</span>)</span>
                                             <span class="review-ratting mst-9">
                                                 <span class="review-star icon-16">
                                                     <i class="ri-star-fill"></i>
@@ -211,23 +265,28 @@
                                                 </span>
                                             </span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Availibility</h6>
                                             <span class="d-inline-block text-success">In stock</span>
                                         </div>
-                                        <div class="product-compare-color ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-color ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Color</h6>
                                             <span class="d-inline-block">Cadetblue, Chocolate, Coral</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Size</h6>
                                             <span class="d-inline-block">24cm, 43cm</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Weight</h6>
                                             <span class="d-inline-block">171g(6.02 oz)</span>
                                         </div>
-                                        <div class="product-compare-availibility ptb-15 plr-15 bst" data-animate="animate__fadeIn">
+                                        <div class="product-compare-availibility ptb-15 plr-15 bst"
+                                            data-animate="animate__fadeIn">
                                             <h6 class="font-16 meb-8">Warranty</h6>
                                             <span class="d-inline-block">---</span>
                                         </div>
@@ -235,9 +294,15 @@
                                 </div>
                                 <div class="col-6 col-lg-4 col-xl-3 d-flex">
                                     <div class="w-100 border-full border-radius">
-                                        <div class="product-compare-detail ptb-15 plr-15" data-animate="animate__fadeIn">
-                                            <div class="d-flex flex-column align-items-center justify-content-center pst-36 text-center">
-                                                <button type="button" data-bs-target="#compare-modal" data-bs-toggle="modal" class="body-secondary-color font-24 width-96 height-96 d-flex align-items-center justify-content-center border-full border-radius" aria-label="Compare product"><i class="ri-add-large-line d-block lh-1"></i></button>
+                                        <div class="product-compare-detail ptb-15 plr-15"
+                                            data-animate="animate__fadeIn">
+                                            <div
+                                                class="d-flex flex-column align-items-center justify-content-center pst-36 text-center">
+                                                <button type="button" data-bs-target="#compare-modal"
+                                                    data-bs-toggle="modal"
+                                                    class="body-secondary-color font-24 width-96 height-96 d-flex align-items-center justify-content-center border-full border-radius"
+                                                    aria-label="Compare product"><i
+                                                        class="ri-add-large-line d-block lh-1"></i></button>
                                                 <span class="mst-25">Select a product</span>
                                             </div>
                                         </div>
@@ -254,24 +319,34 @@
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content body-bg border-0 br-hidden">
                     <div class="modal-body ptb-30 plr-0">
-                        <div class="compare-modal-header d-flex align-items-center justify-content-between plr-15 plr-sm-30 meb-30">
+                        <div
+                            class="compare-modal-header d-flex align-items-center justify-content-between plr-15 plr-sm-30 meb-30">
                             <h6 class="font-18">Compare a product</h6>
-                            <button type="button" class="body-secondary-color icon-16" data-bs-dismiss="modal" aria-label="Close"><i class="ri-close-large-line d-block lh-1"></i></button>
+                            <button type="button" class="body-secondary-color icon-16" data-bs-dismiss="modal"
+                                aria-label="Close"><i class="ri-close-large-line d-block lh-1"></i></button>
                         </div>
                         <form method="get" action="javascript:void(0)" class="search-form w-100">
                             <div class="compare-search">
                                 <div class="compare-search-bar position-relative">
-                                    <div class="compare-form-search d-flex flex-wrap align-items-center plr-15 plr-sm-30">
-                                        <span class="d-block body-secondary-color width-16 icon-16"><i class="ri-search-line d-block lh-1"></i></span>
-                                        <input type="search" name="compare-search-input" class="compare-search-input width-calc-16 h-auto ptb-0 psl-10 per-0 bg-transparent border-0" value placeholder="Search here" required>
+                                    <div
+                                        class="compare-form-search d-flex flex-wrap align-items-center plr-15 plr-sm-30">
+                                        <span class="d-block body-secondary-color width-16 icon-16"><i
+                                                class="ri-search-line d-block lh-1"></i></span>
+                                        <input type="search" name="compare-search-input"
+                                            class="compare-search-input width-calc-16 h-auto ptb-0 psl-10 per-0 bg-transparent border-0"
+                                            value placeholder="Search here" required>
                                     </div>
                                     <div class="compare-product-results plr-15 psl-sm-30 per-sm-30 per-xl-19 mst-15">
                                         <ul class="ul-mt15">
-                                            <li class="col-12 col-md-6" data-name="refractometers" >
+                                            <li class="col-12 col-md-6" data-name="refractometers">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="refractometers" name="refractometers" class="cust-checkbox" value="refractometers" checked>
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal1.jpg" class="width-88 img-fluid border-radius" alt="compare-modal1">
+                                                    <input type="checkbox" id="refractometers" name="refractometers"
+                                                        class="cust-checkbox" value="refractometers" checked>
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal1.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal1">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Refractometers</span>
                                                             <span class="d-block mst-4">From $79.00</span>
@@ -281,9 +356,14 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="digital-thermometer">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="digital-thermometer" name="digital-thermometer" class="cust-checkbox" value="digital-thermometer" checked>
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal2.jpg" class="width-88 img-fluid border-radius" alt="compare-modal2">
+                                                    <input type="checkbox" id="digital-thermometer"
+                                                        name="digital-thermometer" class="cust-checkbox"
+                                                        value="digital-thermometer" checked>
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal2.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal2">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Digital thermometer</span>
                                                             <span class="d-block mst-4">From $49.00</span>
@@ -293,9 +373,14 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="optical-microscope">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="optical-microscope" name="optical-microscope" class="cust-checkbox" value="optical-microscope" checked>
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal3.jpg" class="width-88 img-fluid border-radius" alt="compare-modal3">
+                                                    <input type="checkbox" id="optical-microscope"
+                                                        name="optical-microscope" class="cust-checkbox"
+                                                        value="optical-microscope" checked>
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal3.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal3">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Optical microscope</span>
                                                             <span class="d-block mst-4">From $69.00</span>
@@ -305,9 +390,13 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="dental-tool">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="dental-tool" name="dental-tool" class="cust-checkbox" value="dental-tool">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal4.jpg" class="width-88 img-fluid border-radius" alt="compare-modal4">
+                                                    <input type="checkbox" id="dental-tool" name="dental-tool"
+                                                        class="cust-checkbox" value="dental-tool">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal4.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal4">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Dental tool</span>
                                                             <span class="d-block mst-4">From $49.00</span>
@@ -317,9 +406,13 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="drug-vaccine">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="drug-vaccine" name="drug-vaccine" class="cust-checkbox" value="drug-vaccine">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal5.jpg" class="width-88 img-fluid border-radius" alt="compare-modal5">
+                                                    <input type="checkbox" id="drug-vaccine" name="drug-vaccine"
+                                                        class="cust-checkbox" value="drug-vaccine">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal5.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal5">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Drug vaccine</span>
                                                             <span class="d-block mst-4">From $89.00</span>
@@ -329,9 +422,14 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="nebulizer-machine">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="nebulizer-machine" name="nebulizer-machine" class="cust-checkbox" value="nebulizer-machine">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal6.jpg" class="width-88 img-fluid border-radius" alt="compare-modal6">
+                                                    <input type="checkbox" id="nebulizer-machine"
+                                                        name="nebulizer-machine" class="cust-checkbox"
+                                                        value="nebulizer-machine">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal6.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal6">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Nebulizer machine</span>
                                                             <span class="d-block mst-4">From $79.00</span>
@@ -341,9 +439,13 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="blood-machine">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="blood-machine" name="blood-machine" class="cust-checkbox" value="blood-machine">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal7.jpg" class="width-88 img-fluid border-radius" alt="compare-modal7">
+                                                    <input type="checkbox" id="blood-machine" name="blood-machine"
+                                                        class="cust-checkbox" value="blood-machine">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal7.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal7">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Blood machine</span>
                                                             <span class="d-block mst-4">From $29.00</span>
@@ -353,9 +455,13 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="pulse-oximeter">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="pulse-oximeter" name="pulse-oximeter" class="cust-checkbox" value="pulse-oximeter">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal8.jpg" class="width-88 img-fluid border-radius" alt="compare-modal8">
+                                                    <input type="checkbox" id="pulse-oximeter" name="pulse-oximeter"
+                                                        class="cust-checkbox" value="pulse-oximeter">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal8.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal8">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Pulse oximeter</span>
                                                             <span class="d-block mst-4">From $14.00</span>
@@ -365,9 +471,14 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="dressing-scissors">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="dressing-scissors" name="dressing-scissors" class="cust-checkbox" value="dressing-scissors">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal9.jpg" class="width-88 img-fluid border-radius" alt="compare-modal9">
+                                                    <input type="checkbox" id="dressing-scissors"
+                                                        name="dressing-scissors" class="cust-checkbox"
+                                                        value="dressing-scissors">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal9.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal9">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Dressing scissors</span>
                                                             <span class="d-block mst-4">From $64.00</span>
@@ -377,9 +488,13 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="sanitizer-gel">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="sanitizer-gel" name="sanitizer-gel" class="cust-checkbox" value="sanitizer-gel">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal10.jpg" class="width-88 img-fluid border-radius" alt="compare-modal10">
+                                                    <input type="checkbox" id="sanitizer-gel" name="sanitizer-gel"
+                                                        class="cust-checkbox" value="sanitizer-gel">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal10.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal10">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Sanitizer gel</span>
                                                             <span class="d-block mst-4">From $34.00</span>
@@ -389,9 +504,13 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="face-mask">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="face-mask" name="face-mask" class="cust-checkbox" value="face-mask">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal11.jpg" class="width-88 img-fluid border-radius" alt="compare-modal11">
+                                                    <input type="checkbox" id="face-mask" name="face-mask"
+                                                        class="cust-checkbox" value="face-mask">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal11.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal11">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Face mask</span>
                                                             <span class="d-block mst-4">From $4.00</span>
@@ -401,9 +520,13 @@
                                             </li>
                                             <li class="col-12 col-md-6" data-name="tonic-lotion">
                                                 <label class="compare-product-label">
-                                                    <input type="checkbox" id="tonic-lotion" name="tonic-lotion" class="cust-checkbox" value="tonic-lotion">
-                                                    <span class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
-                                                        <img src="/static/image/product/compare-modal12.jpg" class="width-88 img-fluid border-radius" alt="compare-modal12">
+                                                    <input type="checkbox" id="tonic-lotion" name="tonic-lotion"
+                                                        class="cust-checkbox" value="tonic-lotion">
+                                                    <span
+                                                        class="compare-product-content d-flex flex-wrap ptb-5 plr-5 border-full border-radius">
+                                                        <img src="{% static 'image/product/compare-modal12.jpg' %}"
+                                                            class="width-88 img-fluid border-radius"
+                                                            alt="compare-modal12">
                                                         <span class="width-calc-88 psl-15">
                                                             <span class="d-block">Tonic lotion</span>
                                                             <span class="d-block mst-4">From $9.00</span>
@@ -413,7 +536,8 @@
                                             </li>
                                         </ul>
                                     </div>
-                                    <div class="d-none compare-product-results-fail plr-15 plr-sm-30 mst-15">Search not found</div>
+                                    <div class="d-none compare-product-results-fail plr-15 plr-sm-30 mst-15">Search not
+                                        found</div>
                                 </div>
                             </div>
                             <div class="compare-modal-footer plr-15 plr-sm-30 mst-30 text-end">

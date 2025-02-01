@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Legal</title>
+<title>Legal</title>
 {% endblock %}
 
 {% block content %}
@@ -19,28 +20,36 @@
             <div class="row row-mtm justify-content-md-center text-center">
                 <div class="col-12 col-sm-6 col-lg-3" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <span class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i class="ri-shield-line d-block lh-1"></i></span>
+                        <span
+                            class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i
+                                class="ri-shield-line d-block lh-1"></i></span>
                         <h6 class="font-18">Protection guard</h6>
                         <p class="mst-6">Measures in place to ensure the safety of your data.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <span class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i class="ri-reset-left-line d-block lh-1"></i></span>
+                        <span
+                            class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i
+                                class="ri-reset-left-line d-block lh-1"></i></span>
                         <h6 class="font-18">Credit replacement</h6>
                         <p class="mst-6">Process for issuing a new credit or replacing a refund.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <span class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i class="ri-eye-line d-block lh-1"></i></span>
+                        <span
+                            class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i
+                                class="ri-eye-line d-block lh-1"></i></span>
                         <h6 class="font-18">Watch guard</h6>
                         <p class="mst-6">Features to monitor and protect your account security.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-3" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <span class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i class="ri-user-line d-block lh-1"></i></span>
+                        <span
+                            class="dominant-color icon-32 d-flex align-items-center justify-content-center meb-23 rounded-circle"><i
+                                class="ri-user-line d-block lh-1"></i></span>
                         <h6 class="font-18">Member profile</h6>
                         <p class="mst-6">Your personal account details and settings overview.</p>
                     </div>
@@ -58,11 +67,13 @@
                         <div class="col-12 col-xl-6" data-animate="animate__fadeIn">
                             <div class="banner-hover">
                                 <span class="d-block banner-img overflow-hidden">
-                                    <img src="/static/image/other/payment-banner1.jpg" class="w-100 img-fluid" alt="payment-banner1">
+                                    <img src="{% static 'image/other/payment-banner1.jpg' %}" class="w-100 img-fluid"
+                                        alt="payment-banner1">
                                 </span>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-6 d-xl-flex flex-xl-column justify-content-xl-center ptb-30 plr-15 plr-sm-30" data-animate="animate__fadeIn">
+                        <div class="col-12 col-xl-6 d-xl-flex flex-xl-column justify-content-xl-center ptb-30 plr-15 plr-sm-30"
+                            data-animate="animate__fadeIn">
                             <h6 class="font-18">Charge info</h6>
                             <p class="mst-6 meb-15">Insights into payment costs and fee details.</p>
                             <div class="p-mtm20">
@@ -78,11 +89,13 @@
                         <div class="col-12 col-xl-6" data-animate="animate__fadeIn">
                             <div class="banner-hover">
                                 <span class="d-block banner-img overflow-hidden">
-                                    <img src="/static/image/other/payment-banner2.jpg" class="w-100 img-fluid" alt="payment-banner2">
+                                    <img src="{% static 'image/other/payment-banner2.jpg' %}" class="w-100 img-fluid"
+                                        alt="payment-banner2">
                                 </span>
                             </div>
                         </div>
-                        <div class="col-12 col-xl-6 d-xl-flex flex-xl-column justify-content-xl-center ptb-30 plr-15 plr-sm-30" data-animate="animate__fadeIn">
+                        <div class="col-12 col-xl-6 d-xl-flex flex-xl-column justify-content-xl-center ptb-30 plr-15 plr-sm-30"
+                            data-animate="animate__fadeIn">
                             <h6 class="font-18">Billing plan</h6>
                             <p class="mst-6 meb-15">Outline of payment schedules and subscription details.</p>
                             <div class="p-mtm20">
@@ -108,42 +121,48 @@
             <div class="row row-mtm text-center">
                 <div class="col-12 col-sm-6 col-lg-4" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <img src="/static/image/other/paying-visa.png" class="width-48 img-fluid meb-23 border-radius" alt="paying-visa">
+                        <img src="{% static 'image/other/paying-visa.png' %}"
+                            class="width-48 img-fluid meb-23 border-radius" alt="paying-visa">
                         <h6 class="font-18">Visa transactions</h6>
                         <p class="mst-6">Secure Visa card payments processed quickly and easily.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <img src="/static/image/other/paying-maestro.png" class="width-48 img-fluid meb-23 border-radius" alt="paying-maestro">
+                        <img src="{% static 'image/other/paying-maestro.png' %}"
+                            class="width-48 img-fluid meb-23 border-radius" alt="paying-maestro">
                         <h6 class="font-18">Maestro transactions</h6>
                         <p class="mst-6">Payment transactions handled via maestro card services.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <img src="/static/image/other/paying-paypal.png" class="width-48 img-fluid meb-23 border-radius" alt="paying-paypal">
+                        <img src="{% static 'image/other/paying-paypal.png' %}"
+                            class="width-48 img-fluid meb-23 border-radius" alt="paying-paypal">
                         <h6 class="font-18">Paypal transactions</h6>
                         <p class="mst-6">Handling payments through paypal for secure transactions.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <img src="/static/image/other/paying-discover.png" class="width-48 img-fluid meb-23 border-radius" alt="paying-discover">
+                        <img src="{% static 'image/other/paying-discover.png' %}"
+                            class="width-48 img-fluid meb-23 border-radius" alt="paying-discover">
                         <h6 class="font-18">Discover payments</h6>
                         <p class="mst-6">Processing secure payments with discover card services.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <img src="/static/image/other/paying-gpay.png" class="width-48 img-fluid meb-23 border-radius" alt="paying-gpay">
+                        <img src="{% static 'image/other/paying-gpay.png' %}"
+                            class="width-48 img-fluid meb-23 border-radius" alt="paying-gpay">
                         <h6 class="font-18">Google payment</h6>
                         <p class="mst-6">Make fast, secure payments using google wallet services.</p>
                     </div>
                 </div>
                 <div class="col-12 col-sm-6 col-lg-4" data-animate="animate__fadeIn">
                     <div class="col-xl-11 col-xxl-9 d-flex flex-column align-items-center mx-xl-auto">
-                        <img src="/static/image/other/paying-american.png" class="width-48 img-fluid meb-23 border-radius" alt="paying-american">
+                        <img src="{% static 'image/other/paying-american.png' %}"
+                            class="width-48 img-fluid meb-23 border-radius" alt="paying-american">
                         <h6 class="font-18">Amex card</h6>
                         <p class="mst-6">Make secure payments using your american express card.</p>
                     </div>
@@ -158,16 +177,25 @@
             <div class="row row-mtm">
                 <div class="col-12 col-lg-5">
                     <h6 class="font-18" data-animate="animate__fadeIn">Billing rules</h6>
-                    <p class="mst-16" data-animate="animate__fadeIn">This section details the guidelines and procedures for handling payments, covering due dates, acceptable payment methods, and penalties for late or missed payments. It ensures that all financial transactions are managed effectively and according to the established terms and conditions.</p>
-                    <a href="about-us.html" class="link-dominant-color mst-17" data-animate="animate__fadeIn">Extra details</a>
+                    <p class="mst-16" data-animate="animate__fadeIn">This section details the guidelines and procedures
+                        for handling payments, covering due dates, acceptable payment methods, and penalties for late or
+                        missed payments. It ensures that all financial transactions are managed effectively and
+                        according to the established terms and conditions.</p>
+                    <a href="about-us.html" class="link-dominant-color mst-17" data-animate="animate__fadeIn">Extra
+                        details</a>
                 </div>
                 <div class="col-12 col-lg-7">
                     <div class="point-line">
-                        <p class="p-bullets" data-animate="animate__fadeIn">Guidelines for managing payments are outlined clearly in this section.</p>
-                        <p class="p-bullets" data-animate="animate__fadeIn">It includes due dates and acceptable payment methods for transactions.</p>
-                        <p class="p-bullets" data-animate="animate__fadeIn">Penalties for late or missed payments are specified to ensure compliance.</p>
-                        <p class="p-bullets" data-animate="animate__fadeIn">Procedures for handling disputes and corrections are also covered here.</p>
-                        <p class="p-bullets" data-animate="animate__fadeIn">This section ensures effective management of all billing and payment matters.</p>
+                        <p class="p-bullets" data-animate="animate__fadeIn">Guidelines for managing payments are
+                            outlined clearly in this section.</p>
+                        <p class="p-bullets" data-animate="animate__fadeIn">It includes due dates and acceptable payment
+                            methods for transactions.</p>
+                        <p class="p-bullets" data-animate="animate__fadeIn">Penalties for late or missed payments are
+                            specified to ensure compliance.</p>
+                        <p class="p-bullets" data-animate="animate__fadeIn">Procedures for handling disputes and
+                            corrections are also covered here.</p>
+                        <p class="p-bullets" data-animate="animate__fadeIn">This section ensures effective management of
+                            all billing and payment matters.</p>
                     </div>
                 </div>
             </div>

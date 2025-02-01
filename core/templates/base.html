@@ -1,38 +1,44 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        {% block title %}
-            <title>Medist - The medical equipment eCommerce html template</title>
-        {% endblock %}
-        <meta name="description" content="A best clean, modern, stylish, creative, responsive theme for different eCommerce business or industries.">
-        <meta name="keywords" content="medical theme, vegetables, medicine store, eCommerce html template, responsive, multipurpose, mask, sanitizer, eCommerce store, health, tables, dental, healthcare, pharmacy, herbal, medicine shop">
-        <meta name="author" content="spacingtech_webify">
-        <!-- favicon -->
-        <link rel="shortcut icon" type="image/favicon" href="/static/image/index/favicon.png">
-        <!-- plugin css -->
-        <link rel="stylesheet" type="text/css" href="/static/css/plugin.css">
-        <!-- theme css -->
-        <link rel="stylesheet" type="text/css" href="/static/css/theme.css">
-        <!-- collection css -->
-        <link rel="stylesheet" type="text/css" href="/static/css/collection.css">
-        <!-- blog css -->
-        <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
-        <!-- style css -->
-        <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    {% block title %}
+    <title>Medist - The medical equipment eCommerce html template</title>
+    {% endblock %}
+    <meta name="description"
+        content="A best clean, modern, stylish, creative, responsive theme for different eCommerce business or industries.">
+    <meta name="keywords"
+        content="medical theme, vegetables, medicine store, eCommerce html template, responsive, multipurpose, mask, sanitizer, eCommerce store, health, tables, dental, healthcare, pharmacy, herbal, medicine shop">
+    <meta name="author" content="spacingtech_webify">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/favicon" href="{% static 'image/index/favicon.png' %}">
+    <!-- plugin css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/plugin.css">
+    <!-- theme css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/theme.css">
+    <!-- collection css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/collection.css">
+    <!-- blog css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+
 <body>
 
     <!-- preloader start -->
     <div class="preloader position-fixed top-0 start-0 w-100 h-100 body-bg z-index-5">
-        <div class="loader-img position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
-            <img src="/static/image/index/logo.png" class="width-88 width-xl-144 img-fluid" alt="logo">
+        <div
+            class="loader-img position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center">
+            <img src="{% static 'image/index/logo.png' %}" class="width-88 width-xl-144 img-fluid" alt="logo">
         </div>
     </div>
     <!-- preloader end -->
-    
+
     <!-- header start -->
     {% block header %}
     {% include 'includes/header.html' %}
@@ -54,6 +60,7 @@
 
     <!-- theme js -->
     <script src="/static/js/theme.js"></script>
-    
+
 </body>
+
 </html>

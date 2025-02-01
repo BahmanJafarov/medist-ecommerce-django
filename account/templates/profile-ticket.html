@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Profile ticket</title>
+<title>Profile ticket</title>
 {% endblock %}
 
 {% block content %}
@@ -17,13 +18,15 @@
                     <div class="ap-detail">
                         <div class="ap-title d-flex align-items-center justify-content-between meb-30">
                             <h6 class="font-18" data-animate="animate__fadeIn">Ticket</h6>
-                            <a href="/ticket-create/" class="body-dominant-color text-decoration-underline" data-animate="animate__fadeIn">Create a ticket</a>
+                            <a href="/ticket-create/" class="body-dominant-color text-decoration-underline"
+                                data-animate="animate__fadeIn">Create a ticket</a>
                         </div>
                         <div class="ap-detail-info">
                             <div class="row row-mtm30">
                                 <div class="col-12" data-animate="animate__fadeIn">
                                     <div class="ticket-content extra-bg br-hidden">
-                                        <div class="ticket-header d-flex align-items-center justify-content-between ptb-30 plr-15 plr-sm-30">
+                                        <div
+                                            class="ticket-header d-flex align-items-center justify-content-between ptb-30 plr-15 plr-sm-30">
                                             <span class="ticket-id">#1720</span>
                                             <span class="ticket-status st-big-label bg-success">Open</span>
                                         </div>
@@ -32,23 +35,29 @@
                                                 <div class="ticket-col">
                                                     <div class="row row-mtm">
                                                         <div class="col-12 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Subject</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Subject</span>
                                                             <div class="st-label d-flex mst-5 meb-15">
-                                                                <span class="d-inline-block st-small-label bg-warning">Urgent</span>
+                                                                <span
+                                                                    class="d-inline-block st-small-label bg-warning">Urgent</span>
                                                             </div>
                                                             <div class="ul-mtm20">
                                                                 <span>Replace request</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Date submit</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Date
+                                                                submit</span>
                                                             <div class="ul-mtm20">
                                                                 <span>19<sup>th</sup> jan 2023</span>
                                                                 <span>Thrusday, 12:36 p.m</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Last update</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Last
+                                                                update</span>
                                                             <div class="ul-mtm20">
                                                                 <span>19<sup>th</sup> jan 2023</span>
                                                                 <span>Thrusday, 01:11 p.m</span>
@@ -67,21 +76,33 @@
                                                                 <span>9 comments</span>
                                                             </div>
                                                             <div class="st-label d-flex mst-24">
-                                                                <span class="d-inline-block st-small-label bg-danger">Replace</span>
+                                                                <span
+                                                                    class="d-inline-block st-small-label bg-danger">Replace</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Created by</span>
-                                                            <div class="ticket-user d-flex flex-wrap align-items-center mst-5">
-                                                                <img src="/static/image/account/customer-img.jpg" class="width-40 img-fluid rounded-circle" alt="customer-img">
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Created
+                                                                by</span>
+                                                            <div
+                                                                class="ticket-user d-flex flex-wrap align-items-center mst-5">
+                                                                <img src="{% static 'image/account/customer-img.jpg' %}"
+                                                                    class="width-40 img-fluid rounded-circle"
+                                                                    alt="customer-img">
                                                                 <span class="width-calc-40 psl-15">Miranda joy</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Handled by</span>
-                                                            <div class="ticket-user d-flex flex-wrap align-items-center mst-5">
-                                                                <img src="/static/image/account/female.jpg" class="width-40 img-fluid rounded-circle" alt="female">
-                                                                <span class="width-calc-40 psl-15">Selcen stochliya</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Handled
+                                                                by</span>
+                                                            <div
+                                                                class="ticket-user d-flex flex-wrap align-items-center mst-5">
+                                                                <img src="{% static 'image/account/female.jpg' %}"
+                                                                    class="width-40 img-fluid rounded-circle"
+                                                                    alt="female">
+                                                                <span class="width-calc-40 psl-15">Selcen
+                                                                    stochliya</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -89,7 +110,8 @@
                                                 <div class="ticket-button">
                                                     <div class="row">
                                                         <div class="col-12 col-md-6 col-xl-4">
-                                                            <a href="/ticket-info/" class="w-100 btn-style2 secondary-btn">View request</a>
+                                                            <a href="/ticket-info/"
+                                                                class="w-100 btn-style2 secondary-btn">View request</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -99,7 +121,8 @@
                                 </div>
                                 <div class="col-12" data-animate="animate__fadeIn">
                                     <div class="ticket-content extra-bg br-hidden">
-                                        <div class="ticket-header d-flex align-items-center justify-content-between ptb-30 plr-15 plr-sm-30">
+                                        <div
+                                            class="ticket-header d-flex align-items-center justify-content-between ptb-30 plr-15 plr-sm-30">
                                             <span class="ticket-id">#1719</span>
                                             <span class="ticket-status st-big-label bg-danger">Cancel</span>
                                         </div>
@@ -108,23 +131,29 @@
                                                 <div class="ticket-col">
                                                     <div class="row row-mtm">
                                                         <div class="col-12 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Subject</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Subject</span>
                                                             <div class="st-label d-flex mst-5 meb-15">
-                                                                <span class="d-inline-block st-small-label bg-success">Success</span>
+                                                                <span
+                                                                    class="d-inline-block st-small-label bg-success">Success</span>
                                                             </div>
                                                             <div class="ul-mtm20">
                                                                 <span>Cancel order</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Date submit</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Date
+                                                                submit</span>
                                                             <div class="ul-mtm20">
                                                                 <span>19<sup>th</sup> jan 2023</span>
                                                                 <span>Thrusday, 11:14 a.m</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Last update</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Last
+                                                                update</span>
                                                             <div class="ul-mtm20">
                                                                 <span>19<sup>th</sup> jan 2023</span>
                                                                 <span>Thrusday, 11:45 a.m</span>
@@ -143,20 +172,31 @@
                                                                 <span>12 comments</span>
                                                             </div>
                                                             <div class="st-label d-flex mst-24">
-                                                                <span class="d-inline-block st-small-label bg-danger">Refund</span>
+                                                                <span
+                                                                    class="d-inline-block st-small-label bg-danger">Refund</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Created by</span>
-                                                            <div class="ticket-user d-flex flex-wrap align-items-center mst-5">
-                                                                <img src="/static/image/account/customer-img.jpg" class="width-40 img-fluid rounded-circle" alt="customer-img">
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Created
+                                                                by</span>
+                                                            <div
+                                                                class="ticket-user d-flex flex-wrap align-items-center mst-5">
+                                                                <img src="{% static 'image/account/customer-img.jpg' %}"
+                                                                    class="width-40 img-fluid rounded-circle"
+                                                                    alt="customer-img">
                                                                 <span class="width-calc-40 psl-15">Miranda joy</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Handled by</span>
-                                                            <div class="ticket-user d-flex flex-wrap align-items-center mst-5">
-                                                                <img src="/static/image/account/female.jpg" class="width-40 img-fluid rounded-circle" alt="female">
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Handled
+                                                                by</span>
+                                                            <div
+                                                                class="ticket-user d-flex flex-wrap align-items-center mst-5">
+                                                                <img src="{% static 'image/account/female.jpg' %}"
+                                                                    class="width-40 img-fluid rounded-circle"
+                                                                    alt="female">
                                                                 <span class="width-calc-40 psl-15">Kaitlyn kristy</span>
                                                             </div>
                                                         </div>
@@ -165,7 +205,8 @@
                                                 <div class="ticket-button">
                                                     <div class="row">
                                                         <div class="col-12 col-md-6 col-xl-4">
-                                                            <a href="/ticket-info/" class="w-100 btn-style2 secondary-btn">View request</a>
+                                                            <a href="/ticket-info/"
+                                                                class="w-100 btn-style2 secondary-btn">View request</a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -175,7 +216,8 @@
                                 </div>
                                 <div class="col-12" data-animate="animate__fadeIn">
                                     <div class="ticket-content extra-bg br-hidden">
-                                        <div class="ticket-header d-flex align-items-center justify-content-between ptb-30 plr-15 plr-sm-30">
+                                        <div
+                                            class="ticket-header d-flex align-items-center justify-content-between ptb-30 plr-15 plr-sm-30">
                                             <span class="ticket-id">#1718</span>
                                             <span class="ticket-status st-big-label bg-danger">Close</span>
                                         </div>
@@ -184,23 +226,29 @@
                                                 <div class="ticket-col">
                                                     <div class="row row-mtm">
                                                         <div class="col-12 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Subject</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Subject</span>
                                                             <div class="st-label d-flex mst-5 meb-15">
-                                                                <span class="d-inline-block st-small-label bg-success">Success</span>
+                                                                <span
+                                                                    class="d-inline-block st-small-label bg-success">Success</span>
                                                             </div>
                                                             <div class="ul-mtm20">
                                                                 <span>Arrange delivery</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Date submit</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Date
+                                                                submit</span>
                                                             <div class="ul-mtm20">
                                                                 <span>18<sup>th</sup> jan 2023</span>
                                                                 <span>Thrusday, 10:36 a.m</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Last update</span>
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Last
+                                                                update</span>
                                                             <div class="ul-mtm20">
                                                                 <span>18<sup>th</sup> jan 2023</span>
                                                                 <span>Thrusday, 10:45 a.m</span>
@@ -219,20 +267,31 @@
                                                                 <span>22 comments</span>
                                                             </div>
                                                             <div class="st-label d-flex mst-24">
-                                                                <span class="d-inline-block st-small-label bg-info">Info</span>
+                                                                <span
+                                                                    class="d-inline-block st-small-label bg-info">Info</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Created by</span>
-                                                            <div class="ticket-user d-flex flex-wrap align-items-center mst-5">
-                                                                <img src="/static/image/account/customer-img.jpg" class="width-40 img-fluid rounded-circle" alt="customer-img">
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Created
+                                                                by</span>
+                                                            <div
+                                                                class="ticket-user d-flex flex-wrap align-items-center mst-5">
+                                                                <img src="{% static 'image/account/customer-img.jpg' %}"
+                                                                    class="width-40 img-fluid rounded-circle"
+                                                                    alt="customer-img">
                                                                 <span class="width-calc-40 psl-15">Miranda joy</span>
                                                             </div>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-xl-4">
-                                                            <span class="d-inline-block heading-color heading-weight meb-19">Handled by</span>
-                                                            <div class="ticket-user d-flex flex-wrap align-items-center mst-5">
-                                                                <img src="/static/image/account/female.jpg" class="width-40 img-fluid rounded-circle" alt="female">
+                                                            <span
+                                                                class="d-inline-block heading-color heading-weight meb-19">Handled
+                                                                by</span>
+                                                            <div
+                                                                class="ticket-user d-flex flex-wrap align-items-center mst-5">
+                                                                <img src="{% static 'image/account/female.jpg' %}"
+                                                                    class="width-40 img-fluid rounded-circle"
+                                                                    alt="female">
                                                                 <span class="width-calc-40 psl-15">Carla houston</span>
                                                             </div>
                                                         </div>
@@ -241,7 +300,8 @@
                                                 <div class="ticket-button">
                                                     <div class="row">
                                                         <div class="col-12 col-md-6 col-xl-4">
-                                                            <a href="/ticket-info/" class="w-100 btn-style2 secondary-btn">View request</a>
+                                                            <a href="/ticket-info/"
+                                                                class="w-100 btn-style2 secondary-btn">View request</a>
                                                         </div>
                                                     </div>
                                                 </div>

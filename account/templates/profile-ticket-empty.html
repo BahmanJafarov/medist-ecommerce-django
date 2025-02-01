@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
-    <title>Profile ticket empty</title>
+<title>Profile ticket empty</title>
 {% endblock %}
 
 {% block content %}
@@ -17,9 +18,12 @@
                     <div class="ap-detail">
                         <div class="empty-info col-12 col-md-10 col-xl-8 col-xxl-7 mx-md-auto text-center">
                             <h2 class="section-heading meb-30" data-animate="animate__fadeIn">No ticket created yet</h2>
-                            <img src="/static/image/account/empty-ticket.png" class="width-160 img-fluid meb-23" alt="empty-ticket" data-animate="animate__fadeIn">
-                            <h6 class="font-18" data-animate="animate__fadeIn">There are no ticket history yet, click on 'create a ticket' button given below for add ticket.</h6>
-                            <a href="/ticket-create/" class="btn-style2 secondary-btn mst-23" data-animate="animate__fadeIn">Create a ticket</a>
+                            <img src="{% static 'image/account/empty-ticket.png' %}" class="width-160 img-fluid meb-23"
+                                alt="empty-ticket" data-animate="animate__fadeIn">
+                            <h6 class="font-18" data-animate="animate__fadeIn">There are no ticket history yet, click on
+                                'create a ticket' button given below for add ticket.</h6>
+                            <a href="/ticket-create/" class="btn-style2 secondary-btn mst-23"
+                                data-animate="animate__fadeIn">Create a ticket</a>
                         </div>
                     </div>
                 </div>
