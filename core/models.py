@@ -16,3 +16,10 @@ class Subscribe(AbstractModel):
     
     def __str__(self):
         return self.email
+    
+
+class Contact(AbstractModel):
+    first_name = models.CharField('First Name', max_length=200)
+    last_name = models.CharField('Last Name', max_length=200, null=True, blank=True)
+    email = models.EmailField('Email', max_length=200),
+    message = models.TextField('Message')
