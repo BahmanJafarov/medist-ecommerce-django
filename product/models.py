@@ -24,6 +24,7 @@ class Product(AbstractModel):
     price = models.DecimalField('price', max_digits=10, decimal_places=2)
     cover_image = models.ImageField(upload_to='product_images/')
     quantity = models.IntegerField('quantity')   
+    weight = models.FloatField('weight', null=True, blank=True)
     
     def __str__(self):
         return self.title

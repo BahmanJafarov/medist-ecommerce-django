@@ -19,7 +19,7 @@ class Subscribe(AbstractModel):
     
 
 class Contact(AbstractModel):
-    first_name = models.CharField('First Name', max_length=200)
-    last_name = models.CharField('Last Name', max_length=200, null=True, blank=True)
+    full_name = models.CharField('Full Name', max_length=200, null=True, blank=True)
     email = models.EmailField('Email', max_length=200),
+    phone = models.CharField('Phone', max_length=50, null=True, blank=True),
     message = models.TextField('Message')
