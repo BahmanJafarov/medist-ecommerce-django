@@ -27,12 +27,14 @@ class Product(AbstractModel):
     weight = models.FloatField('weight', null=True, blank=True)
     
     def __str__(self):
+        if self.category:
+            return f"{self.category} - {self.title}"
         return self.title
     
     
 class ProductImage(AbstractModel):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='product_images') 
+    image = models.ImageField(upload_to='product_images/') 
     
     def __str__(self):
         return self.product.title
