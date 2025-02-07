@@ -19,7 +19,9 @@ from product.views import *
 
 urlpatterns = [
     path('collection-category/', collection_category, name='collection-category'),
+    path('collection-category/<str:category_name>', collection_category, name='collection-category'),
     path('product-comparison/', product_comparison, name='product-comparison'),
-    path('product/', product, name='product'),
+    path('product/', collection_category, name='collection-category'),
+    path('product/<int:product_id>/', product, name='product'),
     path('search-product/', search_product, name='search-product')
 ]

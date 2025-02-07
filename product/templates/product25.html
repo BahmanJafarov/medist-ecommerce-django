@@ -12,10 +12,10 @@
     <!-- product-detail start -->
     <section class="product-detail section-ptb">
         <!-- product prev-next start -->
-        <a href="/product/" class="d-none d-xl-block position-fixed top-50 translate-middle-y z-2 np-product prev">
+        <a href="{% url 'product' product.id %}" class="d-none d-xl-block position-fixed top-50 translate-middle-y z-2 np-product prev">
             <span class="d-block body-secondary-color msl-5 heading-weight text-uppercase lh-1">Prev</span>
         </a>
-        <a href="/product/" class="d-none d-xl-block position-fixed top-50 translate-middle-y z-2 np-product next">
+        <a href="{% url 'product' product.id %}" class="d-none d-xl-block position-fixed top-50 translate-middle-y z-2 np-product next">
             <span class="d-block body-secondary-color mer-5 heading-weight text-uppercase lh-1">Next</span>
         </a>
         <!-- product prev-next end -->
@@ -32,12 +32,12 @@
                                         <div class="swiper-wrapper product-swiper-wrapper">
                                             <div class="swiper-slide product-swiper-slide">
                                                 <div class="product-item-img position-relative">
-                                                    <a href="{% static 'image/product/p-1.jpg' %}"
+                                                    <a href="{{product.cover_image.url}}"
                                                         class="full-view product-thumbnail heading-color position-absolute top-0 end-0 width-40 height-40 d-flex align-items-center justify-content-center body-bg z-1 mst-15 mer-15 rounded-circle box-shadow"
                                                         aria-label="Image full view"><i
                                                             class="ri-fullscreen-line d-block lh-1"></i></a>
-                                                    <img src="{% static 'image/product/p-1.jpg' %}"
-                                                        data-zoom="{% static 'image/product/p-1.jpg' %}"
+                                                    <img src="{{product.cover_image.url}}"
+                                                        data-zoom="{{product.cover_image.url}}"
                                                         class="w-100 img-fluid zoom" alt="p-1">
                                                 </div>
                                             </div>
@@ -167,55 +167,54 @@
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-line"></i>
                                     </span>
-                                    <span class="review-caption">2 reviews</span>
+                                    <span class="review-caption">??? reviews</span>
                                 </span>
                             </div>
                         </div>
                         <div class="product-info mst-10" data-animate="animate__fadeIn">
                             <div class="product-title">
-                                <h2 class="font-24">Refractometers</h2>
+                                <h2 class="font-24">{{product.title}}</h2>
                             </div>
                         </div>
                         <div class="product-info mst-20" data-animate="animate__fadeIn">
                             <div class="product-price">
                                 <div class="price-box">
-                                    <span class="new-price dominant-color font-20 heading-weight">$79.00</span>
+                                    <span class="new-price dominant-color font-20 heading-weight">${{product.price}}</span>
                                     <span
-                                        class="old-price heading-color font-20 heading-weight text-decoration-line-through">$89.00</span>
-                                    <span class="discount-price heading-color font-20">-11%</span>
+                                        class="old-price heading-color font-20 heading-weight text-decoration-line-through">$???</span>
+                                    <span class="discount-price heading-color font-20">-???%</span>
                                 </div>
                             </div>
                         </div>
                         <div class="product-info mst-25" data-animate="animate__fadeIn">
                             <div class="product-view">
                                 <span class="heading-color"><i class="ri-eye-line icon-16 mer-5 blinking"></i><span
-                                        class="heading-weight">84 people are viewing this product right
+                                        class="heading-weight">??? people are viewing this product right
                                         now</span></span>
                             </div>
                         </div>
                         <div class="product-info mst-20" data-animate="animate__fadeIn">
                             <div class="product-availability">
                                 <span class="d-inline-block text-success"><span
-                                        class="heading-color heading-weight mer-10">Availability:</span>In stock</span>
+                                        class="heading-color heading-weight mer-10">Availability:</span>???</span>
                             </div>
                         </div>
                         <div class="product-info mst-15" data-animate="animate__fadeIn">
                             <div class="product-stock">
                                 <span
                                     class="d-inline-block stock-fill text-success ptb-10 plr-15 bg-success heading-weight border-success border-radius">Hurry
-                                    up! only <span class="available-stock">66</span> products left in stock!</span>
+                                    up! only <span class="available-stock">{{product.quantity}}</span> products left in stock!</span>
                             </div>
                         </div>
                         <div class="product-info mst-15" data-animate="animate__fadeIn">
                             <div class="product-sold">
                                 <span class="text-danger"><i class="ri-fire-line icon-16 mer-5 blinking"></i><span
-                                        class="heading-weight">14 products sold in last 5 hours</span></span>
+                                        class="heading-weight">??? products sold in last ??? hours</span></span>
                             </div>
                         </div>
                         <div class="product-info mst-20" data-animate="animate__fadeIn">
                             <div class="product-desc">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <p>{{product.description}}</p>
                             </div>
                         </div>
                         <div class="product-info mst-25" data-animate="animate__fadeIn">
@@ -248,14 +247,14 @@
                             <div class="product-offer ptb-15 plr-15 br-hidden">
                                 <span class="d-block heading-color text-uppercase heading-weight">Offers for you</span>
                                 <span class="d-block mst-9"><a href="/collection/">👉 Get up to<span
-                                            class="heading-weight"> 50% off</span> on selected products! Limited time
+                                            class="heading-weight"> ???% off</span> on selected products! Limited time
                                         offer!</a></span>
                                 <span class="d-block mst-9"><a href="/collection/">👉 Buy<span class="heading-weight">
-                                            2</span> and Get<span class="heading-weight"> 15% off</span> on all
-                                        products!, Use code<span class="heading-weight"> "BUY2SAVE"</span></a></span>
+                                            ???</span> and Get<span class="heading-weight"> ???% off</span> on all
+                                        products!, Use code<span class="heading-weight"> "???"</span></a></span>
                                 <span class="d-block mst-9"><a href="/collection/">👉 Get<span class="heading-weight">
-                                            11% off</span> your first order!, Use code<span class="heading-weight">
-                                            "11%OFF"</span></a></span>
+                                            ???% off</span> your first order!, Use code<span class="heading-weight">
+                                            "???%OFF"</span></a></span>
                             </div>
                         </div>
                         <div class="product-info mst-25" data-animate="animate__fadeIn">
@@ -1148,20 +1147,19 @@
                                     <tr>
                                         <th class="heading-color ptb-10 plr-15 heading-weight border-full" scope="row">
                                             Type</th>
-                                        <td class="ptb-10 plr-15 border-full"><a href="/collection/"
-                                                class="body-dominant-color text-decoration-underline">Collection
-                                                name</a></td>
+                                        <td class="ptb-10 plr-15 border-full"><a href="{% url 'collection-category' product.category.parent"
+                                                class="body-dominant-color text-decoration-underline">{{product.category.parent}}</a></td>
                                     </tr>
                                     <tr>
                                         <th class="heading-color ptb-10 plr-15 heading-weight border-full" scope="row">
                                             Color</th>
-                                        <td class="body-color ptb-10 plr-15 border-full">Aliceblue, Antiquewhite, Azure
+                                        <td class="body-color ptb-10 plr-15 border-full">???
                                         </td>
                                     </tr>
                                     <tr>
                                         <th class="heading-color ptb-10 plr-15 heading-weight border-full" scope="row">
                                             Weight</th>
-                                        <td class="body-color ptb-10 plr-15 border-full">5.52kg</td>
+                                        <td class="body-color ptb-10 plr-15 border-full">{{product.weight}}kg</td>
                                     </tr>
                                 </tbody>
                             </table>

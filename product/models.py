@@ -1,5 +1,7 @@
 from django.db import models
 from core.models import AbstractModel
+from django.contrib.auth import get_user_model
+User = get_user_model()
 
 # Create your models here.
 
@@ -35,6 +37,19 @@ class Product(AbstractModel):
 class ProductImage(AbstractModel):
     product = models.ForeignKey(Product, related_name='images', on_delete=models.CASCADE)
     image = models.ImageField(upload_to='product_images/') 
+    
+    def __str__(self):
+        return self.product.title
+    
+    
+    
+class ProductReview(AbstractModel):
+    
+    user = models.ForeignKey(User, related_name='reviews', on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, related_name='reviews', on_delete=models.CASCADE)
+    
+    message = models.TextField('message')
+    
     
     def __str__(self):
         return self.product.title

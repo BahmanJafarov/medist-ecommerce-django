@@ -704,6 +704,7 @@
 
                                     </div>
                                 </div>
+
                                 <div class="col-12 col-sm-6 col-md-5 col-lg-4">
                                     <!-- shop-short start -->
                                     <div class="shop-short d-flex flex-wrap position-relative">
@@ -756,9 +757,11 @@
                                     </div>
                                     <!-- shop-short end -->
                                 </div>
+
                             </div>
                         </div>
                         <!-- shop-top-bar end -->
+
                         <!-- shop-filter-list start -->
                         <div class="shop-filter-list d-flex align-items-start justify-content-between">
                             <ul class="shop-filter-ul ul-mt5 align-items-center">
@@ -787,73 +790,21 @@
                                 </svg></div>
                         </div>
                         <!-- shop-filter-list end -->
+
                         <div class="shop-product-wrap data-grid">
                             <!-- shop-grid start -->
-                            <div class="row row-mtm30"><div class="col-6 col-md-4 shop-col" data-animate="animate__fadeIn">
-                                <div class="single-product">
-                                    <div class="row single-product-wrap">
-                                        <div class="product-image">
-                                            <a href="/product/" class="pro-img">
-                                                <img src="{% static 'image/index/product/p-1.jpg' %}"
-                                                    class="w-100 img-fluid img1" alt="p-1">
-                                                <img src="{% static 'image/index/product/p-2.jpg' %}"
-                                                    class="w-100 img-fluid img2" alt="p-2">
-                                            </a>
-                                            <div class="product-action">
-                                                <a href="javascript:void(0)" class="add-to-cart">
-                                                    <span class="product-icon">
-                                                        <span class="product-bag-icon icon-16"><i
-                                                                class="ri-shopping-bag-3-line d-block lh-1"></i></span>
-                                                        <span class="product-loader-icon icon-16"><i
-                                                                class="ri-loader-4-line d-block lh-1"></i></span>
-                                                        <span class="product-check-icon icon-16"><i
-                                                                class="ri-check-line d-block lh-1"></i></span>
-                                                    </span>
-                                                    <span class="tooltip-text">add to cart</span>
+                            <div class="row row-mtm30">
+                            {% for product in products %}
+                                <div class="col-6 col-md-4 shop-col" data-animate="animate__fadeIn">
+                                    <div class="single-product">
+                                        <div class="row single-product-wrap">
+                                            <div class="product-image">
+                                                <a href="{% url 'product' product.id %}" class="pro-img">
+                                                    <img src="{{product.cover_image.url}}" class="w-100 img-fluid img1"
+                                                        alt="p-1">
+                                                    <img src="{{product.cover_image.url}}" class="w-100 img-fluid img2"
+                                                        alt="p-2">
                                                 </a>
-                                                <a href="#quickview-modal" data-bs-toggle="modal"
-                                                    class="quick-view">
-                                                    <span class="product-icon"><i
-                                                            class="ri-eye-line d-block icon-16 lh-1"></i></span>
-                                                    <span class="tooltip-text">quickview</span>
-                                                </a>
-                                                <a href="javascript:void(0)" class="add-to-wishlist">
-                                                    <span class="product-icon"><i
-                                                            class="ri-heart-line d-block icon-16 lh-1"></i></span>
-                                                    <span class="tooltip-text">wishlist</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="product-content">
-                                            <div class="pro-content">
-                                                <div class="product-ratting">
-                                                    <span class="review-ratting">
-                                                        <span class="review-star">
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-fill"></i>
-                                                            <i class="ri-star-line"></i>
-                                                        </span>
-                                                        <span class="review-caption">No reviews</span>
-                                                    </span>
-                                                </div>
-                                                <div class="product-title">
-                                                    <span class="d-block heading-weight text-uppercase"><a
-                                                            href="/product/"
-                                                            class="d-block w-100 dominant-link text-truncate">Refractometers</a></span>
-                                                </div>
-                                                <div class="price-box">
-                                                    <span
-                                                        class="new-price dominant-color heading-weight">$79.00</span>
-                                                    <span
-                                                        class="old-price heading-weight text-decoration-line-through">$89.00</span>
-                                                </div>
-                                                <div class="product-description">
-                                                    <p>Lorem Ipsum is simply dummy text of the printing and
-                                                        typesetting industry It is a long established fact that a
-                                                        will be distracted by the readable of at</p>
-                                                </div>
                                                 <div class="product-action">
                                                     <a href="javascript:void(0)" class="add-to-cart">
                                                         <span class="product-icon">
@@ -879,62 +830,118 @@
                                                     </a>
                                                 </div>
                                             </div>
+                                            <div class="product-content">
+                                                <div class="pro-content">
+                                                    <div class="product-ratting">
+                                                        <span class="review-ratting">
+                                                            <span class="review-star">
+                                                                <i class="ri-star-fill"></i>
+                                                                <i class="ri-star-fill"></i>
+                                                                <i class="ri-star-fill"></i>
+                                                                <i class="ri-star-fill"></i>
+                                                                <i class="ri-star-line"></i>
+                                                            </span>
+                                                            <span class="review-caption">No reviews</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="product-title">
+                                                        <span class="d-block heading-weight text-uppercase"><a
+                                                                href="{% url 'product' product.id %}"
+                                                                class="d-block w-100 dominant-link text-truncate">{{product.title}}</a></span>
+                                                    </div>
+                                                    <div class="price-box">
+                                                        <span
+                                                            class="new-price dominant-color heading-weight">${{product.price}}</span>
+                                                        <span
+                                                            class="old-price heading-weight text-decoration-line-through">${{product.price}}</span>
+                                                    </div>
+                                                    <div class="product-description">
+                                                        <p>{{product.description}}</p>
+                                                    </div>
+                                                    <div class="product-action">
+                                                        <a href="javascript:void(0)" class="add-to-cart">
+                                                            <span class="product-icon">
+                                                                <span class="product-bag-icon icon-16"><i
+                                                                        class="ri-shopping-bag-3-line d-block lh-1"></i></span>
+                                                                <span class="product-loader-icon icon-16"><i
+                                                                        class="ri-loader-4-line d-block lh-1"></i></span>
+                                                                <span class="product-check-icon icon-16"><i
+                                                                        class="ri-check-line d-block lh-1"></i></span>
+                                                            </span>
+                                                            <span class="tooltip-text">add to cart</span>
+                                                        </a>
+                                                        <a href="#quickview-modal" data-bs-toggle="modal"
+                                                            class="quick-view">
+                                                            <span class="product-icon"><i
+                                                                    class="ri-eye-line d-block icon-16 lh-1"></i></span>
+                                                            <span class="tooltip-text">quickview</span>
+                                                        </a>
+                                                        <a href="javascript:void(0)" class="add-to-wishlist">
+                                                            <span class="product-icon"><i
+                                                                    class="ri-heart-line d-block icon-16 lh-1"></i></span>
+                                                            <span class="tooltip-text">wishlist</span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                            {% endfor %}
+                                <!-- shop-grid end -->
+
+                                <!-- paginatoin start -->
+                                <div class="paginatoin-area section-pt" data-animate="animate__fadeIn">
+                                    <nav aria-label="Page navigation example">
+                                        <ul
+                                            class="pagination ul-mt5 align-items-center justify-content-center pagination-box">
+                                            <li class="page-item first">
+                                                <a href="javascript:void(0)"
+                                                    class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
+                                                    aria-label="First page">First</a>
+                                            </li>
+                                            <li class="page-item prev">
+                                                <a href="javascript:void(0)"
+                                                    class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
+                                                    aria-label="Previous"><i
+                                                        class="ri-arrow-left-line d-block lh-1"></i></a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0)"
+                                                    class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
+                                                    aria-label="Page number">1</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0)"
+                                                    class="page-link active d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
+                                                    aria-label="Page number">2</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a href="javascript:void(0)"
+                                                    class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
+                                                    aria-label="Page number">3</a>
+                                            </li>
+                                            <li class="page-item next">
+                                                <a href="javascript:void(0)"
+                                                    class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
+                                                    aria-label="Next"><i
+                                                        class="ri-arrow-right-line d-block lh-1"></i></a>
+                                            </li>
+                                            <li class="page-item last">
+                                                <a href="javascript:void(0)"
+                                                    class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
+                                                    aria-label="Last page">Last</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- paginatoin end -->
                             </div>
-                            <!-- shop-grid end -->
-                            <!-- paginatoin start -->
-                            <div class="paginatoin-area section-pt" data-animate="animate__fadeIn">
-                                <nav aria-label="Page navigation example">
-                                    <ul
-                                        class="pagination ul-mt5 align-items-center justify-content-center pagination-box">
-                                        <li class="page-item first">
-                                            <a href="javascript:void(0)"
-                                                class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
-                                                aria-label="First page">First</a>
-                                        </li>
-                                        <li class="page-item prev">
-                                            <a href="javascript:void(0)"
-                                                class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
-                                                aria-label="Previous"><i
-                                                    class="ri-arrow-left-line d-block lh-1"></i></a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a href="javascript:void(0)"
-                                                class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
-                                                aria-label="Page number">1</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a href="javascript:void(0)"
-                                                class="page-link active d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
-                                                aria-label="Page number">2</a>
-                                        </li>
-                                        <li class="page-item">
-                                            <a href="javascript:void(0)"
-                                                class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
-                                                aria-label="Page number">3</a>
-                                        </li>
-                                        <li class="page-item next">
-                                            <a href="javascript:void(0)"
-                                                class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
-                                                aria-label="Next"><i class="ri-arrow-right-line d-block lh-1"></i></a>
-                                        </li>
-                                        <li class="page-item last">
-                                            <a href="javascript:void(0)"
-                                                class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
-                                                aria-label="Last page">Last</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!-- paginatoin end -->
                         </div>
+                        <!-- collection-info end -->
                     </div>
-                    <!-- collection-info end -->
                 </div>
             </div>
-        </div>
     </section>
     <!-- shop-content start -->
 </main>

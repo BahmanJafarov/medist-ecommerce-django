@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from core.models import AbstractModel
 
 
 # Create your models here.
@@ -21,3 +22,8 @@ class User(AbstractUser):
     
     def __str__(self):
         return self.first_name
+    
+    
+    
+class UserAddress(AbstractModel):
+    address = models.CharField('address', max_length=200)
