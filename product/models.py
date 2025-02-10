@@ -8,6 +8,7 @@ User = get_user_model()
 class ProductCategory(AbstractModel):
     parent = models.ForeignKey('self', related_name='child', on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
+    icon = models.ImageField(upload_to='image/index/menu/', null=True, blank=True)
     
     def __str__(self):
         if self.parent:

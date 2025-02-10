@@ -3,8 +3,13 @@ from product.models import Product, ProductCategory
 
 # Create your views here.
 
-def collection_category(request):
-    products = Product.objects.all()
+def collection_category(request, category_title=None):
+    if category_title:
+        category = ProductCategory.objects.filter(title=category_title).first()
+        products = Product.objects.filter(category__parent_id=category.id)
+    else:
+        products = Product.objects.all()
+    
     
     context = {
         'products': products

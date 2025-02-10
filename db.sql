@@ -1,17 +1,17 @@
 -- Inserting parent categories with timestamps
-INSERT INTO product_productcategory (title, parent_id, created_at, updated_at)
+INSERT INTO product_productcategory (title, parent_id, created_at, updated_at, icon)
 VALUES
-    ('Cardiogram', NULL, NOW(), NOW()),
-    ('Scalpel Instrument', NULL, NOW(), NOW()),
-    ('Microscope', NULL, NOW(), NOW()),
-    ('First Aid Kit', NULL, NOW(), NOW()),
-    ('Stethoscope', NULL, NOW(), NOW()),
-    ('Thermometer', NULL, NOW(), NOW()),
-    ('Dumbbells', NULL, NOW(), NOW()),
-    ('Notebook', NULL, NOW(), NOW()),
-    ('Wheelchair', NULL, NOW(), NOW()),
-    ('Syringe', NULL, NOW(), NOW()),
-    ('Weighing Scale', NULL, NOW(), NOW());
+    ('Cardiogram', NULL, NOW(), NOW(), 'images/index/menu/menu-icon1.png'),
+    ('Scalpel Instrument', NULL, NOW(), NOW(), 'images/index/menu/menu-icon2.png'),
+    ('Microscope', NULL, NOW(), NOW(), 'images/index/menu/menu-icon3.png'),
+    ('First Aid Kit', NULL, NOW(), NOW(), 'images/index/menu/menu-icon4.png'),
+    ('Stethoscope', NULL, NOW(), NOW(), 'images/index/menu/menu-icon5.png'),
+    ('Thermometer', NULL, NOW(), NOW(), 'images/index/menu/menu-icon6.png'),
+    ('Dumbbells', NULL, NOW(), NOW(), 'images/index/menu/menu-icon7.png'),
+    ('Notebook', NULL, NOW(), NOW(), 'images/index/menu/menu-icon8.png'),
+    ('Wheelchair', NULL, NOW(), NOW(), 'images/index/menu/menu-icon9.png'),
+    ('Syringe', NULL, NOW(), NOW(), 'images/index/menu/menu-icon10.png'),
+    ('Weighing Scale', NULL, NOW(), NOW(), 'images/index/menu/menu-icon11.png');
 
 
 
