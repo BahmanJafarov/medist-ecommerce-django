@@ -13,7 +13,7 @@ class Wishlist(AbstractModel):
     product = models.ForeignKey(Product, related_name='wishlists', on_delete=models.CASCADE)
     
     def __str__(self):
-        return self.user.first_name
+        return f"{self.id} - {self.user.first_name} - {self.product.title}"
     
     
     
@@ -22,11 +22,12 @@ class BasketItem(AbstractModel):
     product = models.ForeignKey(Product, related_name='items', on_delete=models.CASCADE)
     quantity = models.IntegerField('quantity', default=1)
     
-    def __str__(self):
-        return self.product.title
+    def get_price(self):
+        return self.product.price * self.quantity
     
-    def price(self):
-        pass
+    def __str__(self):
+        return f"{self.id} - {self.product.title} - {self.quantity} = ${self.get_price()}"
+
     
     
 class Basket(AbstractModel):
@@ -36,12 +37,14 @@ class Basket(AbstractModel):
     is_active = models.BooleanField(default=True)
     
     def __str__(self):
-        return self.user.username
+        return f"{self.id} - isActive: {self.is_active} - {self.user.username} = ${self.get_total_price()}"
     
-    def total_price(self):
-        pass
-    
-    
+    def get_total_price(self):
+        total_price = 0
+        for item in self.items.all():
+            total_price += item.get_price()
+            
+        return str(total_price)
     
     
 class Order(AbstractModel):
@@ -51,4 +54,4 @@ class Order(AbstractModel):
     user_address = models.ForeignKey(UserAddress, related_name='orders', on_delete=models.CASCADE)
         
     def __str__(self):
-        return self.user.username
+        return f"{self.user.username} - {self.basket}"

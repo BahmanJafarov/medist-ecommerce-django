@@ -8,6 +8,8 @@ comm==0.2.2
 debugpy==1.8.12
 decorator==5.1.1
 Django==5.1.5
+django-ckeditor==6.7.2
+django-js-asset==3.0.1
 executing==2.2.0
 icrawler==0.6.9
 idna==3.10

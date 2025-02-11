@@ -1,3 +1,60 @@
+-- Inserting blog categories with timestamps
+INSERT INTO blog_blogcategory (title, created_at, updated_at) VALUES 
+  ('Cardiogram', NOW(), NOW()),
+  ('Scalpel instrument', NOW(), NOW()),
+  ('Microscope', NOW(), NOW()),
+  ('First aid kit', NOW(), NOW()),
+  ('Stethoscope', NOW(), NOW()),
+  ('Thermometer', NOW(), NOW());
+
+
+-- Inserting blogs with timestamps
+INSERT INTO blog_blog (category_id, title, description, created_at, updated_at) VALUES
+  ((SELECT id FROM blog_blogcategory WHERE title = 'Cardiogram'), 
+  'Understanding Cardiograms', 
+  'A cardiogram, also known as an electrocardiogram (ECG or EKG), is a test that records the electrical activity of the heart over a period of time. 
+    It is a crucial tool for diagnosing heart conditions, detecting irregularities in heart rhythm, and monitoring patients with cardiovascular diseases. 
+    Modern ECG devices are more advanced, offering real-time monitoring and remote diagnostics.', 
+    NOW(), NOW()),
+
+  ((SELECT id FROM blog_blogcategory WHERE title = 'Scalpel instrument'), 
+  'The Role of Scalpels in Surgery', 
+  'Scalpels are precision surgical tools used in various medical procedures. They come in different shapes and sizes, each designed for specific surgeries. 
+    The sharpness and precision of a scalpel allow for minimal tissue damage, reducing recovery time for patients. 
+    While traditional metal scalpels are common, advancements in technology have led to the development of laser scalpels, which offer even greater precision.', 
+    NOW(), NOW()),
+
+  ((SELECT id FROM blog_blogcategory WHERE title = 'Microscope'), 
+  'Microscopes in Medical Research', 
+  'Microscopes have been an essential tool in medical research for centuries, allowing scientists to observe microorganisms and cellular structures. 
+    From diagnosing bacterial infections to studying cancerous tissues, the microscope plays a critical role in modern medicine. 
+    Recent advancements include digital microscopes, AI-powered imaging, and high-resolution electron microscopes, which provide unprecedented detail at the microscopic level.', 
+    NOW(), NOW()),
+
+  ((SELECT id FROM blog_blogcategory WHERE title = 'First aid kit'), 
+  'Essential First Aid Kit Items', 
+  'A first aid kit is a collection of supplies and equipment used to provide immediate medical assistance in emergencies. 
+    It typically includes bandages, antiseptics, pain relievers, and basic medical instruments like scissors and tweezers. 
+    Having a well-stocked first aid kit at home, in the workplace, and in vehicles can make a significant difference in handling minor injuries and stabilizing patients before professional medical help arrives.', 
+    NOW(), NOW()),
+
+  ((SELECT id FROM blog_blogcategory WHERE title = 'Stethoscope'), 
+  'How a Stethoscope Works', 
+  'A stethoscope is one of the most recognizable tools in the medical field. It is used by doctors and nurses to listen to internal body sounds, particularly heartbeats and lung function. 
+    The device amplifies sounds, helping healthcare professionals diagnose conditions such as heart murmurs, respiratory infections, and abnormal blood flow. 
+    Modern stethoscopes now come with digital enhancements that allow for more precise auscultation and even real-time patient monitoring through mobile apps.', 
+    NOW(), NOW()),
+
+  ((SELECT id FROM blog_blogcategory WHERE title = 'Thermometer'), 
+  'Types of Medical Thermometers', 
+  'Medical thermometers are essential for measuring body temperature, an important indicator of health. 
+    Different types include mercury thermometers, digital thermometers, and infrared thermometers. 
+    While mercury thermometers were widely used in the past, they have been largely replaced due to safety concerns. 
+    Infrared thermometers, on the other hand, allow for non-contact temperature measurements, making them ideal during pandemics or in clinical settings.', 
+    NOW(), NOW());
+
+
+
 -- Inserting parent categories with timestamps
 INSERT INTO product_productcategory (title, parent_id, created_at, updated_at, icon)
 VALUES
@@ -12,9 +69,6 @@ VALUES
     ('Wheelchair', NULL, NOW(), NOW(), 'images/index/menu/menu-icon9.png'),
     ('Syringe', NULL, NOW(), NOW(), 'images/index/menu/menu-icon10.png'),
     ('Weighing Scale', NULL, NOW(), NOW(), 'images/index/menu/menu-icon11.png');
-
-
-
 
 
 -- Insert Subcategories for Weighing Scale
@@ -661,6 +715,8 @@ VALUES
 -- EKG Machines
 INSERT INTO product_product (category_id, title, description, price, cover_image, quantity, weight, created_at, updated_at)
 VALUES
+
+
   ((SELECT id FROM product_productcategory WHERE title = 'EKG Machines'),
    'Portable EKG Machine',
    'Compact EKG machine suitable for ambulatory monitoring.',

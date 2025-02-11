@@ -5,6 +5,14 @@ User = get_user_model()
 
 # Create your models here.
 
+class ProductTag(AbstractModel):
+    title = models.CharField('tag', max_length=100)
+    
+    def __str__(self):
+        return self.title
+    
+    
+
 class ProductCategory(AbstractModel):
     parent = models.ForeignKey('self', related_name='child', on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
@@ -21,6 +29,7 @@ class ProductCategory(AbstractModel):
         
 class Product(AbstractModel):
     category = models.ForeignKey(ProductCategory, related_name='products', on_delete=models.CASCADE)
+    tags = models.ManyToManyField(ProductTag, related_name='products', blank=True)
     
     title = models.CharField('title', max_length=200)
     description = models.TextField('description', null=True, blank=True)

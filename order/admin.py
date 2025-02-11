@@ -6,3 +6,4 @@ from order.models import *
 admin.site.register(Wishlist)
 admin.site.register(BasketItem)
 admin.site.register(Basket)
+admin.site.register(Order)
