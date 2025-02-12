@@ -20,8 +20,8 @@ class ProductCategory(AbstractModel):
     
     def __str__(self):
         if self.parent:
-            return f'{self.parent} - {self.title}'
-        return self.title
+            return f'{self.id} - {self.parent} - {self.title}'
+        return f'{self.title}'
     
     class Meta:
         verbose_name_plural = 'Product Categories'

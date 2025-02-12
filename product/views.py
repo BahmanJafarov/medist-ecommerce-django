@@ -1,15 +1,15 @@
 from django.shortcuts import get_object_or_404, render
-from product.models import Product, ProductCategory
+from product.models import *
+from django.views.generic import DetailView
 
 # Create your views here.
 
-def collection_category(request, category_title=None):
-    if category_title:
-        category = ProductCategory.objects.filter(title=category_title).first()
-        products = Product.objects.filter(category__parent_id=category.id)
+def collection_category(request, category_id=None):
+    
+    if category_id:
+        products = Product.objects.filter(category__parent_id=int(category_id))
     else:
         products = Product.objects.all()
-    
     
     context = {
         'products': products
@@ -22,11 +22,20 @@ def product_comparison(request):
     return render(request, 'product-comparison4.html')
 
 
-def product(request, product_id):
-    product = get_object_or_404(Product, id=product_id)
+def product(request, pk):
     
-    context = {'product': product}
+    product = get_object_or_404(Product, id=pk)
+    context = {
+        'product': product
+    }
+    
     return render(request, 'product25.html', context)
+
+
+class ProductDetailView(DetailView):
+    template_name = 'product25.html'
+    model = Product
+
 
 
 def search_product(request):
