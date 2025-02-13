@@ -16,6 +16,7 @@
                 <div class="shop-cat-wrap">
                     <div class="shop-cat-slider swiper" id="shop-cat-slider">
                         <div class="swiper-wrapper">
+                            
                             <div class="swiper-slide" data-animate="animate__fadeIn">
                                 <div class="shop-cat-block text-center">
                                     <span class="d-block shop-cat-img extra-bg border-radius"><a href="/collection/"
@@ -176,6 +177,71 @@
                         <button type="button" class="shop-sidebar-close body-secondary-color icon-16 position-absolute"
                             aria-label="Close"><i class="ri-close-large-line d-block lh-1"></i></button>
                         <form class="shop-form" action="javascript:void(0)" id="shopForm">
+                            <!-- shop-categories start -->
+                            <div class="shop-sidebar shop-categories">
+                                <h6 class="font-18">Categories</h6>
+                                <div class="shop-cat-post mst-18">
+                                    <ul class="list-unstyled ul-mtm20">
+                                        <li>
+                                            <a href="{% url 'collection-category-default' %}"
+                                                class="body-dominant-color d-flex align-items-center justify-content-between">
+                                                <span>All Products</span>
+                                                <span>12</span>
+                                            </a>
+                                        </li>
+                                        {% for category in categories %}
+                                        {% if not category.parent %}
+                                        <li>
+                                            <a href="{% url 'collection-category' category_id=category.id %}"
+                                                class="d-flex align-items-center category-toggle"
+                                                data-target="#{{category.title}}">
+                                                <span class="toggle-icon me-2">+</span>
+                                                <span class="flex-grow-1">{{category.title}}</span>
+                                                <span>{{category.product_count}}</span>
+                                            </a>
+                                            <div id="{{category.title}}" class="collapse shop-cat-post ps-3">
+                                                {% for subcat in category.child.all %}
+
+                                                <div class="shop-cat">
+                                                    <a href="{% url 'collection-sub-category' category_id=category.id sub_category_id=subcat.id %}"
+                                                        class="body-dominant-color d-flex align-items-center justify-content-between py-1">
+                                                        <span>{{subcat.title}}</span>
+                                                        <span>{{subcat.product_count}}</span>
+                                                    </a>
+                                                </div>
+                                                {% endfor %}
+
+                                            </div>
+                                        </li>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- shop-categories end -->
+
+                            <!-- JavaScript to Handle Toggle Effect and Icons -->
+                            <script>
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    let toggles = document.querySelectorAll(".category-toggle");
+                                    toggles.forEach(toggle => {
+                                        toggle.addEventListener("click", function (event) {
+                                            event.preventDefault();
+                                            let target = document.querySelector(this.getAttribute("data-target"));
+                                            let icon = this.querySelector(".toggle-icon");
+                                            if (target.classList.contains("show")) {
+                                                target.classList.remove("show"); // Close subcategory
+                                                icon.textContent = "+"; // Change icon to plus
+                                            } else {
+                                                target.classList.add("show"); // Open subcategory
+                                                icon.textContent = "−"; // Change icon to minus
+                                            }
+                                        });
+                                    });
+                                });
+                            </script>
+
+
                             <!-- shop-availability start -->
                             <div class="shop-sidebar availability">
                                 <h6 class="font-18">Availability</h6>
@@ -794,7 +860,7 @@
                         <div class="shop-product-wrap data-grid">
                             <!-- shop-grid start -->
                             <div class="row row-mtm30">
-                            {% for product in products %}
+                                {% for product in products %}
                                 <div class="col-6 col-md-4 shop-col" data-animate="animate__fadeIn">
                                     <div class="single-product">
                                         <div class="row single-product-wrap">
@@ -887,8 +953,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                            {% endfor %}
+
+                                {% endfor %}
                                 <!-- shop-grid end -->
 
                                 <!-- paginatoin start -->

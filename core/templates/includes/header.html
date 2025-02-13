@@ -1,4 +1,4 @@
-{% load static %}
+{% load static tags %}
 
 <!-- header start -->
 <header id="header" class="main-header">
@@ -12,7 +12,8 @@
                         <div class="col-6 col-xl-3 header-element header-logo">
                             <div class="header-theme-logo">
                                 <a href="/" class="d-block theme-logo">
-                                    <img src="{% static 'image/index/logo.png' %}" class="width-88 width-xl-144 img-fluid" alt="logo">
+                                    <img src="{% static 'image/index/logo.png' %}"
+                                        class="width-88 width-xl-144 img-fluid" alt="logo">
                                 </a>
                             </div>
                         </div>
@@ -21,7 +22,8 @@
                         <!-- header-text start -->
                         <div class="col-xl-6 d-none d-xl-block header-element header-text">
                             <div class="header-theme-text text-center">
-                                <p class="font-16 text-uppercase heading-weight">Worldwide free shipping for above <span class="dominant-color">$98.00!</span></p>
+                                <p class="font-16 text-uppercase heading-weight">Worldwide free shipping for above <span
+                                        class="dominant-color">$98.00!</span></p>
                             </div>
                         </div>
                         <!-- header-text end -->
@@ -29,10 +31,12 @@
                         <!-- header-call start -->
                         <div class="col-xl-3 d-none d-xl-block header-element header-call">
                             <div class="header-phone-text d-flex align-items-center justify-content-end">
-                                <span class="dominant-color icon-32"><i class="ri-customer-service-line d-block lh-1"></i></span>
+                                <span class="dominant-color icon-32"><i
+                                        class="ri-customer-service-line d-block lh-1"></i></span>
                                 <div class="header-text-content psl-15">
                                     <h6 class="font-16">Helpline number</h6>
-                                    <a href="tel:(+00)123456789" class="d-inline-block body-dominant-color mst-3">(+00)-123456789</a>
+                                    <a href="tel:(+00)123456789"
+                                        class="d-inline-block body-dominant-color mst-3">(+00)-123456789</a>
                                 </div>
                             </div>
                         </div>
@@ -44,22 +48,27 @@
                                 <ul class="ul-mt30 header-icon-element">
                                     <li class="header-icon-wrap toggler-wrap d-xl-none">
                                         <div class="header-icon-wrapper">
-                                            <a href="javascript:void(0)" class="d-block header-icon-toggler toggler-btn" aria-label="Menu toggler button">
-                                                <span class="d-block header-block-icon icon-16"><i class="ri-menu-line d-block lh-1"></i></span>
+                                            <a href="javascript:void(0)" class="d-block header-icon-toggler toggler-btn"
+                                                aria-label="Menu toggler button">
+                                                <span class="d-block header-block-icon icon-16"><i
+                                                        class="ri-menu-line d-block lh-1"></i></span>
                                             </a>
                                         </div>
                                     </li>
                                     <li class="header-icon-wrap search-wrap">
                                         <div class="header-icon-wrapper">
-                                            <a href="#searchmodal" class="d-block header-icon-search" data-bs-toggle="modal" aria-label="Search modal">
-                                                <span class="d-block header-block-icon icon-16"><i class="ri-search-line d-block lh-1"></i></span>
+                                            <a href="#searchmodal" class="d-block header-icon-search"
+                                                data-bs-toggle="modal" aria-label="Search modal">
+                                                <span class="d-block header-block-icon icon-16"><i
+                                                        class="ri-search-line d-block lh-1"></i></span>
                                             </a>
                                         </div>
                                     </li>
                                     <li class="header-icon-wrap user-wrap d-sm-block d-none">
                                         <div class="header-icon-wrapper">
                                             <a href="/login/" class="d-block header-icon-user" aria-label="Login user">
-                                                <span class="d-block header-block-icon icon-16"><i class="ri-user-3-line d-block lh-1"></i></span>
+                                                <span class="d-block header-block-icon icon-16"><i
+                                                        class="ri-user-3-line d-block lh-1"></i></span>
                                             </a>
                                         </div>
                                     </li>
@@ -67,18 +76,23 @@
                                         <div class="header-icon-wrapper">
                                             <a href="/wishlist/" class="d-block header-icon-wishlist">
                                                 <span class="d-block header-block-icon-wrap position-relative per-7">
-                                                    <span class="d-block header-block-icon icon-16"><i class="ri-heart-line d-block lh-1"></i></span>
-                                                    <span class="header-block-counter wishlist-counter extra-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center dominant-bg rounded-circle">5</span>
+                                                    <span class="d-block header-block-icon icon-16"><i
+                                                            class="ri-heart-line d-block lh-1"></i></span>
+                                                    <span
+                                                        class="header-block-counter wishlist-counter extra-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center dominant-bg rounded-circle">5</span>
                                                 </span>
                                             </a>
                                         </div>
                                     </li>
                                     <li class="header-icon-wrap cart-wrap d-sm-block d-none">
                                         <div class="header-icon-wrapper">
-                                            <a href="javascript:void(0)" class="d-block header-icon-cart js-cart-drawer">
+                                            <a href="javascript:void(0)"
+                                                class="d-block header-icon-cart js-cart-drawer">
                                                 <span class="d-block header-block-icon-wrap position-relative per-7">
-                                                    <span class="d-block header-block-icon icon-16"><i class="ri-shopping-bag-3-line d-block lh-1"></i></span>
-                                                    <span class="header-block-counter cart-counter extra-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center dominant-bg rounded-circle">4</span>
+                                                    <span class="d-block header-block-icon icon-16"><i
+                                                            class="ri-shopping-bag-3-line d-block lh-1"></i></span>
+                                                    <span
+                                                        class="header-block-counter cart-counter extra-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center dominant-bg rounded-circle">4</span>
                                                 </span>
                                             </a>
                                         </div>
@@ -103,19 +117,26 @@
                     <div class="vegamenu-content position-relative">
                         <a href="/" class="menu-link d-flex flex-wrap align-items-center ptb-12 plr-15 extra-bg">
                             <span class="width-16 icon-16 fw-normal"><i class="ri-menu-line d-block"></i></span>
-                            <span class="menu-title width-calc-32 font-16 psl-10 text-uppercase heading-weight">Shop categories</span>
+                            <span class="menu-title width-calc-32 font-16 psl-10 text-uppercase heading-weight">Shop
+                                categories</span>
                             <span class="width-16 icon-16 fw-normal"><i class="ri-arrow-down-s-line d-block"></i></span>
                         </a>
-                        <div class="main-wrap collapse position-absolute top-100 start-0 end-0 extra-bg z-2 DropDownSlide box-shadow">
+                        <div
+                            class="main-wrap collapse position-absolute top-100 start-0 end-0 extra-bg z-2 DropDownSlide box-shadow">
                             <ul class="menu-ul">
-                            {% for category in categories %}
+                                {% get_categories as categories %}
+                                {% for category in categories %}
+                                {% if not category.parent %}
                                 <li class="menu-li">
-                                    <a href="{% url 'collection-category' category.id %}" class="body-dominant-color d-flex align-items-center ptb-10 plr-15">
-                                        <span class="width-16 lh-1"><img src={{category.icon.url}} class="w-100 img-fluid" alt="menu-icon1"></span>
+                                    <a href="{% url 'collection-category' category_id=category.id %}"
+                                        class="body-dominant-color d-flex align-items-center ptb-10 plr-15">
+                                        <span class="width-16 lh-1"><img src={{category.icon.url}}
+                                                class="w-100 img-fluid" alt="menu-icon1"></span>
                                         <span class="menusub-title width-calc-16 psl-10">{{category.title}}</span>
                                     </a>
                                 </li>
-                            {% endfor %}
+                                {% endif %}
+                                {% endfor %}
                             </ul>
                         </div>
                     </div>
@@ -131,31 +152,34 @@
                                     <a href="/" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
                                         <span class="menu-title text-uppercase heading-weight">Home</span>
                                     </a>
-                                    
+
                                 </li>
                                 <li class="menu-li">
-                                    <a href="{% url 'collection-category-default' %}" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
+                                    <a href="{% url 'collection-category-default' %}"
+                                        class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
                                         <span class="menu-title text-uppercase heading-weight">Shop</span>
                                     </a>
-                                    
+
                                 </li>
                                 <li class="menu-li">
-                                    <a href="/blog/" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
+                                    <a href="{% url 'blog' %}" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
                                         <span class="menu-title text-uppercase heading-weight">Blog</span>
                                     </a>
-                                    
+
                                 </li>
                                 <li class="menu-li">
-                                    <a href="/sitemap/" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
+                                    <a href="{% url 'sitemap' %}"
+                                        class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
                                         <span class="menu-title text-uppercase heading-weight">Page</span>
                                     </a>
-                                    
+
                                 </li>
                                 <li class="menu-li">
-                                    <a href="/contact-us/" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
+                                    <a href="{% url 'contact-us' %}"
+                                        class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
                                         <span class="menu-title text-uppercase heading-weight">Contact us</span>
                                     </a>
-                                    
+
                                 </li>
                             </ul>
                         </div>
@@ -168,15 +192,18 @@
                         <ul class="ul-mt30 header-icon-element">
                             <li class="header-icon-wrap search-wrap">
                                 <div class="header-icon-wrapper">
-                                    <a href="#searchmodal" class="d-block header-icon-search" data-bs-toggle="modal" aria-label="Search modal">
-                                        <span class="d-block header-block-icon extra-color font-18"><i class="ri-search-line d-block lh-1"></i></span>
+                                    <a href="#searchmodal" class="d-block header-icon-search" data-bs-toggle="modal"
+                                        aria-label="Search modal">
+                                        <span class="d-block header-block-icon extra-color font-18"><i
+                                                class="ri-search-line d-block lh-1"></i></span>
                                     </a>
                                 </div>
                             </li>
                             <li class="header-icon-wrap user-wrap">
                                 <div class="header-icon-wrapper">
                                     <a href="/login/" class="d-block header-icon-user" aria-label="Login user">
-                                        <span class="d-block header-block-icon extra-color font-18"><i class="ri-user-3-line d-block lh-1"></i></span>
+                                        <span class="d-block header-block-icon extra-color font-18"><i
+                                                class="ri-user-3-line d-block lh-1"></i></span>
                                     </a>
                                 </div>
                             </li>
@@ -184,8 +211,10 @@
                                 <div class="header-icon-wrapper">
                                     <a href="/wishlist/" class="d-block header-icon-wishlist">
                                         <span class="d-block header-block-icon-wrap position-relative per-7">
-                                            <span class="d-block header-block-icon extra-color font-18"><i class="ri-heart-line d-block lh-1"></i></span>
-                                            <span class="header-block-counter wishlist-counter dominant-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center extra-bg rounded-circle">5</span>
+                                            <span class="d-block header-block-icon extra-color font-18"><i
+                                                    class="ri-heart-line d-block lh-1"></i></span>
+                                            <span
+                                                class="header-block-counter wishlist-counter dominant-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center extra-bg rounded-circle">5</span>
                                         </span>
                                     </a>
                                 </div>
@@ -194,8 +223,10 @@
                                 <div class="header-icon-wrapper">
                                     <a href="javascript:void(0)" class="d-block header-icon-cart js-cart-drawer">
                                         <span class="d-block header-block-icon-wrap position-relative per-7">
-                                            <span class="d-block header-block-icon extra-color font-18"><i class="ri-shopping-bag-3-line d-block lh-1"></i></span>
-                                            <span class="header-block-counter cart-counter dominant-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center extra-bg rounded-circle">4</span>
+                                            <span class="d-block header-block-icon extra-color font-18"><i
+                                                    class="ri-shopping-bag-3-line d-block lh-1"></i></span>
+                                            <span
+                                                class="header-block-counter cart-counter dominant-color font-10 position-absolute end-0 d-flex align-items-center justify-content-center extra-bg rounded-circle">4</span>
                                         </span>
                                     </a>
                                 </div>

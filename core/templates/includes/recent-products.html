@@ -1,0 +1,120 @@
+<!-- related-product start -->
+<section class="related-area section-ptb">
+    <div class="container">
+        <div class="collection-category">
+            <div class="section-capture text-center" data-animate="animate__fadeIn">
+                <div class="section-title">
+                    <h2 class="section-heading">Most recent products</h2>
+                </div>
+            </div>
+            <div class="collection-wrap">
+                <div class="related-slider swiper" id="related-slider">
+                    <div class="swiper-wrapper">
+                        {% for product in recent_products %}
+                        <div class="swiper-slide" data-animate="animate__fadeIn">
+                            <div class="single-product">
+                                <div class="row single-product-wrap">
+                                    <div class="product-image">
+                                        <a href="{% url 'product' product.id %}" class="pro-img">
+                                            <img src="{{ product.cover_image.url }}"
+                                                class="w-100 img-fluid img1" alt="p-1">
+                                            <img src="{{ product.cover_image.url }}"
+                                                class="w-100 img-fluid img2" alt="p-2">
+                                        </a>
+                                        <div class="product-action">
+                                            <a href="javascript:void(0)" class="add-to-cart">
+                                                <span class="product-icon">
+                                                    <span class="product-bag-icon icon-16"><i
+                                                            class="ri-shopping-bag-3-line d-block lh-1"></i></span>
+                                                    <span class="product-loader-icon icon-16"><i
+                                                            class="ri-loader-4-line d-block lh-1"></i></span>
+                                                    <span class="product-check-icon icon-16"><i
+                                                            class="ri-check-line d-block lh-1"></i></span>
+                                                </span>
+                                                <span class="tooltip-text">add to cart</span>
+                                            </a>
+                                            <a href="#quickview-modal" data-bs-toggle="modal" class="quick-view">
+                                                <span class="product-icon"><i
+                                                        class="ri-eye-line d-block icon-16 lh-1"></i></span>
+                                                <span class="tooltip-text">quickview</span>
+                                            </a>
+                                            <a href="javascript:void(0)" class="add-to-wishlist">
+                                                <span class="product-icon"><i
+                                                        class="ri-heart-line d-block icon-16 lh-1"></i></span>
+                                                <span class="tooltip-text">wishlist</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-content">
+                                        <div class="pro-content">
+                                            <div class="product-ratting">
+                                                <span class="review-ratting">
+                                                    <span class="review-star">
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-fill"></i>
+                                                        <i class="ri-star-line"></i>
+                                                    </span>
+                                                    <span class="review-caption">No reviews</span>
+                                                </span>
+                                            </div>
+                                            <div class="product-title">
+                                                <span class="d-block heading-weight text-uppercase"><a href="{% url 'product' product.id %}"
+                                                        class="d-block w-100 dominant-link text-truncate">{{ product.title }}</a></span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span class="new-price dominant-color heading-weight">${{ product.price }}</span>
+                                                <span
+                                                    class="old-price heading-weight text-decoration-line-through">${{ product.price }}</span>
+                                            </div>
+                                            <div class="product-description">
+                                                <p>{{ product.description }}</p>
+                                            </div>
+                                            <div class="product-action">
+                                                <a href="javascript:void(0)" class="add-to-cart">
+                                                    <span class="product-icon">
+                                                        <span class="product-bag-icon icon-16"><i
+                                                                class="ri-shopping-bag-3-line d-block lh-1"></i></span>
+                                                        <span class="product-loader-icon icon-16"><i
+                                                                class="ri-loader-4-line d-block lh-1"></i></span>
+                                                        <span class="product-check-icon icon-16"><i
+                                                                class="ri-check-line d-block lh-1"></i></span>
+                                                    </span>
+                                                    <span class="tooltip-text">add to cart</span>
+                                                </a>
+                                                <a href="#quickview-modal" data-bs-toggle="modal" class="quick-view">
+                                                    <span class="product-icon"><i
+                                                            class="ri-eye-line d-block icon-16 lh-1"></i></span>
+                                                    <span class="tooltip-text">quickview</span>
+                                                </a>
+                                                <a href="javascript:void(0)" class="add-to-wishlist">
+                                                    <span class="product-icon"><i
+                                                            class="ri-heart-line d-block icon-16 lh-1"></i></span>
+                                                    <span class="tooltip-text">wishlist</span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                <div class="swiper-buttons" data-animate="animate__fadeIn">
+                    <div class="swiper-buttons-wrap">
+                        <button type="button" class="swiper-prev swiper-prev-related" aria-label="Arrow previous"><i
+                                class="ri-arrow-left-line d-block lh-1"></i></button>
+                        <button type="button" class="swiper-next swiper-next-related" aria-label="Arrow next"><i
+                                class="ri-arrow-right-line d-block lh-1"></i></button>
+                    </div>
+                </div>
+                <div class="swiper-dots" data-animate="animate__fadeIn">
+                    <div class="swiper-pagination swiper-pagination-related"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- related-product end -->
