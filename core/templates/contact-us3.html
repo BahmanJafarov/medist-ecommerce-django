@@ -109,33 +109,44 @@
                     <h2 class="section-heading">Reach out today</h2>
                 </div>
             </div>
-            <form method="post" action="javascript:void(0)">
+            <form method="post">
+                {% csrf_token %}
+                {% include 'includes/messages.html' %}
+                {{ form.non_field_errors }}
                 <div class="row field-row">
                     <div class="col-12 col-md-6 field-col d-flex">
                         <div class="row field-row">
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="name" class="field-label">Name</label>
-                                <input type="text" id="name" name="name" class="w-100" placeholder="Full name"
-                                    autocomplete="name">
+                                <!-- <input type="text" id="name" name="name" class="w-100" placeholder="Full name"
+                                    autocomplete="name"> -->
+                                    {{ form.full_name }}
+                                    {{ form.full_name.errors }}
                             </div>
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="email" class="field-label">Email</label>
-                                <input type="email" id="email" name="email" class="w-100" placeholder="Email"
-                                    autocomplete="email">
+                                <!-- <input type="email" id="email" name="email" class="w-100" placeholder="Email"
+                                    autocomplete="email"> -->
+                                    {{ form.email }}
+                                    {{ form.email.errors }}
                             </div>
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="phone" class="field-label">Phone number</label>
-                                <input type="text" id="phone" name="phone" class="w-100" placeholder="Phone number"
-                                    autocomplete="tel">
+                                <!-- <input type="text" id="phone" name="phone" class="w-100" placeholder="Phone number"
+                                    autocomplete="tel"> -->
+                                    {{ form.phone }}
+                                    {{ form.phone.errors }}
                             </div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6 field-col d-flex" data-animate="animate__fadeIn">
                         <div class="d-flex flex-column w-100">
                             <label for="message" class="field-label">Message</label>
-                            <textarea rows="5" id="message" name="message" class="w-100 height-md-100"
-                                placeholder="Message" autocomplete="off"></textarea>
-                        </div>
+                            <!-- <textarea rows="5" id="message" name="message" class="w-100 height-md-100"
+                                placeholder="Message" autocomplete="off"></textarea> -->
+                                {{ form.message }}
+                                {{ form.message.errors}}
+                            </div>
                     </div>
                 </div>
                 <div class="contact-form-btn mst-20 mst-sm-30">

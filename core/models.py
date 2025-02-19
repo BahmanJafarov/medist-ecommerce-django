@@ -1,4 +1,5 @@
 from django.db import models
+from core.validators import validate_email
 
 # Create your models here.
 
@@ -20,6 +21,6 @@ class Subscribe(AbstractModel):
 
 class Contact(AbstractModel):
     full_name = models.CharField('Full Name', max_length=200, null=True, blank=True)
-    email = models.EmailField('Email', max_length=200),
-    phone = models.CharField('Phone', max_length=50, null=True, blank=True),
+    phone = models.CharField('Phone', max_length=50, null=True, blank=True)
+    email = models.EmailField('Email', max_length=200, validators=[validate_email])
     message = models.TextField('Message')

@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from core.forms import ContactForm
+from django.urls import reverse_lazy
+from django.contrib import messages
 
 # Create your views here.
 
@@ -18,7 +21,20 @@ def coming_soon(request):
     return render(request, 'coming-soon5.html')
 
 def contact_us(request):
-    return render(request, 'contact-us3.html')
+    form = ContactForm
+    
+    if request.method == 'POST':
+        form = ContactForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, "Successfully sent!")
+            return redirect(reverse_lazy('contact-us'))
+    
+    context = {
+        'form': form
+    }
+    
+    return render(request, 'contact-us3.html', context)
 
 def cookie(request):
     return render(request, 'cookie.html')
