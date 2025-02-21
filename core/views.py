@@ -21,7 +21,7 @@ def coming_soon(request):
     return render(request, 'coming-soon5.html')
 
 def contact_us(request):
-    form = ContactForm
+    form = ContactForm()
     
     if request.method == 'POST':
         form = ContactForm(data=request.POST)

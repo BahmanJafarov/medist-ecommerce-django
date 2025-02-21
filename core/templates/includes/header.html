@@ -162,7 +162,8 @@
 
                                 </li>
                                 <li class="menu-li">
-                                    <a href="{% url 'blog' %}" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
+                                    <a href="{% url 'blog' %}"
+                                        class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
                                         <span class="menu-title text-uppercase heading-weight">Blog</span>
                                     </a>
 
@@ -199,12 +200,28 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="header-icon-wrap user-wrap">
+                            <li class="header-icon-wrap user-wrap dropdown">
                                 <div class="header-icon-wrapper">
-                                    <a href="/login/" class="d-block header-icon-user" aria-label="Login user">
-                                        <span class="d-block header-block-icon extra-color font-18"><i
-                                                class="ri-user-3-line d-block lh-1"></i></span>
+                                    <!-- User Icon with Dropdown Toggle -->
+                                    <a href="#" class="d-flex align-items-center dropdown-toggle" id="userDropdown"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="d-block header-block-icon extra-color font-18">
+                                            <i class="ri-user-3-line d-block lh-1 text-white"></i>
+                                            <!-- User Icon (White) -->
+                                        </span>
+                                        <span class="ms-1 text-white"><i class="ri-arrow-down-s-line"></i></span>
+                                        <!-- White Dropdown Indicator -->
                                     </a>
+
+                                    <!-- Bootstrap Dropdown Menu -->
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                        {% if request.user.is_authenticated %}
+                                        <li><a class="dropdown-item" href="{% url 'profile' %}">{{request.user.username}}</a></li>
+                                        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                                        {% else %}
+                                        <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
+                                        {% endif %}
+                                    </ul>
                                 </div>
                             </li>
                             <li class="header-icon-wrap wishlist-wrap">

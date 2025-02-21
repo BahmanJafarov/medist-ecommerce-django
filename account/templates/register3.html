@@ -19,14 +19,19 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5 mx-md-auto">
-                    <form method="post" action="javascript:void(0)">
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'includes/messages.html' %}
+                        {{ form.non_field_errors }}
                         <div class="row field-row">
                             <div class="col-12 col-md-6 field-col" data-animate="animate__fadeIn">
                                 <label for="fname" class="field-label">First name</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="text" id="fname" name="fname"
+                                    <!-- <input type="text" id="fname" name="fname"
                                         class="w-100 h-auto p-0 bg-transparent border-0" placeholder="First name"
-                                        autocomplete="given-name">
+                                        autocomplete="given-name"> -->
+                                        {{ form.first_name }}
+                                        {{ form.first_name.errors }}
                                     <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
                                             class="ri-user-line d-block lh-1"></i></button>
                                 </div>
@@ -34,42 +39,66 @@
                             <div class="col-12 col-md-6 field-col" data-animate="animate__fadeIn">
                                 <label for="lname" class="field-label">Last name</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="text" id="lname" name="lname"
+                                    <!-- <input type="text" id="lname" name="lname"
                                         class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Last name"
-                                        autocomplete="family-name">
+                                        autocomplete="family-name"> -->
+                                        {{ form.last_name }}
+                                        {{ form.last_name.errors }}
+                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
+                                            class="ri-user-line d-block lh-1"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-12 field-col" data-animate="animate__fadeIn">
+                                <label for="text" class="field-label">Username</label>
+                                <div class="field-pwd d-flex">
+                                    <!-- <input type="email" id="email" name="username"
+                                        class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Username"
+                                        autocomplete="username"> -->
+                                        {{ form.username }}
+                                        {{ form.username.errors }}
                                     <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
                                             class="ri-user-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 col-md-6 field-col" data-animate="animate__fadeIn">
                                 <label for="bdate" class="field-label">Date of birth (dd-mm-yyyy)</label>
-                                <input type="date" id="bdate" name="bdate" class="w-100">
+                                <!-- <input type="date" id="bdate" name="bdate" class="w-100"> -->
+                                {{ form.dob }}
+                                {{ form.dob.errors }}
                             </div>
                             <div class="col-12 col-md-6 field-col" data-animate="animate__fadeIn">
                                 <label for="gender" class="field-label">Gender</label>
-                                <select id="gender" name="sex" class="w-100" autocomplete="sex">
-                                    <option>--Select your gender--</option>
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
-                                </select>
+                                {{ form.gender }}
                             </div>
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
-                                <label for="email" class="field-label">Email</label>
+                                <label for="fname" class="field-label">Email</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="email" id="email" name="email"
+                                    <!-- <input type="email" id="email" name="email"
                                         class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Email"
-                                        autocomplete="email">
+                                        autocomplete="email"> -->
+                                        {{ form.email }}
+                                        {{ form.email.errors }}
                                     <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
                                             class="ri-mail-line d-block lh-1"></i></button>
                                 </div>
                             </div>
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
+                                <label for="email" class="field-label">Image</label>
+                                <div class="field-pwd d-flex">
+                                    {{ form.image }}
+                                    {{ form.image.error }}
+                                    <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
+                                            class="ri-image-line d-block lh-1"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="password" class="field-label">Password</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="password" id="password" name="password"
+                                    <!-- <input type="password" id="password" name="password"
                                         class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Password"
-                                        autocomplete="new-password">
+                                        autocomplete="new-password"> -->
+                                        {{ form.password }}
+                                        {{ form.password.errors }}
                                     <button type="button" class="field-pwd-btn body-color icon-16"
                                         aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
                                 </div>
@@ -77,9 +106,11 @@
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="rep-new-pwd" class="field-label">Confirm password</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="password" id="rep-new-pwd" name="password-rep"
+                                    <!-- <input type="password" id="rep-new-pwd" name="password-rep"
                                         class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Confirm password"
-                                        autocomplete="new-password">
+                                        autocomplete="new-password"> -->
+                                        {{ form.confirm_password }}
+                                        {{ form.confirm_password.errors }}
                                     <button type="button" class="field-pwd-btn body-color icon-16"
                                         aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
                                 </div>
@@ -106,7 +137,7 @@
                     </form>
                     <div class="mst-30 text-center">
                         <h6 class="font-18" data-animate="animate__fadeIn">Already have an account?</h6>
-                        <a href="/register/" class="d-inline-block body-secondary-color mst-8 text-decoration-underline"
+                        <a href="/login/" class="d-inline-block body-secondary-color mst-8 text-decoration-underline"
                             data-animate="animate__fadeIn">Log in</a>
                     </div>
                 </div>

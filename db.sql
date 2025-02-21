@@ -58,17 +58,17 @@ INSERT INTO blog_blog (category_id, title, description, created_at, updated_at) 
 -- Inserting parent categories with timestamps
 INSERT INTO product_productcategory (title, parent_id, created_at, updated_at, icon)
 VALUES
-    ('Cardiogram', NULL, NOW(), NOW(), 'images/index/menu/menu-icon1.png'),
-    ('Scalpel Instrument', NULL, NOW(), NOW(), 'images/index/menu/menu-icon2.png'),
-    ('Microscope', NULL, NOW(), NOW(), 'images/index/menu/menu-icon3.png'),
-    ('First Aid Kit', NULL, NOW(), NOW(), 'images/index/menu/menu-icon4.png'),
-    ('Stethoscope', NULL, NOW(), NOW(), 'images/index/menu/menu-icon5.png'),
-    ('Thermometer', NULL, NOW(), NOW(), 'images/index/menu/menu-icon6.png'),
-    ('Dumbbells', NULL, NOW(), NOW(), 'images/index/menu/menu-icon7.png'),
-    ('Notebook', NULL, NOW(), NOW(), 'images/index/menu/menu-icon8.png'),
-    ('Wheelchair', NULL, NOW(), NOW(), 'images/index/menu/menu-icon9.png'),
-    ('Syringe', NULL, NOW(), NOW(), 'images/index/menu/menu-icon10.png'),
-    ('Weighing Scale', NULL, NOW(), NOW(), 'images/index/menu/menu-icon11.png');
+    ('Cardiogram', NULL, NOW(), NOW(), 'image/index/menu/menu-icon1.png'),
+    ('Scalpel Instrument', NULL, NOW(), NOW(), 'image/index/menu/menu-icon2.png'),
+    ('Microscope', NULL, NOW(), NOW(), 'image/index/menu/menu-icon3.png'),
+    ('First Aid Kit', NULL, NOW(), NOW(), 'image/index/menu/menu-icon4.png'),
+    ('Stethoscope', NULL, NOW(), NOW(), 'image/index/menu/menu-icon5.png'),
+    ('Thermometer', NULL, NOW(), NOW(), 'image/index/menu/menu-icon6.png'),
+    ('Dumbbells', NULL, NOW(), NOW(), 'image/index/menu/menu-icon7.png'),
+    ('Notebook', NULL, NOW(), NOW(), 'image/index/menu/menu-icon8.png'),
+    ('Wheelchair', NULL, NOW(), NOW(), 'image/index/menu/menu-icon9.png'),
+    ('Syringe', NULL, NOW(), NOW(), 'image/index/menu/menu-icon10.png'),
+    ('Weighing Scale', NULL, NOW(), NOW(), 'image/index/menu/menu-icon11.png');
 
 
 -- Insert Subcategories for Weighing Scale

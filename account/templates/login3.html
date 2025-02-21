@@ -19,14 +19,19 @@
             </div>
             <div class="row">
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5 mx-md-auto">
-                    <form method="post" action="javascript:void(0)">
+                    <form method="post">
+                        {% csrf_token %}
+                        {% include 'includes/messages.html' %}
+                        {{ form.non_field_errors }}
                         <div class="row field-row">
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
-                                <label for="email" class="field-label">Email</label>
+                                <label for="email" class="field-label">Username</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="email" id="email" name="email"
+                                    <!-- <input type="email" id="email" name="email"
                                         class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Email"
-                                        autocomplete="email">
+                                        autocomplete="email"> -->
+                                        {{ form.username }}
+                                        {{ form.username.errors }}
                                     <button type="button" class="body-color icon-16" aria-label="Password hidden"><i
                                             class="ri-mail-line d-block lh-1"></i></button>
                                 </div>
@@ -34,9 +39,11 @@
                             <div class="col-12 field-col" data-animate="animate__fadeIn">
                                 <label for="password" class="field-label">Password</label>
                                 <div class="field-pwd d-flex">
-                                    <input type="password" id="password" name="password"
+                                    <!-- <input type="password" id="password" name="password"
                                         class="w-100 h-auto p-0 bg-transparent border-0" placeholder="Password"
-                                        autocomplete="current-password">
+                                        autocomplete="current-password"> -->
+                                        {{ form.password }}
+                                        {{ form.password.errors }}
                                     <button type="button" class="field-pwd-btn body-color icon-16"
                                         aria-label="Password hidden"><i class="ri-eye-line d-block lh-1"></i></button>
                                 </div>

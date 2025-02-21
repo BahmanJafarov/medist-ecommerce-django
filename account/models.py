@@ -23,7 +23,7 @@ class User(AbstractUser):
     product_ids = ArrayField(models.IntegerField(), blank=True, default=list)
     
     def __str__(self):
-        return self.first_name
+        return self.username
     
     
     
