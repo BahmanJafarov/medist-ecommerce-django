@@ -4,62 +4,62 @@
 <div class="col-12 col-lg-4 col-xl-3 p-lg-sticky top-0" data-animate="animate__fadeIn">
     <div class="ap-info">
         <div class="ap-author ptb-30 plr-15 extra-bg text-center border-radius">
-            <img src="{% static 'image/account/customer-img.jpg' %}" class="width-72 img-fluid rounded-circle"
-                alt="customer-img">
+            <img src="{{ request.user.get_profile_image }}" class="width-72 img-fluid rounded-circle" alt="customer-img">
             <div class="ap-ac mst-23">
-                <h6 class="font-18">Miranda joy</h6>
-                <span class="d-inline-block mst-8">Joined 23<sup>rd</sup> Jan, 2023</span>
+                <h6 class="font-18">{{ request.user.first_name }} {{ request.user.last_name }}</h6>
+                <span class="d-inline-block mst-8">Joined {{ request.user.date_joined|date:"jS M, Y" }}</span>
             </div>
         </div>
         <div class="ap-profile">
             <a href="/profile/"
-                class="body-dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15">
-                <span class="ap-icon body-dominant-color icon-16 mer-5"><i class="ri-user-settings-line"></i></span>
+                class="d-flex align-items-center justify-content-between ptb-15 plr-15 {% if request.path == '/profile/' %}dominant-color{% else %}body-dominant-color{% endif %}">
+                <span class="ap-icon icon-16 mer-5"><i class="ri-user-settings-line"></i></span>
                 <span class="ap-name me-auto">Profile</span>
             </a>
             <a href="/profile-address/"
-                class="dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15">
-                <span class="ap-icon dominant-color icon-16 mer-5"><i class="ri-booklet-line"></i></span>
+                class="d-flex align-items-center justify-content-between ptb-15 plr-15 {% if request.path == '/profile-address/' %}dominant-color{% else %}body-dominant-color{% endif %}">
+                <span class="ap-icon icon-16 mer-5"><i class="ri-booklet-line"></i></span>
                 <span class="ap-name me-auto">Address book</span>
             </a>
             <a href="/profile-wishlist/"
-                class="body-dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15">
-                <span class="ap-icon body-color icon-16 mer-5"><i class="ri-heart-line"></i></span>
+                class="d-flex align-items-center justify-content-between ptb-15 plr-15 {% if request.path == '/profile-wishlist/' %}dominant-color{% else %}body-dominant-color{% endif %}">
+                <span class="ap-icon icon-16 mer-5"><i class="ri-heart-line"></i></span>
                 <span class="ap-name me-auto">My wishlist</span>
                 <span
                     class="ap-count extra-color font-12 d-flex align-items-center justify-content-center secondary-bg rounded-circle">3</span>
             </a>
             <a href="/profile-order/"
-                class="body-dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15">
-                <span class="ap-icon body-color icon-16 mer-5"><i class="ri-shopping-bag-3-line"></i></span>
+                class="d-flex align-items-center justify-content-between ptb-15 plr-15 {% if request.path == '/profile-order/' %}dominant-color{% else %}body-dominant-color{% endif %}">
+                <span class="ap-icon icon-16 mer-5"><i class="ri-shopping-bag-3-line"></i></span>
                 <span class="ap-name me-auto">Order</span>
                 <span
                     class="ap-count extra-color font-12 d-flex align-items-center justify-content-center secondary-bg rounded-circle">3</span>
             </a>
             <a href="/profile-ticket/"
-                class="body-dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15">
-                <span class="ap-icon body-color icon-16 mer-5"><i class="ri-ticket-line"></i></span>
+                class="d-flex align-items-center justify-content-between ptb-15 plr-15 {% if request.path == '/profile-ticket/' %}dominant-color{% else %}body-dominant-color{% endif %}">
+                <span class="ap-icon icon-16 mer-5"><i class="ri-ticket-line"></i></span>
                 <span class="ap-title me-auto">Ticket</span>
                 <span
                     class="ap-count extra-color font-12 d-flex align-items-center justify-content-center secondary-bg rounded-circle">3</span>
             </a>
             <a href="/profile-notification/"
-                class="body-dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15">
-                <span class="ap-icon body-color icon-16 mer-5"><i class="ri-notification-line"></i></span>
+                class="d-flex align-items-center justify-content-between ptb-15 plr-15 {% if request.path == '/profile-notification/' %}dominant-color{% else %}body-dominant-color{% endif %}">
+                <span class="ap-icon icon-16 mer-5"><i class="ri-notification-line"></i></span>
                 <span class="ap-name me-auto">Manage notification</span>
             </a>
             <a href="#deletemodal"
                 class="body-dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15"
                 data-bs-toggle="modal">
-                <span class="ap-icon body-color icon-16 mer-5"><i class="ri-delete-bin-line"></i></span>
+                <span class="ap-icon icon-16 mer-5"><i class="ri-delete-bin-line"></i></span>
                 <span class="ap-name me-auto">Delete account</span>
             </a>
             <a href="/" class="body-dominant-color d-flex align-items-center justify-content-between ptb-15 plr-15">
-                <span class="ap-icon body-color icon-16 mer-5"><i class="ri-logout-box-line"></i></span>
+                <span class="ap-icon icon-16 mer-5"><i class="ri-logout-box-line"></i></span>
                 <span class="ap-name me-auto">Logout</span>
             </a>
         </div>
     </div>
 </div>
+
 
 {% endblock profile-list %}

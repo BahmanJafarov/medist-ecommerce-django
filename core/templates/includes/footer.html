@@ -21,6 +21,7 @@
                                         first order up 60% off</h2>
                                     <div class="footer-news-form mst-21">
                                         <form method="post" class="news-form">
+                                            {% csrf_token %}
                                             <div class="news-wrap d-flex flex-wrap border-full br-hidden">
                                                 <input type="email" id="newsletter-email" name="newsletter-email"
                                                     class="width-calc-120 border-none ber rounded-0"
