@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 
-from django.urls import path
+from django.urls import path, re_path
 from account.views import *
 
 urlpatterns = [
@@ -33,4 +33,9 @@ urlpatterns = [
     path("ticket-create/", ticket_create, name="ticket-create"),
     path("ticket-edit/", ticket_edit, name="ticket-edit"),
     path("ticket-info/", ticket_info, name="ticket-info"),
+    re_path(
+        r"^activate/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,32})/$",
+        activate,
+        name="activate",
+    ),
 ]
