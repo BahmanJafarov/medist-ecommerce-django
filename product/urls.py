@@ -14,14 +14,27 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.urls import path
 from product.views import *
 
 urlpatterns = [
-    path('collection-category/', collection_category, name='collection-category-default'),
-    path('collection-category/<int:category_id>/', collection_category, name='collection-category'),
-    path('collection-category/<int:category_id>/<int:sub_category_id>/', collection_category, name='collection-sub-category'),
-    path('product-comparison/', product_comparison, name='product-comparison'),
-    path('product/<int:pk>/', product, name='product'),
-    path('search-product/', search_product, name='search-product')
+    path(
+        "collection-category/",
+        CollectionCategoryView.as_view(),
+        name="collection-category-default",
+    ),
+    path(
+        "collection-category/<int:category_id>/",
+        CollectionCategoryView.as_view(),
+        name="collection-category",
+    ),
+    path(
+        "collection-category/<int:category_id>/<int:sub_category_id>/",
+        CollectionCategoryView.as_view(),
+        name="collection-sub-category",
+    ),
+    path("product-comparison/", product_comparison, name="product-comparison"),
+    path("product/<int:pk>/", ProductDetailView.as_view(), name="product"),
+    path("search-product/", search_product, name="search-product"),
 ]

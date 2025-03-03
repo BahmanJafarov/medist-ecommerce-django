@@ -16,7 +16,7 @@
                 <div class="shop-cat-wrap">
                     <div class="shop-cat-slider swiper" id="shop-cat-slider">
                         <div class="swiper-wrapper">
-                            
+
                             <div class="swiper-slide" data-animate="animate__fadeIn">
                                 <div class="shop-cat-block text-center">
                                     <span class="d-block shop-cat-img extra-bg border-radius"><a href="/collection/"
@@ -731,10 +731,10 @@
                     <!-- collection-info start -->
                     <div class="row row-mtm" data-animate="animate__fadeIn">
                         <!-- collection-img start -->
-                        <div class="collection-img">
+                        <!-- <div class="collection-img">
                             <img src="{% static 'image/collection/collection-banner.jpg' %}"
                                 class="w-100 img-fluid border-radius" alt="collection-banner">
-                        </div>
+                        </div> -->
                         <!-- collection-img end -->
                         <!-- shop-top-bar start -->
                         <div class="shop-top-bar">
@@ -962,44 +962,45 @@
                                     <nav aria-label="Page navigation example">
                                         <ul
                                             class="pagination ul-mt5 align-items-center justify-content-center pagination-box">
+                                            {% if page_obj.has_previous %}
                                             <li class="page-item first">
-                                                <a href="javascript:void(0)"
+                                                <a href="?page=1"
                                                     class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
                                                     aria-label="First page">First</a>
                                             </li>
                                             <li class="page-item prev">
-                                                <a href="javascript:void(0)"
+                                                <a href="?page={{ page_obj.previous_page_number }}"
                                                     class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
-                                                    aria-label="Previous"><i
-                                                        class="ri-arrow-left-line d-block lh-1"></i></a>
+                                                    aria-label="Previous">
+                                                    <i class="ri-arrow-left-line d-block lh-1"></i>
+                                                </a>
                                             </li>
+                                            {% endif %}
+
+                                            {% for page in page_obj.paginator.page_range %}
                                             <li class="page-item">
-                                                <a href="javascript:void(0)"
-                                                    class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
-                                                    aria-label="Page number">1</a>
+                                                <a href="?page={{ page }}"
+                                                    class="{% if page == page_obj.number %} active {% endif %} page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
+                                                    aria-label="Page number">{{ page }}</a>
                                             </li>
-                                            <li class="page-item">
-                                                <a href="javascript:void(0)"
-                                                    class="page-link active d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
-                                                    aria-label="Page number">2</a>
-                                            </li>
-                                            <li class="page-item">
-                                                <a href="javascript:void(0)"
-                                                    class="page-link d-flex align-items-center justify-content-center p-0 m-0 heading-weight border-0 border-radius lh-1"
-                                                    aria-label="Page number">3</a>
-                                            </li>
+                                            {% endfor %}
+
+                                            {% if page_obj.has_next %}
                                             <li class="page-item next">
-                                                <a href="javascript:void(0)"
+                                                <a href="?page={{ page_obj.next_page_number }}"
                                                     class="page-link icon-16 d-flex align-items-center justify-content-center p-0 m-0 bg-transparent heading-weight border-0 border-radius"
-                                                    aria-label="Next"><i
-                                                        class="ri-arrow-right-line d-block lh-1"></i></a>
+                                                    aria-label="Next">
+                                                    <i class="ri-arrow-right-line d-block lh-1"></i>
+                                                </a>
                                             </li>
                                             <li class="page-item last">
-                                                <a href="javascript:void(0)"
+                                                <a href="?page={{ page_obj.paginator.num_pages }}"
                                                     class="page-link p-0 m-0 bg-transparent heading-weight border-0 lh-1"
                                                     aria-label="Last page">Last</a>
                                             </li>
+                                            {% endif %}
                                         </ul>
+
                                     </nav>
                                 </div>
                                 <!-- paginatoin end -->

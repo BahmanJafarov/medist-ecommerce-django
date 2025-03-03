@@ -1046,7 +1046,7 @@
                                         <div class="ul-mtm20">
                                             <span class="d-block heading-color heading-weight">Is pickup available for
                                                 all items?</span>
-                                            <span class="d-block">Pickup is available for most items. If an item is
+                                            <span class="d-block">Pickup is available for items. If an item is
                                                 eligible, you'll see the pickup option during checkout.</span>
                                         </div>
                                     </li>
@@ -1470,9 +1470,11 @@
     <!-- product-detail-tab end -->
 
     <!-- related-product start -->
-    {% get_recent_products %}
+    {% if request.user.is_authenticated %}
+    {% include 'includes/recent-products.html' %}
+    {% endif %}
     <!-- related-product end -->
-     
+
 </main>
 <!-- main end -->
 
