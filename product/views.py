@@ -1,8 +1,9 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
+from django.urls import reverse_lazy
 from product.models import *
 from django.views.generic import DetailView, ListView
-from django.db.models import Case, When, Value, IntegerField
-
+from product.forms import ProductReviewForm
+from django.views.generic.edit import FormMixin
 
 # Create your views here.
 
@@ -31,65 +32,66 @@ class CollectionCategoryView(ListView):
         return context
 
 
-def collection_category(request, category_id=None, sub_category_id=None):
+# def collection_category(request, category_id=None, sub_category_id=None):
 
-    # If a subcategory_id is passed, filter by that subcategory
-    if sub_category_id:
-        products = Product.objects.filter(category_id=sub_category_id)
-    # If a category_id is passed, filter by that category's subcategories
-    elif category_id:
-        products = Product.objects.filter(category__parent_id=category_id)
-    # Show all products if no category_id or sub_category_id is provided
-    else:
-        products = Product.objects.all()
+#     # If a subcategory_id is passed, filter by that subcategory
+#     if sub_category_id:
+#         products = Product.objects.filter(category_id=sub_category_id)
+#     # If a category_id is passed, filter by that category's subcategories
+#     elif category_id:
+#         products = Product.objects.filter(category__parent_id=category_id)
+#     # Show all products if no category_id or sub_category_id is provided
+#     else:
+#         products = Product.objects.all()
 
-    context = {
-        "products": products,
-    }
+#     context = {
+#         "products": products,
+#     }
 
-    return render(request, "collection-category.html", context)
+#     return render(request, "collection-category.html", context)
 
 
 def product_comparison(request):
     return render(request, "product-comparison4.html")
 
 
-def product(request, pk):
+# def product(request, pk):
 
-    product = get_object_or_404(Product, id=pk)
+#     product = get_object_or_404(Product, id=pk)
 
-    user = request.user
+#     user = request.user
 
-    # if product is in the list, remove it to prevent duplicate.
-    if pk in user.product_ids:
-        user.product_ids.remove(pk)
-    # add product to the list
-    user.product_ids.insert(0, pk)
+#     # if product is in the list, remove it to prevent duplicate.
+#     if pk in user.product_ids:
+#         user.product_ids.remove(pk)
+#     # add product to the list
+#     user.product_ids.insert(0, pk)
 
-    # take most recent 3 products
-    product_ids = user.product_ids[:3]
-    recent_products = Product.objects.filter(id__in=product_ids)
+#     # take most recent 3 products
+#     product_ids = user.product_ids[:3]
+#     recent_products = Product.objects.filter(id__in=product_ids)
 
-    context = {"product": product, "recent_products": recent_products}
+#     context = {"product": product, "recent_products": recent_products}
 
-    return render(request, "product25.html", context)
+#     return render(request, "product25.html", context)
 
 
-class ProductDetailView(DetailView):
+class ProductDetailView(FormMixin, DetailView):
     model = Product
     template_name = "product25.html"
-    context_object_name = "product"
+    form_class = ProductReviewForm
 
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
 
         user = self.request.user
         product = self.get_object()  # Get the current product
 
-        print(user)
+        context = super().get_context_data(**kwargs)
+        context["reviews"] = ProductReview.objects.filter(product=product)
 
+        # Update recent viewed products for user
         if user.is_authenticated:
-            # Ensure user has a product_ids list (ArrayField is stored as a list in PostgreSQL)
+            # Ensure user has a product_ids list
             product_list = user.product_ids if user.product_ids else []
 
             # Remove product ID if already exists (to avoid duplicates)
@@ -116,9 +118,18 @@ class ProductDetailView(DetailView):
             # Fetch product reviews
             context["recent_products"] = recent_products
 
-        context["reviews"] = ProductReview.objects.filter(product=product)
-
         return context
+
+    def post(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        form = self.get_form()
+
+        if form.is_valid():
+            review = form.save(False)
+            review.product = self.object
+            review.user = self.request.user
+            form.save()
+            return redirect(reverse_lazy("product", kwargs={"pk": self.object.id}))
 
 
 def search_product(request):

@@ -378,7 +378,8 @@
                                     <span class="d-inline-block heading-color meb-14 heading-weight">Frequently bought
                                         together</span>
                                     <div class="frequent-group">
-                                        <form method="post" action="javascript:void(0)" class="frequent-form">
+                                        <form method="post" class="frequent-form">
+                                            {% csrf_token %}
                                             <div class="row row-mtm15">
                                                 <div class="col-12 col-lg-12">
                                                     <div class="frequent-detail">
@@ -1174,10 +1175,12 @@
                     <div class="tab-pane fade" id="pro-review-tab">
                         <div class="product-tab-review">
                             <div class="product-review">
-                                <form method="post" action="javascript:void(0)">
+                                {% if request.user.is_authenticated %}
+                                <form method="post">
+                                    {% csrf_token %}
                                     <h6 class="font-18 meb-15">Customer reviews</h6>
                                     <div class="row row-mtm">
-                                        <div class="product-review-info">
+                                        <!-- <div class="product-review-info">
                                             <div class="row row-mtm">
                                                 <div class="col-12 col-sm-6 col-md-4">
                                                     <div class="product-review-rating"><span class="heading-color fs-3"
@@ -1271,10 +1274,10 @@
                                                         review</button>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="product-review-form">
                                             <div class="row field-row">
-                                                <div class="col-12 col-md-6 field-col">
+                                                <!-- <div class="col-12 col-md-6 field-col">
                                                     <label for="review-name" class="field-label">Name</label>
                                                     <input type="text" id="review-name" name="review-name" class="w-100"
                                                         placeholder="Demo name" autocomplete="name" required>
@@ -1306,15 +1309,16 @@
                                                     <input type="text" id="review-title" name="review-title"
                                                         class="w-100" placeholder="Review title" autocomplete="off"
                                                         required>
-                                                </div>
+                                                </div> -->
                                                 <div class="col-12 field-col">
                                                     <label for="review-message" class="field-label">Review
                                                         message</label>
-                                                    <textarea rows="10" id="review-message" name="review-message"
+                                                    <!-- <textarea rows="10" id="review-message" name="review-message"
                                                         class="w-100" placeholder="Review message" autocomplete="off"
-                                                        required></textarea>
+                                                        required></textarea> -->
+                                                    {{ form.message }}
                                                 </div>
-                                                <div class="col-12 field-col">
+                                                <!-- <div class="col-12 field-col">
                                                     <label class="field-label">Upload attachment</label>
                                                     <div class="field-attachment ptb-30 plr-15 plr-sm-30 text-center">
                                                         <div
@@ -1331,109 +1335,72 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
-                                            <div class="product-review-button mst-20 mst-sm-30">
-                                                <div class="row btn-row">
-                                                    <div class="col-12 col-sm-6 col-xl-3">
-                                                        <button type="submit"
-                                                            class="w-100 btn-style2 quaternary-btn review-submit">Submit
-                                                            review</button>
-                                                    </div>
-                                                    <div class="col-12 col-sm-6 col-xl-3">
-                                                        <button type="button"
-                                                            class="w-100 btn-style2 secondary-btn review-cancel">Cancel
-                                                            review</button>
-                                                    </div>
+
+                                        </div>
+                                        <div class="product-review-button mst-20 mst-sm-30">
+                                            <div class="row btn-row">
+                                                <div class="col-12 col-sm-6 col-xl-3">
+                                                    <button type="submit"
+                                                        class="w-100 btn-style2 quaternary-btn review-submit">Submit
+                                                        review</button>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-xl-3">
+                                                    <button type="button"
+                                                        class="w-100 btn-style2 secondary-btn review-cancel">Cancel
+                                                        review</button>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="product-review-comment">
-                                            <div class="row row-mtm">
-                                                <div class="product-review-detail">
-                                                    <div
-                                                        class="product-reviewer-info d-flex flex-wrap align-items-center">
-                                                        <span
-                                                            class="width-48 height-48 icon-16 d-flex align-items-center justify-content-center overflow-hidden rounded-circle"><i
-                                                                class="ri-user-line d-block lh-1"></i></span>
-                                                        <h6 class="product-reviewer-name width-calc-48 font-16 psl-15">
-                                                            Noah james</h6>
-                                                    </div>
-                                                    <div class="product-reviewer-date mst-10">Reviwed on Oct 30, 2021
-                                                    </div>
-                                                    <div class="product-review-love mst-9">
-                                                        <div class="product-ratting">
-                                                            <span class="review-ratting">
-                                                                <span class="review-star icon-16">
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                </span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <h6 class="product-reviewer-subject mst-8">Very good</h6>
-                                                    <p class="product-reviewer-review mst-1">There are many variations
-                                                        of passages of Lorem Ipsum available, but the majority have
-                                                        suffered alteration in some form, by injected humour, or
-                                                        randomised words which don’t look even slightly believable. If
-                                                        you are going to use a passage of Lorem Ipsum, you need to be
-                                                        sure there isn’t anything embarrassing hidden in the middle of
-                                                        text. All the Lorem Ipsum generators on the Internet tend to
-                                                        repeat predefined chunks as necessary, making this the first
-                                                        true generator on the Internet.</p>
-                                                    <div class="product-reviewer-attachment mst-7">
-                                                        <ul class="ul-mt5">
-                                                            <li><img src="{% static 'image/product/review-product1.jpg' %}"
-                                                                    class="width-56 img-fluid ptb-4 plr-4 body-bg border-full br-hidden"
-                                                                    alt="review-product1"></li>
-                                                            <li><img src="{% static 'image/product/review-product2.jpg' %}"
-                                                                    class="width-56 img-fluid ptb-4 plr-4 body-bg border-full br-hidden"
-                                                                    alt="review-product2"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="product-review-detail">
-                                                    <div
-                                                        class="product-reviewer-info d-flex flex-wrap align-items-center">
-                                                        <span
-                                                            class="width-48 height-48 icon-16 d-flex align-items-center justify-content-center overflow-hidden rounded-circle"><i
-                                                                class="ri-user-line d-block lh-1"></i></span>
-                                                        <h6 class="product-reviewer-name width-calc-48 font-16 psl-15">
-                                                            Carla houston</h6>
-                                                    </div>
-                                                    <div class="product-reviewer-date mst-10">Reviwed on Oct 30, 2021
-                                                    </div>
-                                                    <div class="product-review-love mst-9">
-                                                        <div class="product-ratting">
-                                                            <span class="review-ratting">
-                                                                <span class="review-star icon-16">
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-fill"></i>
-                                                                    <i class="ri-star-line"></i>
-                                                                    <i class="ri-star-line"></i>
-                                                                    <i class="ri-star-line"></i>
-                                                                </span>
-                                                            </span>
-                                                        </div>
-                                                    </div>
-                                                    <h6 class="product-reviewer-subject mst-8">Good</h6>
-                                                    <p class="product-reviewer-review mst-1">There are many variations
-                                                        of passages of Lorem Ipsum available, but the majority have
-                                                        suffered alteration in some form, by injected humour, or
-                                                        randomised words which don’t look even slightly believable. If
-                                                        you are going to use a passage of Lorem Ipsum, you need to be
-                                                        sure there isn’t anything embarrassing hidden in the middle of
-                                                        text. All the Lorem Ipsum generators on the Internet tend to
-                                                        repeat predefined chunks as necessary, making this the first
-                                                        true generator on the Internet.</p>
-                                                </div>
-                                            </div>
-                                        </div>
+
                                     </div>
+
                                 </form>
+                                {% endif %}
+                                <div class="product-review-comment">
+                                    <div class="row row-mtm">
+                                        {% for review in reviews %}
+                                        <div class="product-review-detail">
+                                            <div class="product-reviewer-info d-flex flex-wrap align-items-center">
+                                                <span
+                                                    class="width-48 height-48 icon-16 d-flex align-items-center justify-content-center overflow-hidden rounded-circle"><i
+                                                        class="ri-user-line d-block lh-1"></i></span>
+                                                <h6 class="product-reviewer-name width-calc-48 font-16 psl-15">
+                                                    {{ review.user.first_name }} {{ review.user.last_name }}</h6>
+                                            </div>
+                                            <div class="product-reviewer-date mst-10">
+                                                Reviewed on {{ review.created_at|date:"F d, Y H:i A" }}
+                                            </div>
+                                            <!-- <div class="product-review-love mst-9">
+                                                <div class="product-ratting">
+                                                    <span class="review-ratting">
+                                                        <span class="review-star icon-16">
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                            <i class="ri-star-fill"></i>
+                                                        </span>
+                                                    </span>
+                                                </div>
+                                            </div> -->
+                                            <!-- <h6 class="product-reviewer-subject mst-8">Very good</h6> -->
+                                            <p class="product-reviewer-review mst-1">{{ review.message }}</p>
+                                            <!-- <div class="product-reviewer-attachment mst-7">
+                                                <ul class="ul-mt5">
+                                                    <li><img src="{% static 'image/product/review-product1.jpg' %}"
+                                                            class="width-56 img-fluid ptb-4 plr-4 body-bg border-full br-hidden"
+                                                            alt="review-product1"></li>
+                                                    <li><img src="{% static 'image/product/review-product2.jpg' %}"
+                                                            class="width-56 img-fluid ptb-4 plr-4 body-bg border-full br-hidden"
+                                                            alt="review-product2"></li>
+                                                </ul>
+                                            </div> -->
+                                        </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
