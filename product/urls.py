@@ -25,16 +25,16 @@ urlpatterns = [
         name="collection-category-default",
     ),
     path(
-        "collection-category/<int:category_id>/",
+        "collection-category/<slug:category_slug>/",
         CollectionCategoryView.as_view(),
         name="collection-category",
     ),
     path(
-        "collection-category/<int:category_id>/<int:sub_category_id>/",
+        "collection-category/<slug:category_slug>/<slug:sub_category_slug>/",
         CollectionCategoryView.as_view(),
         name="collection-sub-category",
     ),
     path("product-comparison/", product_comparison, name="product-comparison"),
-    path("product/<int:pk>/", ProductDetailView.as_view(), name="product"),
+    path("product/<str:slug>/", ProductDetailView.as_view(), name="product"),
     path("search-product/", search_product, name="search-product"),
 ]

@@ -17,6 +17,7 @@ class ProductCategory(AbstractModel):
     parent = models.ForeignKey('self', related_name='child', on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
     icon = models.ImageField(upload_to='image/index/menu/', null=True, blank=True)
+    slug = models.SlugField('slug', null=True, blank=True)
     
     def __str__(self):
         if self.parent:
@@ -37,6 +38,7 @@ class Product(AbstractModel):
     cover_image = models.ImageField(upload_to='product_images/')
     quantity = models.IntegerField('quantity')   
     weight = models.FloatField('weight', null=True, blank=True)
+    slug = models.SlugField('slug', null=True, blank=True)
     
     def __str__(self):
         if self.category:

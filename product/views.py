@@ -16,13 +16,13 @@ class CollectionCategoryView(ListView):
 
     def get_queryset(self):
         """Filter products based on category_id or sub_category_id."""
-        category_id = self.kwargs.get("category_id")
-        sub_category_id = self.kwargs.get("sub_category_id")
+        category_slug = self.kwargs.get("category_slug")
+        sub_category_slug = self.kwargs.get("sub_category_slug")
 
-        if sub_category_id:
-            return Product.objects.filter(category_id=sub_category_id)
-        elif category_id:
-            return Product.objects.filter(category__parent_id=category_id)
+        if sub_category_slug:
+            return Product.objects.filter(category__slug=sub_category_slug)
+        elif category_slug:
+            return Product.objects.filter(category__parent__slug=category_slug)
         else:
             return Product.objects.all()
 
