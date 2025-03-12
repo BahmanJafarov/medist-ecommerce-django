@@ -1,4 +1,4 @@
-{% load static tags %}
+{% load static tags i18n %}
 
 <!-- header start -->
 <header id="header" class="main-header">
@@ -150,37 +150,55 @@
                             <ul class="menu-ul d-flex flex-wrap">
                                 <li class="menu-li">
                                     <a href="/" class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
-                                        <span class="menu-title text-uppercase heading-weight">Home</span>
+                                        <span class="menu-title text-uppercase heading-weight">{% trans 'Home' %}</span>
                                     </a>
 
                                 </li>
                                 <li class="menu-li">
                                     <a href="{% url 'collection-category-default' %}"
                                         class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
-                                        <span class="menu-title text-uppercase heading-weight">Shop</span>
+                                        <span class="menu-title text-uppercase heading-weight">{% trans 'Shop' %}</span>
                                     </a>
 
                                 </li>
                                 <li class="menu-li">
                                     <a href="{% url 'blog' %}"
                                         class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
-                                        <span class="menu-title text-uppercase heading-weight">Blog</span>
+                                        <span class="menu-title text-uppercase heading-weight">{% trans 'Blog' %}</span>
                                     </a>
 
                                 </li>
                                 <li class="menu-li">
                                     <a href="{% url 'sitemap' %}"
                                         class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
-                                        <span class="menu-title text-uppercase heading-weight">Page</span>
+                                        <span class="menu-title text-uppercase heading-weight">{% trans 'Page' %}</span>
                                     </a>
 
                                 </li>
                                 <li class="menu-li">
                                     <a href="{% url 'contact-us' %}"
                                         class="menu-link font-16 d-flex align-items-center ptb-12 plr-15">
-                                        <span class="menu-title text-uppercase heading-weight">Contact us</span>
+                                        <span class="menu-title text-uppercase heading-weight">{% trans 'Contact us' %}</span>
                                     </a>
 
+                                </li>
+                                <li>
+                                    <form action="{% url 'set_language' %}" method="post">
+                                        {% csrf_token %}
+                                        <div class="custom-select-wrapper">
+                                            <select name="language" onchange="this.form.submit()" class="custom-select">
+                                                {% get_current_language as LANGUAGE_CODE %}
+                                                {% get_available_languages as LANGUAGES %}
+                                                {% get_language_info_list for LANGUAGES as languages %}
+                                                
+                                                {% for language in languages %}
+                                                    <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                                        {{ language.code }}
+                                                    </option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </form>                                                                    
                                 </li>
                             </ul>
                         </div>
@@ -216,7 +234,8 @@
                                     <!-- Bootstrap Dropdown Menu -->
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
                                         {% if request.user.is_authenticated %}
-                                        <li><a class="dropdown-item" href="{% url 'profile' %}">{{request.user.username}}</a></li>
+                                        <li><a class="dropdown-item"
+                                                href="{% url 'profile' %}">{{request.user.username}}</a></li>
                                         <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
                                         {% else %}
                                         <li><a class="dropdown-item" href="{% url 'login' %}">Login</a></li>
