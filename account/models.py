@@ -27,12 +27,20 @@ class User(AbstractUser):
         "Gender", max_length=10, choices=GENDER_CHOICES, default="Other"
     )
     product_ids = ArrayField(models.IntegerField(), blank=True, default=list)
+    ips = ArrayField(models.GenericIPAddressField(), null=True, blank=True)
 
     def __str__(self):
         return self.username
 
     def get_profile_image(self):
         return self.image.url if self.image else static("image/account/male.jpg")
+
+
+class BlockIpAddress(AbstractModel):
+    ip_address = models.GenericIPAddressField()
+
+    def __str__(self):
+        return self.ip_address
 
 
 class UserAddress(AbstractModel):
