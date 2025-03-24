@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     "core",
     "order",
     "product",
+    "rest_framework",
 ]
 
 MIDDLEWARE = [
