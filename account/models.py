@@ -17,7 +17,7 @@ class User(AbstractUser):
 
     first_name = models.CharField("First Name", max_length=155, blank=False, null=False)
     last_name = models.CharField("Last Name", max_length=155, blank=False, null=False)
-    email = models.EmailField("Email", max_length=200, null=False, blank=False)
+    email = models.EmailField("Email", unique=True)
     phone = models.CharField("Phone", max_length=200, blank=True)
     image = models.ImageField(
         upload_to="image/account/profile_images/", null=True, blank=True
@@ -28,6 +28,9 @@ class User(AbstractUser):
     )
     product_ids = ArrayField(models.IntegerField(), blank=True, default=list)
     ips = ArrayField(models.GenericIPAddressField(), null=True, blank=True)
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = ("",)
 
     def __str__(self):
         return self.username

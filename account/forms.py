@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth import get_user_model
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth.password_validation import validate_password
+from django.contrib.auth.forms import AuthenticationForm, UsernameField
 
 User = get_user_model()
 
@@ -98,13 +99,13 @@ class RegisterForm(forms.ModelForm):
         return cleaned_data
 
 
-class LoginForm(forms.Form):
-    username = forms.CharField(
+class LoginForm(AuthenticationForm):
+    username = UsernameField(
         max_length=200,
         widget=forms.TextInput(
             attrs={
                 "class": "w-100 h-auto p-0 bg-transparent border-0",
-                "placeholder": "Username",
+                "placeholder": "Email",
             }
         ),
     )

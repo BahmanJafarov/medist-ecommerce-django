@@ -21,7 +21,7 @@ from account.views import *
 urlpatterns = [
     path("register/", register, name="register"),
     path("forgot-password/", forgot_password, name="forgot-password"),
-    path("login/", login, name="login"),
+    path("login/", UserLoginView.as_view(), name="login"),
     path("logut/", logout, name="logout"),
     path("profile/", profile, name="profile"),
     path("profile-address/", profile_address, name="profile-address"),

@@ -10,6 +10,7 @@ from django.urls import reverse_lazy
 from account.forms import LoginForm, RegisterForm, ProfileUpdateForm
 from django.contrib import messages
 from django.contrib.auth import get_user_model
+
 User = get_user_model()
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import (
@@ -18,6 +19,8 @@ from django.contrib.auth import (
     logout as django_logout,
     update_session_auth_hash,
 )
+
+from django.contrib.auth.views import LoginView
 
 # Create your views here.
 
@@ -47,20 +50,23 @@ def register(request):
             user = form.save(commit=False)  # Save instance without committing
             user.is_active = False  # Prevent login until activation
             user.save()  # Now save the user
-            
+
             # Prepare email activation
             current_site = get_current_site(request)
             subject = "Activate Your Medist Account"
             uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
             token = account_activation_token.make_token(user)
-            
+
             # Render email template
-            email_html = render_to_string("account_activation_email.html", {
-                "user": user,
-                "domain": current_site.domain,
-                "uid": uidb64,
-                "token": token,
-            })
+            email_html = render_to_string(
+                "account_activation_email.html",
+                {
+                    "user": user,
+                    "domain": current_site.domain,
+                    "uid": uidb64,
+                    "token": token,
+                },
+            )
             email_text = f"Activate your account: http://{current_site.domain}/activate/{uidb64}/{token}/"
 
             # Send email
@@ -73,7 +79,9 @@ def register(request):
             email.attach_alternative(email_html, "text/html")  # Attach HTML version
             email.send()
 
-            messages.success(request, "Please check your email to activate your account.")
+            messages.success(
+                request, "Please check your email to activate your account."
+            )
             return redirect(reverse_lazy("login"))
 
         # Format form errors properly
@@ -87,6 +95,11 @@ def register(request):
 
 def forgot_password(request):
     return render(request, "forgot-password.html")
+
+
+class UserLoginView(LoginView):
+    template_name = "login3.html"
+    form_class = LoginForm
 
 
 def login(request):
