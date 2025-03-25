@@ -42,3 +42,18 @@ class ProductSerializer(serializers.ModelSerializer):
             "description",
             "quantity",
         )
+
+
+class ProductCreateSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Product
+        fields = (
+            "title",
+            "category",
+            "tags",
+            "cover_image",
+            "price",
+            "description",
+            "quantity",
+        )
