@@ -20,10 +20,10 @@
                                     <h2 class="col-lg-9 col-xxl-8 font-24 section-heading-weight">Subscribe newsletter
                                         first order up 60% off</h2>
                                     <div class="footer-news-form mst-21">
-                                        <form method="post" class="news-form">
+                                        <form action="" method="post" id="subscription-form" class="news-form">
                                             {% csrf_token %}
                                             <div class="news-wrap d-flex flex-wrap border-full br-hidden">
-                                                <input type="email" id="newsletter-email" name="newsletter-email"
+                                                <input type="email" id="email" name="email"
                                                     class="width-calc-120 border-none ber rounded-0"
                                                     placeholder="Enter your email" required>
                                                 <button type="submit"

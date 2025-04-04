@@ -1,12 +1,23 @@
 from product.models import ProductCategory, Product
+from core.models import Subscribe
 from django.http import JsonResponse
 from product.api.serializers import (
     ProductCategorySerializer,
     ProductSerializer,
     ProductCreateSerializer,
+    SubscribeCreateSerializer,
 )
 from rest_framework.decorators import api_view
-from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.generics import (
+    ListCreateAPIView,
+    RetrieveUpdateDestroyAPIView,
+    CreateAPIView,
+)
+
+
+class SubscribeCreateAPIView(CreateAPIView):
+    serializer_class = SubscribeCreateSerializer
+    queryset = Subscribe.objects.all()
 
 
 def categories(request):
