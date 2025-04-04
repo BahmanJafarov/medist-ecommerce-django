@@ -1,6 +1,7 @@
 from product.models import ProductCategory, Product
 from core.models import Subscribe
 from django.http import JsonResponse
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from product.api.serializers import (
     ProductCategorySerializer,
     ProductSerializer,
@@ -30,6 +31,7 @@ def categories(request):
 class ProductListAPIView(ListCreateAPIView):
     serializer_class = ProductSerializer
     queryset = Product.objects.all()
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get_serializer_class(self):
         if self.request.method == "POST":
