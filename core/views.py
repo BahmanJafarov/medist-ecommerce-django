@@ -1,11 +1,17 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 from core.forms import ContactForm
 from django.urls import reverse_lazy
 from django.contrib import messages
 from django.views.generic import CreateView
 from django.utils.translation import gettext_lazy as _
+from .tasks import export_data
 
 # Create your views here.
+
+
+def export_view(request):
+    export_data.delay()
+    return HttpResponse()
 
 
 def error_404(request):
@@ -31,8 +37,8 @@ def coming_soon(request):
 class ContactView(CreateView):
     template_name = "contact-us3.html"
     form_class = ContactForm
-    success_url = reverse_lazy('contact-us')
-    
+    success_url = reverse_lazy("contact-us")
+
     def form_valid(self, form):
         messages.add_message(self.request, messages.SUCCESS, _("Successfully sent!"))
         return super().form_valid(form)
